@@ -1,0 +1,31 @@
+{
+  "name": "recolorbrewer",
+  "version": "1.0.0",
+  "description": "ColorBrewer\r ==============",
+  "main": "src/colorbrewer.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/axismaps/colorbrewer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/axismaps/colorbrewer/issues"
+  },
+  "homepage": "https://github.com/axismaps/colorbrewer#readme",
+  "dependencies": {
+    "d3-fetch": "^1.1.2",
+    "remodel-vis": "^1.0.1",
+    "vega-embed": "^4.2.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5"
+  }
+}
