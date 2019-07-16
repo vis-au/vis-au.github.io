@@ -1,0 +1,18 @@
+.navbar-fixed nav h2 {
+  margin-top: 1rem;
+  margin-left: 300px;
+}
+
+article.container .collection-item span.title {
+  font-weight: bold;
+}
+
+article.container .collection-item span {
+  color: grey;
+}
+
+p.subtitle {
+  margin-top: 2rem;
+  font-size: 20px;
+  font-style: italic;
+}
