@@ -1,0 +1,95 @@
+.au-color {
+  background: #002546;
+  color: #ffffff;
+}
+img.profile-pic {
+  max-width: 300px;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+nav a.brand-logo {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+nav a.brand-logo h1 {
+  font-size: 1.5rem;
+  padding: 0;
+  margin: 0;
+  margin-left: 1rem;
+}
+nav li > a:hover {
+  background: rgba(250, 250, 250, 0.15);
+}
+
+section.row {
+  margin-bottom: 5rem;
+}
+
+h1 {
+  font-size: 2.7rem;
+}
+h2 {
+  font-size: 2.06rem;
+}
+h3 {
+  font-size: 1.42rem;
+}
+
+.no-image-placeholder {
+  position: absolute;
+  width: 42px;
+  height: 42px;
+  border-radius: 21px;
+  overflow: hidden;
+  left: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+}
+.no-image-placeholder i {
+  font-size: 25px;
+}
+
+.secondary-content {
+  color: #002546;
+}
+
+.collection .collection-item.avatar .secondary-content.repository-reference {
+  right: 45px;
+}
+
+a {
+  color: #002546;
+}
+a.github-url {
+  font-size: 25px;
+}
+
+.collection .collection-item span.title {
+  color: #002546;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 1000;
+}
+
+.overlay#bibtex {
+  /* x-width: 350px; */
+  max-height: 450px;
+  overflow-y: auto;
+}
+
+.hidden {
+  display: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
