@@ -67,8 +67,8 @@ h3 {
 a {
   color: #002546;
 }
-a.github-url {
-  font-size: 25px;
+a.external-url {
+  font-size: 18px;
 }
 
 .collection .collection-item span.title {
