@@ -64,6 +64,16 @@ h3 {
   right: 45px;
 }
 
+.card-image img {
+  height: 200px;
+}
+.card-content p {
+  height: 2rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 a {
   color: #002546;
 }
