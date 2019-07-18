@@ -67,6 +67,9 @@ h3 {
 a {
   color: #002546;
 }
+.collection .title {
+  font-weight: bold;
+}
 a.external-url {
   font-size: 18px;
 }
