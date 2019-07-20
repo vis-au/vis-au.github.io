@@ -21,7 +21,52 @@ var selectedScheme = "BuGn",
 	selectedField = null,
 	selectedView = null,
 	importedTemplate = null,
-	numClasses = 3;
+  numClasses = 3;
+
+const initialSchema = {
+  "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
+  "data": {
+    "name": "node320744",
+    "url": "https://vega.github.io/editor/data/us-10m.json",
+    "format": {
+      "type": "topojson",
+      "feature": "counties"
+    }
+  },
+  "mark": "geoshape",
+  "encoding": {
+    "color": {
+      "field": "rate",
+      "type": "quantitative",
+      "scale": {
+        "range": [
+          "rgb(189,0,38)",
+          "rgb(255,255,204)"
+        ]
+      }
+    }
+  },
+  "transform": [
+    {
+      "lookup": "id",
+      "from": {
+        "data": {
+          "url": "https://vega.github.io/editor/data/unemployment.tsv"
+        },
+        "key": "id",
+        "fields": [
+          "rate"
+        ]
+      }
+    }
+  ],
+  "height": 300,
+  "width": 500,
+  "projection": {
+    "type": "albersUsa"
+  }
+};
+const initialField = "rate";
 
 $("#num-classes").change(function(){
 	setNumClasses($(this).val());
@@ -503,6 +548,18 @@ function renderVegaUI() {
 	getFields();
 }
 
+function loadDefaultSchema() {
+  const jsonObject = initialSchema;
+  const parser = new SpecParser();
+
+	importedTemplate = parser.parse(jsonObject);
+  selectedView = importedTemplate.getFlatHierarchy().filter(t => t instanceof PlotTemplate)[0];
+  selectedField = initialField;
+
+  $("#vegaImport").val(JSON.stringify(initialSchema, null, 2));
+  $("#customField").val(initialField);
+}
+
 function initVega() {
 	renderVegaUI();
 	updateVegaSpec();
@@ -513,12 +570,13 @@ function init()
 	$("#map-container").css("background-image","none");
 	var type = getParameterByName("type") || "sequential";
 	var scheme = getParameterByName("scheme") || "BuGn";
-	var n = getParameterByName("n") || 3;
+	var n = getParameterByName("n") || 9;
 	$("#"+type).prop("checked",true);
 	$("#num-classes").val(n);
 	setSchemeType(type);
 	setNumClasses(n);
-	setScheme(scheme);
+  setScheme(scheme);
+  loadDefaultSchema();
 	initVega();
 }
 
