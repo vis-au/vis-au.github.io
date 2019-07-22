@@ -21,7 +21,10 @@ var selectedScheme = "BuGn",
 	selectedField = null,
 	selectedView = null,
 	importedTemplate = null,
-  numClasses = 3;
+	useInvertedScales = false,
+	numClasses = 3;
+
+const initialColorScheme = "GnBu";
 
 const initialSchema = {
   "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
@@ -38,12 +41,7 @@ const initialSchema = {
     "color": {
       "field": "rate",
       "type": "quantitative",
-      "scale": {
-        "range": [
-          "rgb(189,0,38)",
-          "rgb(255,255,204)"
-        ]
-      }
+			"legend": null
     }
   },
   "transform": [
@@ -60,8 +58,8 @@ const initialSchema = {
       }
     }
   ],
-  "height": 300,
-  "width": 500,
+  "height": 500,
+  "width": 700,
   "projection": {
     "type": "albersUsa"
   }
@@ -80,6 +78,10 @@ $("#filters input").change(showSchemes);
 $("#customField").change(function() {
 	const customField = $(this).val();
 	selectField(customField);
+});
+$("#invertScalesBox").change(function() {
+	useInvertedScales = $(this).prop("checked");
+	setScheme(selectedScheme || initialColorScheme);
 });
 
 $("#importVegaButton").click(function() {
@@ -299,7 +301,13 @@ function setScheme(s)
 		const field = selectedField;
 		const type = selectedSchemeType === "sequential" ? "quantitative" : selectedSchemeType === "diverging" ? "nominal" : "ordinal";
 		const schemeColors = colorbrewer[selectedScheme][numClasses];
-		const range = type !== "quantitative" ? schemeColors : [schemeColors[schemeColors.length - 2], schemeColors[0]];
+		let range = type !== "quantitative"
+			? schemeColors
+			: [schemeColors[schemeColors.length - 2], schemeColors[0]];
+
+		if (useInvertedScales) {
+			range = range.reverse();
+		}
 
 		const visualVariable = selectedEncoding;
 		let encoding = selectedView.encodings.get(visualVariable);
@@ -557,7 +565,8 @@ function loadDefaultSchema() {
   selectedField = initialField;
 
   $("#vegaImport").val(JSON.stringify(initialSchema, null, 2));
-  $("#customField").val(initialField);
+	$("#customField").val(initialField);
+	$("#ramps .ramp.selected").removeClass("selected");
 }
 
 function initVega() {
@@ -569,7 +578,7 @@ function init()
 {
 	$("#map-container").css("background-image","none");
 	var type = getParameterByName("type") || "sequential";
-	var scheme = getParameterByName("scheme") || "BuGn";
+	var scheme = getParameterByName("scheme") || initialColorScheme;
 	var n = getParameterByName("n") || 9;
 	$("#"+type).prop("checked",true);
 	$("#num-classes").val(n);

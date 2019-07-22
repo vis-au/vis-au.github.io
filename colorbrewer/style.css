@@ -191,6 +191,10 @@ a img{ border: none }
 	stroke-width: .5px;
 }
 
+#invertScales {
+	padding: 0 5px;
+}
+
 #vegaImportPanel {
 	display: flex;
 	flex-direction: column;
