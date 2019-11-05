@@ -402,9 +402,7 @@ function setScheme(s)
 		const field = selectedField;
 		const type = selectedSchemeType === "sequential" ? "quantitative" : selectedSchemeType === "diverging" ? "nominal" : "ordinal";
 		const schemeColors = colorbrewer[selectedScheme][numClasses];
-		let range = type !== "quantitative"
-			? schemeColors
-			: [schemeColors[schemeColors.length - 2], schemeColors[0]];
+		let range = JSON.parse(JSON.stringify(schemeColors));
 
 		if (useInvertedScales) {
 			range = range.reverse();
