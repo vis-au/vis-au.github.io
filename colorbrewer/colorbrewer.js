@@ -291,19 +291,11 @@ function setScheme(s)
 	}
 	$("#copy-css input").val(cssString);
 
-	if (importedTemplate !== null) {
-		const compiler = new SpecCompiler();
-		const spec = compiler.getVegaSpecification(importedTemplate);
-		$("#vegaImport").val(JSON.stringify(spec, null, 2));
-	}
-
   if (selectedView !== null) {
 		const field = selectedField;
 		const type = selectedSchemeType === "sequential" ? "quantitative" : selectedSchemeType === "diverging" ? "nominal" : "ordinal";
 		const schemeColors = colorbrewer[selectedScheme][numClasses];
-		let range = type !== "quantitative"
-			? schemeColors
-			: [schemeColors[schemeColors.length - 2], schemeColors[0]];
+		let range = JSON.parse(JSON.stringify(schemeColors));
 
 		if (useInvertedScales) {
 			range = range.reverse();
@@ -323,6 +315,12 @@ function setScheme(s)
   }
 
 	updateVegaSpec();
+
+	if (importedTemplate !== null) {
+		const compiler = new SpecCompiler();
+		const spec = compiler.getVegaSpecification(importedTemplate);
+		$("#vegaImport").val(JSON.stringify(spec, null, 2));
+	}
 
 	$(".score-icon").attr("class","score-icon");
 	var f = checkColorblind(s);

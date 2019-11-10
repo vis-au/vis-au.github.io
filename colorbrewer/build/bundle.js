@@ -392,12 +392,6 @@ function setScheme(s)
 	}
 	$("#copy-css input").val(cssString);
 
-	if (importedTemplate !== null) {
-		const compiler = new remodel_vis__WEBPACK_IMPORTED_MODULE_0__["SpecCompiler"]();
-		const spec = compiler.getVegaSpecification(importedTemplate);
-		$("#vegaImport").val(JSON.stringify(spec, null, 2));
-	}
-
   if (selectedView !== null) {
 		const field = selectedField;
 		const type = selectedSchemeType === "sequential" ? "quantitative" : selectedSchemeType === "diverging" ? "nominal" : "ordinal";
@@ -422,6 +416,12 @@ function setScheme(s)
   }
 
 	updateVegaSpec();
+
+	if (importedTemplate !== null) {
+		const compiler = new remodel_vis__WEBPACK_IMPORTED_MODULE_0__["SpecCompiler"]();
+		const spec = compiler.getVegaSpecification(importedTemplate);
+		$("#vegaImport").val(JSON.stringify(spec, null, 2));
+	}
 
 	$(".score-icon").attr("class","score-icon");
 	var f = checkColorblind(s);
