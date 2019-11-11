@@ -16,3 +16,23 @@ p.subtitle {
   font-size: 20px;
   font-style: italic;
 }
+.collection-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: background 0.15s ease-in;
+  cursor: default;
+}
+.collection-item:hover {
+  background: #eee;
+}
+
+.collection-item .project-links {
+  float: right;
+}
+.collection-item .project-links a {
+  display: inline;
+}
+.collection-item .project-links i {
+  padding-left: 0.75rem;
+}
