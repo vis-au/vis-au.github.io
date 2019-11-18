@@ -3,6 +3,10 @@
   margin-left: 300px;
 }
 
+article.container {
+  max-width: 1100px;
+}
+
 article.container .collection-item span.title {
   font-weight: bold;
 }
