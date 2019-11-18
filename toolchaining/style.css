@@ -11,9 +11,28 @@ article.container .collection-item span {
   color: grey;
 }
 
+#revize {
+  margin-bottom: 4rem;
+}
+#revize .project-links a:hover {
+  background: #eee;
+}
+
+.project-links a {
+  height: 2rem;
+  border: 1px solid #ccc;
+  padding: 0.25rem 0.75rem;
+  border-radius: 2rem;
+  transition: background 0.1s ease-in-out;
+}
+.project-links a:hover {
+  background: #ddd;
+}
+.project-links a i {
+  margin-right: 0.5rem;
+}
+
 p.subtitle {
-  margin-top: 2rem;
-  font-size: 20px;
   font-style: italic;
 }
 .collection-item {
@@ -32,7 +51,4 @@ p.subtitle {
 }
 .collection-item .project-links a {
   display: inline;
-}
-.collection-item .project-links i {
-  padding-left: 0.75rem;
 }
