@@ -66,6 +66,7 @@ h3 {
 
 .card-image img {
   height: 200px;
+  object-fit: cover;
 }
 .card-content p {
   height: 2rem;
@@ -82,6 +83,10 @@ a {
 }
 a.external-url {
   font-size: 18px;
+}
+
+pre.bibtex {
+  overflow: auto;
 }
 
 .collection .collection-item span.title {

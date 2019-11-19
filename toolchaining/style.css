@@ -22,12 +22,25 @@ article.container .collection-item span {
   background: #eee;
 }
 
+.project-links {
+  float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+#revize .project-links {
+  float: left;
+}
 .project-links a {
   height: 2rem;
   border: 1px solid #ccc;
   padding: 0.25rem 0.75rem;
+  margin-right: 0.25rem;
   border-radius: 2rem;
   transition: background 0.1s ease-in-out;
+  white-space: nowrap;
 }
 .project-links a:hover {
   background: #ddd;
@@ -49,10 +62,11 @@ p.subtitle {
 .collection-item:hover {
   background: #eee;
 }
-
-.collection-item .project-links {
-  float: right;
-}
-.collection-item .project-links a {
-  display: inline;
+@media screen and (max-width: 1000px) {
+  .collection-item {
+    flex-direction: column;
+  }
+  .project-links a {
+    margin: 0.25rem 0.15rem;
+  }
 }
