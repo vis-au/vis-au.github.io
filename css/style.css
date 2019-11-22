@@ -78,11 +78,18 @@ h3 {
 a {
   color: #002546;
 }
-.collection .title {
-  font-weight: bold;
+a.btn {
+  background: #fff;
+  color: black;
+}
+a.btn:hover {
+  background: #eee;
 }
 a.external-url {
   font-size: 18px;
+}
+.collection .title {
+  font-weight: bold;
 }
 
 pre.bibtex {
