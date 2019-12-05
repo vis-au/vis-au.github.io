@@ -105,6 +105,34 @@ pre.bibtex {
   z-index: 1000;
 }
 
+.student-project {
+  display: flex;
+  justify-content: flex-start;
+}
+.student-project img.teaser {
+  width: 150px;
+  max-height: 150px;
+}
+.student-project .title {
+  width: 100%;
+}
+.student-project .author {
+  font-style: italic;
+}
+.student-project .abstract {
+  margin: 0.2rem 0;
+}
+.student-project .icons {
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+.student-project .icons i {
+  margin: 0.35rem;
+}
+
 .overlay#bibtex {
   /* x-width: 350px; */
   max-height: 450px;
