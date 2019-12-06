@@ -110,8 +110,9 @@ pre.bibtex {
   justify-content: flex-start;
 }
 .student-project img.teaser {
-  width: 150px;
+  max-width: 100%;
   max-height: 150px;
+  overflow: hidden;
 }
 .student-project .title {
   width: 100%;
@@ -127,10 +128,11 @@ pre.bibtex {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  align-content: flex-start;
   flex-wrap: wrap;
 }
 .student-project .icons i {
-  margin: 0.35rem;
+  margin: 0.5rem;
 }
 
 .overlay#bibtex {
