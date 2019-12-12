@@ -127,6 +127,9 @@ pre.bibtex {
 .student-project .author {
   font-style: italic;
 }
+.student-project .author a:hover {
+  text-decoration: underline;
+}
 .student-project .abstract {
   margin: 0.2rem 0;
 }
