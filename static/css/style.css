@@ -24,6 +24,10 @@ nav a.brand-logo h1 {
 nav li > a:hover {
   background: rgba(250, 250, 250, 0.15);
 }
+nav li > a.current {
+  background: rgba(200, 200, 200, .3);
+  border-top: 3px solid rgb(255, 255, 255);
+}
 
 section.row {
   margin-bottom: 5rem;
