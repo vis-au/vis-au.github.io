@@ -1,0 +1,24 @@
+section div.person .name {
+  width: 100%;
+  padding-left: 2.2rem;
+  padding-bottom: 0;
+  font-size: 1.2rem;
+  font-family: "AUPassataBold";
+  margin-bottom: 0;
+}
+section div.person div.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+section div.person div.info .title {
+  width: 75%;
+}
+section div.person div.info .references {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+section div.person div.info .references .reference {
+  margin-left: 0.75rem;
+}
