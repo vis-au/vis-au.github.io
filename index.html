@@ -15,7 +15,7 @@
 </head>
 
 <body class="landing-page">
-  <nav class="au-color">
+  <nav class="au-color" style="position: absolute;">
     <div class="nav-wrapper container">
       <a href="#" class="brand-logo">
         <img src="./static/img/auvis_logo_large_white.png" height="45px" alt="">
@@ -34,8 +34,8 @@
     <div class="image">
       <div class="container">
         <section class="row center">
-          <h1>Aarhus Visualization Repository</h1>
-          <h2>We do Visual Analytics.</h2>
+          <h1>Visualization Repository</h1>
+          <h2>Aarhus University</h2>
         </section>
       </div>
     </div>
@@ -45,21 +45,21 @@
           <a href="./publications/">
             <i class="fas fa-book icon gigantic"></i>
             <h3>Publications</h3>
-            <p class="light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolorem repellendus voluptatem odio ut itaque aliquid adipisci tempora. Repudiandae eius vero veritatis voluptas repellat dolor architecto, non in voluptate minima.</p>
+            <p class="light">List of publications in related journals and conference proceedings.</p>
           </a>
         </div>
         <div class="col s12 m4">
           <a href="./software">
             <i class="fas fa-code icon gigantic"></i>
-            <h3>Projects</h3>
-            <p class="light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolorem repellendus voluptatem odio ut itaque aliquid adipisci tempora. Repudiandae eius vero veritatis voluptas repellat dolor architecto, non in voluptate minima.</p>
+            <h3>Software</h3>
+            <p class="light">Links to software projects accompanying our research projects, including the source code.</p>
           </a>
         </div>
         <div class="col s12 m4">
           <a href="./teaching_materials/">
             <i class="fas fa-user-friends icon gigantic"></i>
             <h3>Teaching</h3>
-            <p class="light">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga dolorem repellendus voluptatem odio ut itaque aliquid adipisci tempora. Repudiandae eius vero veritatis voluptas repellat dolor architecto, non in voluptate minima.</p>
+            <p class="light">Various teaching materials used in our courses and other activities, open for public use.</p>
           </a>
         </div>
       </section>
@@ -75,21 +75,33 @@
           </p>
         </div>
         <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">References</h5>
           <ul>
             <li><a class="grey-text text-lighten-3" href="https://cs.au.dk/">Department of Computer Science, Aarhus University</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Research Group for Ubiquitous Computing and Interaction</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://cs.au.dk/research/ubiquitous-computing-and-interaction/">Research Group for Ubiquitous Computing and Interaction</a></li>
           </ul>
         </div>
       </div>
     </div>
     <div class="footer-copyright">
-      <div class="container">
+      <!-- <div class="container">
         © 2020 Copyright Department of Computer Science, Aarhus University
       <a class="grey-text text-lighten-4 right" href="#">back to top</a>
-      </div>
+      </div> -->
     </div>
   </footer>
+
+  <script>
+    const image = document.querySelector("article div.image");
+    const scrollMin = -20;
+    const scrollMax = 580;
+
+    window.addEventListener("scroll", e => {
+      const currentScroll = (window.scrollY - scrollMin) / (scrollMax - scrollMin);
+      const offset = currentScroll * 150;
+      image.style["background-position-y"] = `${offset}px`;
+    });
+
+  </script>
 
   <script type="text/javascript" src="./static/js/materialize.min.js"></script>
 </body>
