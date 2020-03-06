@@ -1,3 +1,7 @@
+body {
+  font-family: "AUPassataRegular";
+}
+
 .au-color {
   background: #002546;
   color: #ffffff;
@@ -29,10 +33,6 @@ nav li > a.current {
   border-top: 3px solid rgb(255, 255, 255);
 }
 
-section.row {
-  margin-bottom: 5rem;
-}
-
 h1 {
   font-size: 2.7rem;
 }
@@ -41,6 +41,7 @@ h2 {
 }
 h3 {
   font-size: 1.42rem;
+  font-family: "AUPassataBold";
 }
 
 .no-image-placeholder {
@@ -64,6 +65,9 @@ h3 {
   color: #002546;
 }
 
+.collection .collection-item.avatar {
+  padding-right: 60px;
+}
 .collection .collection-item.avatar .secondary-content.repository-reference {
   right: 45px;
 }
@@ -94,6 +98,15 @@ a.external-url {
 }
 .collection .title {
   font-weight: bold;
+  font-family: "AUPassataLight";
+}
+
+i.icon.gigantic {
+  font-size: 90px;
+}
+
+p.light {
+  font-weight: lighter;
 }
 
 pre.bibtex {

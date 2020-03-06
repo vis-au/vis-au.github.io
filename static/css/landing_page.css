@@ -1,0 +1,33 @@
+body.landing-page article div.image {
+  background-image: url("https://au.dk/uploads/tx_gridelements/kampagne2020_hero3_audk_FORELSK_DIG.jpg"); height: 600px; padding-top: 340px; background-position-y: 0px;
+  color: white;
+}
+
+body.landing-page hr {
+  background:#ccc;
+  height: 1px;
+  padding: 0;
+  border: none;
+}
+body.landing-page h1 {
+  font-family: "AUPassataBold";
+}
+
+body.landing-page h1 {
+  font-size: 70px;
+}
+
+body.landing-page section.bullets {
+  padding-top: 10rem;
+  margin-bottom: 15rem;
+}
+
+body.landing-page h2 {
+  font-family: "AUPassataLight";
+  font-weight: lighter;
+}
+
+body.landing-page h3,
+body.landing-page i.icon {
+  color: #002546;
+}

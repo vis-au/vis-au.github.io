@@ -1,0 +1,33 @@
+@font-face {
+  font-family: AUPassataBold;
+  src: url("https://www.aucdn.dk/fonts/aupassata_bold-webfont.eot");
+  src: url("https://www.aucdn.dk/fonts/aupassata_bold-webfont.eot?#iefix") format("embedded-opentype"),
+    url("https://www.aucdn.dk/fonts/aupassata_bold-webfont.woff2") format("woff2"),
+    url("https://www.aucdn.dk/fonts/aupassata_bold-webfont.woff") format("woff"),
+    url("https://www.aucdn.dk/fonts/aupassata_bold-webfont.ttf") format("truetype"),
+    url("https://www.aucdn.dk/fonts/aupassata_bold-webfont.svg#AUPassataBold") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: AUPassataLight;
+  src: url("https://www.aucdn.dk/fonts/aupassata_light-webfont.eot");
+  src: url("https://www.aucdn.dk/fonts/aupassata_light-webfont.eot?#iefix") format("embedded-opentype"),
+    url("https://www.aucdn.dk/fonts/aupassata_light-webfont.woff2") format("woff2"),
+    url("https://www.aucdn.dk/fonts/aupassata_light-webfont.woff") format("woff"),
+    url("https://www.aucdn.dk/fonts/aupassata_light-webfont.ttf") format("truetype"),
+    url("https://www.aucdn.dk/fonts/aupassata_light-webfont.svg#AUPassataLight") format("svg");
+  font-weight:400;
+  font-style:normal;
+}
+
+@font-face{
+  font-family: AUPassataRegular;
+  src: url("https://www.aucdn.dk/fonts/aupassata_rg-webfont.eot");
+  src: url("https://www.aucdn.dk/fonts/aupassata_rg-webfont.eot?#iefix") format("embedded-opentype"),
+    url("https://www.aucdn.dk/fonts/aupassata_rg-webfont.woff2") format("woff2"),
+    url("https://www.aucdn.dk/fonts/aupassata_rg-webfont.woff") format("woff"),
+    url("https://www.aucdn.dk/fonts/aupassata_rg-webfont.ttf") format("truetype"),
+    url("https://www.aucdn.dk/fonts/aupassata_rg-webfont.svg#AUPassataRegular") format("svg");
+}
