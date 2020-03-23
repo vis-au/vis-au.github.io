@@ -1,0 +1,60 @@
+/*
+Theme Name: Jamba
+Theme URI: http://www.vooshthemes.com
+Author: Voosh Themes
+Author URI: http://www.vooshthemes.com
+*/
+
+/* Colors -- Blue: #035aa6 */
+
+@import "reset.css";
+
+/*------------------------------------------------*/
+/*-----------------GENERAL STYLES-----------------*/
+/*------------------------------------------------*/
+#wrap { width: 1020px; margin: 0 auto; background: url(main-bg.png) repeat-y; }
+html { background-color: #eeeeee; }
+body { background-color: #eeeeee; color: #555555; line-height: 22px; font-family: Arial; font-size: 12px;  }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+h1 { font-size: 40px; margin: 20px 0 15px 0; }
+h2 { font-size: 26px; margin: 20px 0 15px 0; }
+h3 { font-size: 22px; margin: 20px 0 15px 0; }
+h4 { font-size: 18px; margin: 20px 0 10px 0; }
+h5 { font-size: 16px; margin: 20px 0 5px 0; }
+h6 { font-size: 14px; margin: 0 0 0 0; }
+a:link, a:visited, a:active { color: #035aa6; text-decoration: none; }
+a:hover { color: #555555; }
+p { margin: 0 0 8px 0; line-height: 1.3em;}
+.line { clear: both; background: url(line.png) no-repeat; width: 842px; height: 2px; margin: 40px 0 35px 88px; }
+.section-line { float: left; background: url(line.png) no-repeat; width: 842px; height: 2px; margin: 10px 0 35px 88px; }
+
+/*------------------------------------------------*/
+/*-----------------HEADER-------------------------*/
+/*------------------------------------------------*/
+#header-top { background: url(header-top.png) no-repeat; width: 1020px; height: 77px; margin: 40px 0 0 0; }
+#header { height: 220px; }
+#header #header-content { float: left; }
+#header #header-img { float: right; width: 180px; height: 180px; margin: 10px 105px 0px 10px; }
+#header h1 { background: url(name.png) no-repeat; height: 109px; text-indent: -9999px; margin: 8px -175px 0 85px; }
+#header #contact-details { font-size: 20px; margin: 20px 0 0 90px; }
+#header p { margin: 0 0 5px 0; line-height: 1.1em; }
+#header p .grey { color: #aaaaaa; }
+
+/*------------------------------------------------*/
+/*--------------------CONTENT---------------------*/
+/*------------------------------------------------*/
+#content .plaintext { float: left; margin: -35px 0 -5px 85px; }
+#content .section { margin: 0 0 0 85px; }
+#content .section .abstract { float: left; background: url(abstract.png) no-repeat; width: 190px; height: 46px; text-indent: -9999px; margin: -15px 0 0 0; }
+#content .section .materials { float: left; background: url(materials.png) no-repeat; width: 190px; height: 46px; text-indent: -9999px; margin: -15px 0 0 0; }
+#content .section-standard .section-content { margin-left: 305px; }
+#content .section img { float: left; margin: -2px 20px 0 0; }
+#content .inlinepics img { float: none; margin: 0 0 0 0; vertical-align:middle; }
+#content .section .section-content, #content .section-standard .section-content { float: left; width: 620px; margin: 3px 0 10px 30px; }
+#content .section .section-content h3, #content .section-standard .section-content h3 { color: #035aa6; margin: 0 0 12px 0; }
+#content .section .section-content h4, #content .section-standard .section-content h4 { margin: 0px 0 3px 0; }
+
+/*------------------------------------------------*/
+/*-----------------FOOTER-------------------------*/
+/*------------------------------------------------*/
+#footer { clear: both; background: url(footer.png) no-repeat; width: 1020px; height: 76px; margin: 0 0 30px 0; }
