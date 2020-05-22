@@ -1,0 +1,30 @@
+.author {
+  margin-right: 1rem;
+}
+
+.resources h4 {
+  font-weight: normal;
+  font-size: 1.2rem;
+}
+.resources .icon {
+  margin-right: 0.5rem;
+}
+.resources h4 a:hover {
+  text-decoration: underline;
+}
+
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating) {
+  color: #002546;
+}
+.card .card-action a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating):hover {
+  color: #002546;
+  text-decoration: underline;
+}
+
+section.figures .figure p {
+  color: #002546;
+  font-size: 1.25rem;
+}
+section.figures .figure i.icon {
+  padding-right: 0.45rem;
+}
