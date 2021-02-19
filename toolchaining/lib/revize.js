@@ -8701,7 +8701,7 @@
 
 	var WebsocketBridge = createCommonjsModule(function (module, exports) {
 	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.broadcastNewVersion = exports.unsubscribeFromRemoteChanges = exports.subscribeToRemoteChanges = exports.previousInQueue = exports.nextInQueue = exports.connect = void 0;
+	exports.sendNewVersion = exports.broadcastNewVersion = exports.unsubscribeFromRemoteChanges = exports.subscribeToRemoteChanges = exports.previousInQueue = exports.nextInQueue = exports.connect = void 0;
 
 	const subscribers = [];
 	let socket = null;
@@ -8749,9 +8749,14 @@
 	    socket.emit("update_spec", { spec, version });
 	}
 	exports.broadcastNewVersion = broadcastNewVersion;
+	function sendNewVersion(spec, version) {
+	    socket.emit("send_spec", { spec, version });
+	}
+	exports.sendNewVersion = sendNewVersion;
 	});
 
 	unwrapExports(WebsocketBridge);
+	WebsocketBridge.sendNewVersion;
 	WebsocketBridge.broadcastNewVersion;
 	WebsocketBridge.unsubscribeFromRemoteChanges;
 	WebsocketBridge.subscribeToRemoteChanges;
@@ -8781,4 +8786,4 @@
 	return index;
 
 })));
-//# sourceMappingURL=revize.js.map
+//# sourceMappingURL=bundle.js.map
