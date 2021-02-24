@@ -8701,7 +8701,7 @@
 
 	var WebsocketBridge = createCommonjsModule(function (module, exports) {
 	Object.defineProperty(exports, "__esModule", { value: true });
-	exports.sendNewVersion = exports.broadcastNewVersion = exports.unsubscribeFromRemoteChanges = exports.subscribeToRemoteChanges = exports.previousInQueue = exports.nextInQueue = exports.connect = void 0;
+	exports.sendNewVersion = exports.broadcastNewVersion = exports.unsubscribeFromRemoteChanges = exports.subscribeToRemoteChanges = exports.connect = void 0;
 
 	const subscribers = [];
 	let socket = null;
@@ -8710,14 +8710,21 @@
 	    socket = build(`${url}:${port}/${namespace}`);
 	    socket.on('broadcast_spec', function (msg) {
 	        onExternallyUpdatedSpec(msg);
-	        console.log(msg);
+	        console.log("received new broadcasted spec", msg);
+	    });
+	    socket.on("set_id", function (msg) {
+	        id = msg.id;
+	        console.log("received new id", id);
 	    });
 	    socket.on("send_spec", function (msg) {
 	        if (msg.target !== id) {
 	            return;
 	        }
 	        onExternallyUpdatedSpec(msg);
-	        console.log(msg);
+	        console.log("received new spec", msg);
+	    });
+	    socket.on("error", function (msg) {
+	        console.error(msg.message);
 	    });
 	    id = Math.random();
 	    socket.emit("register", { "id": id });
@@ -8726,14 +8733,6 @@
 	function onExternallyUpdatedSpec(message) {
 	    subscribers.forEach((callback) => callback(message.spec, message.version));
 	}
-	function nextInQueue(spec, version) {
-	    socket.emit("get_next", { spec, version, source: id });
-	}
-	exports.nextInQueue = nextInQueue;
-	function previousInQueue(spec, version) {
-	    socket.emit("get_previous", { spec, version, source: id });
-	}
-	exports.previousInQueue = previousInQueue;
 	function subscribeToRemoteChanges(callback) {
 	    subscribers.push(callback);
 	}
@@ -8760,8 +8759,6 @@
 	WebsocketBridge.broadcastNewVersion;
 	WebsocketBridge.unsubscribeFromRemoteChanges;
 	WebsocketBridge.subscribeToRemoteChanges;
-	WebsocketBridge.previousInQueue;
-	WebsocketBridge.nextInQueue;
 	WebsocketBridge.connect;
 
 	var dist$1 = createCommonjsModule(function (module, exports) {
