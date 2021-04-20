@@ -15,6 +15,15 @@ article.container .collection-item span {
   color: grey;
 }
 
+article.container .teaser {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+article.container .teaser img {
+  width: 95%;
+}
+
 #upwardsopt {
   margin-bottom: 4rem;
 }
