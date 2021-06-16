@@ -30,24 +30,29 @@
   </nav>
 
   <article class="container">
-    <h2>AnyProc</h2>
+    <h2>Customizable Coordination of Independent Visual Analytics Tools</h2>
     <div class="row">
-      <p>Developed by <a href="https://pure.au.dk/portal/en/persons/marius-hografer(9728585e-c215-429e-9408-da84c0a95d6d).html"><strong>Marius Hogräfer</strong></a> and Lars Nonnemann.
+      <p>By Lars Nonnemann, <a href="https://pure.au.dk/portal/en/persons/marius-hografer(9728585e-c215-429e-9408-da84c0a95d6d).html"><strong>Marius Hogräfer</strong></a>, Bodo Urban, Heidrun Schumann, and <a href="https://hjschulz.net"><strong>Hans-Jörg Schulz</strong></a> (2021)
       </p>
     </div>
 
     <div id="revize" class="row">
-      <h3>AnyProc</h3>
-      <p>An analytic process constructor.</p>
+      <h3>Abstract</h3>
+      <p>While it is common to use multiple independent analysis tools in combination, it is still cumbersome to carry out a cross-toolvisual analysis. Some dedicated frameworks addressing this issue exist, yet in order to use them, a Visual Analytics tool mustsupport their API or architecture.</p>
+      <p>In our paper, we do not rely on a single predetermined exchange mechanism for the wholeensemble of VA tools. Instead, we propose using any available channel for exchanging data between two subsequently usedVA tools. This effectively allows to mix and match different data exchange strategies within one cross-tool analysis, whichconsiderably reduces the overhead of adding a new VA tool to a given tool ensemble. We demonstrate our approach with a firstimplementation called AnyProc and its application to a use case of three VA tools in a Health IT data analysis scenario</p>
 
       <div class="project-links">
-        <a href="">
-          <i class="fas fa-external-link-alt"></i>
-          <span class="icon-label">DOI</span>
-        </a>
-        <a href="">
+        <a href="https://diglib.eg.org/bitstream/handle/10.2312/eurova20211094/025-029.pdf">
           <i class="fas fa-file-pdf"></i>
-          <span class="icon-label">Slides from EuroVA</span>
+          <span class="icon-label">Paper</span>
+        </a>
+        <a href="https://vis-au.github.io/anyproc/slides_EuroVA2021.pdf">
+          <i class="fas fa-file-pdf"></i>
+          <span class="icon-label">Slides</span>
+        </a>
+        <a href="https://youtu.be/AaU9KduGrxw?t=1518">
+          <i class="fas fa-video"></i>
+          <span class="icon-label">Talk</span>
         </a>
         <a href="https://github.com/nonnemann/AnyProc">
           <i class="fab fa-github"></i>
@@ -57,7 +62,50 @@
     </div>
 
     <div class="row">
+      <h3>ReVize</h3>
+      <p>An integral component to our use case are ReVize, a visualization toolchaining library based on Vega-Lite, and ReVizeServer, an between-tool exchange mechanism for Vega-Lite specifications. Below, you find links to the repositories of both components.</p>
+
+      <ul class="collection">
+        <li class="collection-item">
+          <div class="description">
+            <span class="title">ReVize</span>
+            <span>A library for visualization toolchaining with Vega-Lite .</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/vis-au/revize">
+              <i class="fab fa-github"></i>
+              <span class="icon-label">Github</span>
+            </a>
+            <a href="https://vis-au.github.io/toolchaining">
+              <i class="fas fa-info"></i>
+              <span class="icon-label">Website</span>
+            </a>
+          </div>
+        </li>
+        <li class="collection-item">
+          <div class="description">
+            <span class="title">ReVizeServer</span>
+            <span>A general-purpose websocket interface to synchronize ReVize clients.</span>
+          </div>
+
+          <div class="project-links">
+            <a href="https://github.com/vis-au/revize-server">
+              <i class="fab fa-github"></i>
+              <span class="icon-label">Github</span>
+            </a>
+            <a href="https://vis-au.github.io/toolchaining">
+              <i class="fas fa-info"></i>
+              <span class="icon-label">Website</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="row">
       <h3>Toolchain-Enabled Tools</h3>
+      <p>Below, we list links to code of the toolchaining-enabled tools we used in our use case.</p>
 
       <ul class="collection">
         <li class="collection-item">
