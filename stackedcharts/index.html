@@ -57,16 +57,194 @@
       </p>
     </div>
 
+    <div id="demo">
+      <h3>Interactive Demonstration</h3>
+      <div class="slider-shows">
+        <div class="slider-show left">
+          <h4>Flatness vs. Straightness</h4>
+          <div class="current-image-container">
+            <span class="current-configuration">s1, c1</span>
+            <img width=535 src="./static/img/teaser1.png" alt="area chart with a certain degree of bumpiness">
+          </div>
+          <div class="interface">
+            <button class="previous">flatter</button>
+            <input type="range" min=0  max="14" step=1 />
+            <button class="next">straigher</button>
+          </div>
+        </div>
+        <div class="slider-show right">
+          <h4>Flatness vs. Continuity</h4>
+          <div class="current-image-container">
+            <span class="current-configuration">s1, c1</span>
+            <img width=535 src="./static/img/teaser1.png" alt="area chart with a certain degree of bumpiness">
+          </div>
+          <div class="interface">
+            <button class="previous">flatter</button>
+            <input type="range" min=0  max="19" step=1 />
+            <button class="next">fewer breaks</button>
+          </div>
+        </div>
+      </div>
+
+      <style>
+        div.slider-shows {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        div.slider-show {
+          display: flex;
+          flex-direction: column;
+        }
+        div.slider-show .current-image-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          position: relative;
+        }
+        div.slider-show .current-image-container .current-configuration {
+          position: absolute;
+          left: 10px;
+          top: 10px;
+        }
+        div.slider-show img {
+          border: 0.25px solid #ccc;
+        }
+        div.slider-show .interface {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+        }
+        div.slider-show .interface * {
+          padding: 5px 15px;
+        }
+        div.slider-show .interface button {
+          background: white;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+          cursor: pointer;
+        }
+        div.slider-show .interface button:hover {
+          background: #efefef;
+        }
+      </style>
+
+      <script>
+        class ImageSlider {
+          constructor(image, slider, label, images=[]) {
+            this.image = image;
+            this.slider = slider;
+            this.label = label;
+            this.images = images;
+
+            this.current = Math.floor(this.images.length / 2);
+
+            this.preloadImages();
+            this.update();
+          }
+          preloadImages() {
+            this.images.forEach(path => {
+              // to ensure that the widgets works smoothly, pre-load the images into invisible
+              // <img> containers and then delete them.
+              const image = document.createElement("img");
+              image.src = path;
+              image.style.display = "none";
+              document.querySelector("body").appendChild(image);
+              document.querySelector("body").removeChild(image);
+            });
+          }
+          set(index) {
+            this.current = index;
+            this.update();
+          }
+          next() {
+            this.current = Math.min(this.current + 1, this.images.length - 1);
+            this.update();
+          }
+          previous() {
+            this.current = Math.max(this.current - 1, 0);
+            this.update();
+          }
+          update() {
+            this.slider.value = this.current;
+            this.label.innerHTML = this.images[this.current].match(/([\w,_\s]+).jpg/)[1];
+            this.image.src = this.images[this.current];
+          }
+        }
+
+        const leftImages = [
+          "./static/img/flatness_+_straightness/f1,00 s0,00.jpg",
+          "./static/img/flatness_+_straightness/f1,00 s0,01.jpg",
+          "./static/img/flatness_+_straightness/f1,00 s0,02.jpg",
+          "./static/img/flatness_+_straightness/f1,00 s0,05.jpg",
+          "./static/img/flatness_+_straightness/f1,00 s0,10.jpg",
+          "./static/img/flatness_+_straightness/f1,00 s0,25.jpg",
+          "./static/img/flatness_+_straightness/f1,00 s0,50.jpg",
+          "./static/img/flatness_+_straightness/f1,00 s1,00.jpg",
+          "./static/img/flatness_+_straightness/f0,50 s1,00.jpg",
+          "./static/img/flatness_+_straightness/f0,25 s1,00.jpg",
+          "./static/img/flatness_+_straightness/f0,10 s1,00.jpg",
+          "./static/img/flatness_+_straightness/f0,05 s1,00.jpg",
+          "./static/img/flatness_+_straightness/f0,02 s1,00.jpg",
+          "./static/img/flatness_+_straightness/f0,01 s1,00.jpg",
+          "./static/img/flatness_+_straightness/f0,00 s1,00.jpg",
+        ];
+        const rightImages = [
+          "./static/img/flatness_+_continuity/f1,0 c1,00.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,999.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,998.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,995.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,993.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,99.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,98.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,97.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,96.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,95.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,90.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,85.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,80.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,75.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,70.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,60.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,50.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,40.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,20.jpg",
+          "./static/img/flatness_+_continuity/f1,0 c0,00.jpg",
+        ].reverse();
+
+        [["left", leftImages], ["right", rightImages]].forEach(pair => {
+          const side = pair[0];
+          const images = pair[1];
+          const slider = document.querySelector(`#demo .slider-show.${side} input`);
+          const image = document.querySelector(`#demo .slider-show.${side} img`);
+          const label = document.querySelector(`#demo .slider-show.${side} span.current-configuration`);
+          const nextButton = document.querySelector(`#demo .slider-show.${side} button.next`);
+          const previousButton = document.querySelector(`#demo .slider-show.${side} button.previous`);
+
+          const sliderWidget = new ImageSlider(image, slider, label, images);
+
+          nextButton.addEventListener("click", () => sliderWidget.next());
+          previousButton.addEventListener("click", () => sliderWidget.previous());
+          slider.addEventListener("change", (event) => sliderWidget.set(event.target.value));
+        });
+
+      </script>
+      <p>
+        Use the interface above to show different combinations of aesthetic criteria for laying out stacked area charts.
+      </p>
+    </div>
+
     <div id="upwardsopt" class="row">
       <h3>Resources</h3>
       <p>Below, you find links to primary resources for our paper, including the Github repository.</p>
 
       <div class="project-links">
-        <a href="">
+        <a href="https://doi.org/10.1007/978-3-030-86062-2_1">
           <i class="fas fa-external-link-alt"></i>
           <span class="icon-label">DOI</span>
         </a>
-        <a href="">
+        <a href="https://cs.au.dk/~hjschulz/pdfs/diag2021.pdf">
           <i class="fas fa-file-pdf"></i>
           <span class="icon-label">Paper</span>
         </a>
@@ -147,16 +325,18 @@
       <p>
         We kindly ask you to use the following citation when including <code class="name">UpwardsOpt</code> as part of your work:
         <pre class="bibtex">
-@inproceedings {Mathiesen2021,
-  author = {Mathiesen, Steffen and Schulz, Hans-J{\"o}rg},
-  title = {{Aesthetics and Ordering in Stacked Area Charts}},
-  booktitle = {Lorem ipsum dolor sit},
-  editor = {amet consectetur adipisicing elit. Laboriosam sit dolore},
-  year = {2021},
+@inproceedings{mathiesen_stacked_2021,
+  series = {Lecture Notes in Computer Science},
+  title = {Aesthetics and Ordering in Stacked Area Charts},
+  volume = {12909},
+  isbn = {978-3-030-86061-5},
+  doi = {10.1007/978-3-030-86062-2_1},
+  booktitle = {Proceedings of the International Conference on Theory and Application of Diagrams (Diagrams'21)},
   publisher = {Springer},
-  ISSN = {1234-5678},
-  ISBN = {123-4-56789-101-1},
-  DOI = {000}
+  author = {Mathiesen, Steffen Strunge and Schulz, Hans-J\"{o}rg},
+  editor = {Basu, Amrita and Stapleton, Gem and Linker, Sven and Legg, Catherine and Manalo, Emmanuel and Viana, Petrucio},
+  year = {2021},
+  pages = {3-19}
 }
         </pre>
       </p>
