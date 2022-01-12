@@ -1,0 +1,26 @@
+h4.highlight a {
+  background: black;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 3px;
+}
+.resources h4 a {
+  font-family: AUPassataRegular;
+  font-size: 1.1rem;
+}
+.resources .icon {
+  margin-right: 0.5rem;
+}
+.resources h4 a:hover {
+  text-decoration: underline;
+}
+.row .row {
+  margin: 0;
+}
+img.teaser {
+  margin-top: 2rem;
+}
+div.abstract a.author {
+  text-decoration: underline;
+  margin-right: 0.2rem;
+}

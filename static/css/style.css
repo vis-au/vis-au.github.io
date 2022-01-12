@@ -33,6 +33,11 @@ nav li > a.current {
   border-top: 3px solid rgb(255, 255, 255);
 }
 
+article section img.teaser {
+  max-width: 100%;
+  opacity: 0.7;
+}
+
 article section p.leader {
   font-size: 1.2rem;
   padding: 0 2.5rem;
@@ -59,6 +64,25 @@ h3 {
 h4 {
   font-size: 1.2rem;
   font-family: "AUPassataBold";
+}
+
+figure.right {
+  padding-left: 1rem;
+  border-left: 1px solid #002546;
+}
+figure img {
+  max-width: 100%;
+}
+figure figcaption {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .row figure {
+    border: none;
+    padding: 0;
+    margin: 1.5rem 0;
+  }
 }
 
 .no-image-placeholder {

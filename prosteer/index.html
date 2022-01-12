@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Steering-by-Example for Progressive Visual Analytics</title>
+
+  <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="../static/css/fonts.css" media="screen,projection">
+  <link type="text/css" rel="stylesheet" href="../static/css/style.css" media="screen,projection">
+  <link type="text/css" rel="stylesheet" href="./style.css" media="screen,projection">
+  <script src="https://kit.fontawesome.com/cb26641bd1.js"></script>
+  <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav class="au-color">
+    <div class="nav-wrapper container">
+      <a href="../" class="brand-logo">
+        <img src="../static/img/auvis_logo_large_white.png" height="45px" alt="">
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="../publications/">Publications</a></li>
+        <li><a href="../software/">Software</a></li>
+        <li><a href="../teaching_materials/">Teaching Material</a></li>
+        <li><a href="../student_projects/">Student Projects</a></li>
+        <li><a href="../team/">Team</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="container">
+    <section class="row" id="map-like">
+      <h2>Steering-by-Example for Progressive Visual Analytics</h2>
+      <p class="leader">companion website</p>
+    </section>
+
+    <section class="row">
+      <div class="col s12 m7 abstract">
+        <h3>Authors</h3>
+        <a href="https://orcid.org/0000-0001-9051-6972" class="author"><span>Marco Angelini</span></a>
+        <a href="https://cs.au.dk/~hograefer" class="author"><span>Marius Hogräfer</span></a>
+        <a href="http://www.diag.uniroma1.it/~santucci/" class="author"><span>Giuseppe Santucci</span></a>
+        <a href="https://hjschulz.net/" class="author"><span>Hans-Jörg Schulz</span></a>
+
+        <h3>Abstract</h3>
+        <p>
+          Progressive visual analytics allows users to interact with early, partial results of long-running computations on large datasets.
+          In this context, computational steering is often brought up as a means to prioritize the progressive computation.
+          This is meant to focus computational resources on data subspaces of interest, so as to ensure their computation is completed before all others.
+          Yet, current approaches to select a region of the view space and then to prioritize its corresponding data subspace either require a 1-to-1 mapping between view and data space, or they need to establish and maintain computationally costly index structures to trace complex mappings between view and data space.
+        </p>
+        <p>
+          We present <b>steering-by-example</b>, a novel interactive steering approach for progressive visual analytics, which allows prioritizing data subspaces for the progression by generating a relaxed query from a set of selected data items.
+          Our approach works independently of the particular visualization technique and without additional index structures.
+          First benchmark results show that steering-by-example considerably improves Precision and Recall for prioritizing unprocessed data for a selected view region, clearly outperforming random uniform sampling.
+        </p>
+      </div>
+
+      <div class="col s12 m3 right resources">
+        <h3>Resources</h3>
+
+        <h4> <a href=""><i class="icon fas fa-file-pdf"></i>Paper (preprint)</a></h4>
+        <h4> <a href=""><i class="icon fas fa-globe"></i>DOI (external)</a></h4>
+        <h4> <a href="./static/prosteer_approach.mp4"><i class="icon fas fa-video"></i>Approach Presentation (mp4)</a></h4>
+        <h4><a href="./static/prosteer_demo.mp4"><i class="icon fas fa-video"></i> ProSteer Demo (mp4)</a></h4>
+        <h4><a href="./static/slides.pdf"><i class="icon fas fa-file-pdf"></i> Slides (pdf)</a></h4>
+        <h4><a href=""><i class="icon fas fa-quote-right"></i> BibTeX Citation</a></h4>
+        <h4 class="highlight"><a href="https://github.com/vis-au/progressive-steering"><i class="icon fab fa-github"></i> Code on Github</a></h4>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="col s12 m7 abstract">
+        <h3>Citation in BibTeX</h3>
+
+      <p>To cite this article, we encourage you to use the following bibtex entry in your citation manager:</p>
+
+        <pre>
+  @article {sbe2022,
+    title = {Steering-by-Example for Progressive Visual Analytics},
+    author = {Angelini, Marco and Hogr\"afer, Marius and Santucci,
+              Giuseppe and Schulz, Hans-J\"org},
+    year = {2022},
+    number = {tbd},
+    journal = {tbd},
+    volume = {tbd},
+    pages = {tbd},
+    doi = {tbd}
+  }
+        </pre>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="col m7 s12">
+        <h2><b>ProSteer:</b> An Experimental Visual Environment for Steering-by-Example</h2>
+        <div class="row">
+          <h4 class="highlight" style="margin: 2rem 0;">
+            <a href="https://github.com/vis-au/progressive-steering">
+              <i class="icon fab fa-github"></i> Code and Benchmarks available on Github
+            </a>
+          </h4>
+        </div>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col s12 m7">
+        <figure style="padding:0;margin:0;color:#777">
+          <a href="https://github.com/vis-au/progressive-steering">
+            <img src="./static/img/frontend_full_screenshot.png" alt="Screenshot of ProSteer." />
+          </a>
+          <figcaption>Screenshot from ProSteer showing a side-by-side view from a progression that uses the steering-by-example approach to steer the computation on the left, compared to a progression using random uniform sampling on the right.</figcaption>
+        </figure>
+      </div>
+    </section>
+    <section class="row">
+      <div class="col m7 s12">
+        <h3 id="architecture">Architecture</h3>
+        <p>
+          Here we give a high-level overview of the architecture of our steering-by-example implementation.
+        </p>
+        <p>
+          The main goal of our implementation is to be able to qualitatively and quantitatively evaluate the steering-by-example approach.
+          In the context of the scenario outlined above, the central task throughout our evaluations is to determine how much quicker the interesting listings from the dataset that are located inside the region the user indicated are shown to her when using the steering-by-example approach.
+          More abstractly, our goal is to compare the overall precision (percentage of retrieved data items that were located inside the selection compared to those outside the selection) and recall (percentage of all already retrieved data items that were located inside the selection compared to all items from the dataset that will eventually be located inside the selection) with regards to the selection in view space for steering-by-example compared to a baseline of uniform random sampling and a hypothetical perfect predictor. Perfect predictor here refers to a perfect oracle, i.e. a retrieval approach that has constant precision=1.0 and recall=1.0 for every user selection at every data chunk.
+          We compare approaches from multiple perspectives, for instance comparing how many data items land inside versus outside the selection at a certain chunk, comparing how steering affects the data in view space at one time point of the progression versus another, or comparing the data distribution inside the selection versus outside.
+        </p>
+      </div>
+      <div class="col m7 s12">
+        <p>
+          To be able to make these comparisons, we structured the implementation along a basic pipeline reflecting the scenario, where data is loaded from a database, processed by a computation, and then shown in a visualization, on which view space selections can be made to define a region of interest.
+          The four modules listed below that make up that pipeline are depicted in Fig. 1.
+
+          <ol>
+            <li>The <b>client</b>, which provides the user interface for visualizing and interacting with the progression. Using this module, one can assess the progression through a set of visualizations, monitor the performance of the steering-by-example algorithm, and define a region of interest through direct selection.</li>
+            <li>The <b>database</b>, which holds a dataset and returns it in chunks in response to relational queries.</li>
+            <li>The <b>computation module</b>, which runs the analytic computation on the data. This module sits between the other modules and mediates messages between them.</li>
+            <li>The <b>steering module</b>, which implements the steering-by-example algorithm and thus takes a set of data items from the selected view region and produces an SQL query for prioritizing their respective data subspace.</li>
+          </ol>
+        </p>
+      </div>
+      <div class="col m5 s12">
+        <figure class="right">
+          <img src="./static/img/implementation-overview.png" alt="Modules of implementation for steering-by-example.">
+          <figcaption class="caption"><b>Figure 1: </b>Overview of the modular architecture used in the implementation of steering-by-example.</figcaption>
+        </figure>
+      </div>
+      <div class="col m7 s12">
+        <p>
+          The benefit of using this modular architecture is that we can exchange individual functionalities and evaluate them before and after this exchange.
+          We can for example compare a steering module that implements steering-by-example to a steering module that only relies on random uniform sampling and never returns a steering query.
+          We can compare the two versions with regards to their effect on any part of the pipeline, meaning that we can both evaluate quantitative metrics as well as qualitative effects on the user interface side.
+          Another benefit of the modular architecture is that we can easily provide a parametrizable, automated client module which simulates a user making selections in view space with different presets.
+          That way, we can measure performance metrics across pre-defined benchmark selections.
+
+          We describe the particular implementation of the steering and computation modules in our paper, including the visual design of ProSteer, an implementation of the client module.
+        </p>
+
+        <h3 id="scenario">Scenario</h3>
+        <p>
+          We introduced the steering-by-example approach for progressive computations, for which their complexity prohibits running multiple passes over the entire dataset as it would simply take too long.
+          This could either be due to the size of the dataset being too large, or the computations run on the dataset taking too long.
+          As a realistic scenario for our benchmarks, we describe an example of the latter case, in which a business traveler uses steering-by-example while looking for a suitable accommodation in the city of Paris to attend a conference.
+        </p>
+      </div>
+      <div class="col m7 s12">
+        <p>
+          To determine, whether a housing listing is suitable or not, the traveler requires it to lie within walking distance to the conference venue, while at the same time having a reasonable price compared to its neighborhood.
+          There are thus two key performance indicators to this scenario on which the traveler bases her decision: the distance to walk to the conference center and the price in relation to other accommodations lying in a predefined radius of, e.g., 300 meters around a housing offer.
+          The former indicator can be computed using standard routing algorithms for the distance on foot between the conference venue and a particular housing option (e.g., the Google Distance Matrix service), while the latter indicator can be computed through a range analysis on the geographic location and housing price dimensions.
+          This traveler interest can only be computed on-demand, as it relies on the conference location for the former and on the travel dates for the latter.
+          Yet, as the dataset contains tens of thousands of housing listings, these on-demand computations also take some time to complete.
+        </p>
+        <p>
+          After the system has processed about 10% of the data, the traveler detects a cluster of housing listings that lie within a generally acceptable distance and offer good prices for their neighborhood.
+        </p>
+        <p>
+          Using steering-by-example, the traveler informs the PVA system to prioritize listings for that same visual cluster during the computation, by selecting it in the visualization through direct manipulation.
+          She observes how the next listings that are retrieved all fall within or in close proximity to the cluster she selected (see Fig. 2).
+          After finding a listing that she particularly likes, the traveler decides to go forth and book that housing option.
+          In total, she only needed to wait up until ca. 20% of the data was processed, because she could focus on a particular subspace early on once she noticed a particular pattern forming.
+        </p>
+      </div>
+      <div class="col m5 s12">
+        <figure class="right">
+          <img class="teaser" src="./static/img/screenshots_heatmap_evolution_wide.png" alt="State diagram of ProSteer." />
+          <figcaption><b>Figure 2: </b>Example progression scenario using steering-by-example. The steered region becomes present by the red background during the steering phase and then fades away, once steering is done.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="empty"></section>
+  </article>
+
+  <footer class="page-footer au-color darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Aarhus University Visualization Repository</h5>
+          <p class="grey-text text-lighten-4">
+          </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://cs.au.dk/">Department of Computer Science, Aarhus University</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://cs.au.dk/research/ubiquitous-computing-and-interaction/">Research Group for Ubiquitous Computing and Interaction</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <!-- <div class="container">
+        © 2020 Copyright Department of Computer Science, Aarhus University
+      <a class="grey-text text-lighten-4 right" href="#">back to top</a>
+      </div> -->
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="../static/js/materialize.min.js"></script>
+</body>
+</html>
