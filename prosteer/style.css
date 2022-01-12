@@ -24,3 +24,6 @@ div.abstract a.author {
   text-decoration: underline;
   margin-right: 0.2rem;
 }
+article .col.m7 a {
+  font-weight: bold;
+}

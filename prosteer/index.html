@@ -39,8 +39,8 @@
       <div class="col s12 m7 abstract">
         <h3>Authors</h3>
         <a href="https://orcid.org/0000-0001-9051-6972" class="author"><span>Marco Angelini</span></a>
-        <a href="https://cs.au.dk/~hograefer" class="author"><span>Marius Hogräfer</span></a>
-        <a href="http://www.diag.uniroma1.it/~santucci/" class="author"><span>Giuseppe Santucci</span></a>
+        <a href="https://cs.au.dk/ hograefer" class="author"><span>Marius Hogräfer</span></a>
+        <a href="http://www.diag.uniroma1.it/ santucci/" class="author"><span>Giuseppe Santucci</span></a>
         <a href="https://hjschulz.net/" class="author"><span>Hans-Jörg Schulz</span></a>
 
         <h3>Abstract</h3>
@@ -187,6 +187,56 @@
           <img class="teaser" src="./static/img/screenshots_heatmap_evolution_wide.png" alt="State diagram of ProSteer." />
           <figcaption><b>Figure 2: </b>Example progression scenario using steering-by-example. The steered region becomes present by the red background during the steering phase and then fades away, once steering is done.</figcaption>
         </figure>
+      </div>
+      <div class="col m7 s12">
+        <h3>Implementation Details</h3>
+        <p>
+          The steering and computation modules use Python 3.8.1, building on functionalities from the DecisionTreeClassifier module of <a href="https://scikit-learn.org/stable/index.html">scikit-learn</a> in version 0.22.2 as well as <a href="https://numpy.org/">NumPy</a> version 1.18.1 and <a href="https://pandas.pydata.org/">Pandas</a> version 1.0.1.
+          Scikit-learn's implementation of decision trees is an optimization of the CART algorithm, which includes some performance optimizations such as pruning subtrees that contribute the least to the overall accuracy of the classification <a href="https://scikit-learn.org/stable/modules/tree.html">in order to avoid overfitting</a>.
+          To overcome unbalanced class cardinalities, we parametrize the decision tree with class weights representing the relative percentages of items from each class in the total training dataset.
+          The steering query extracted from the decision tree is appended to the WHERE clause of the initial user query, seeking for accommodations close to a given conference location and for a certain time interval.
+          For visual comparison, the computation module can optionally also be used in "dual" mode, in which two progressions are run in parallel: One using steering-by-example, the other one using random uniform sampling.
+          Using this mode, client modules can visualize both a steered and a non-steered version of the progression side-by-side.
+        </p>
+        <p>
+          The user-driven client module is implemented in ProSteer, a web-based interface using <a href="https://www.typescriptlang.org/">TypeScript</a> version 3.3, <a href="https://reactjs.org">ReactJS</a> version 16.8.6, and <a href="https://d3js.org/">D3</a> version 5.7.2.
+          Its purpose is to provide a visual interface to the benchmarks, to demonstrate how steering translates into the progressive visualization of the dataset.
+          A detailed description of ProSteer's functionality can be found in our paper.
+        </p>
+        <p>
+          The automated client module that was used for producing the benchmark results was implemented in Python.
+          Test cases are defined inside a configuration file that describes the region in view space that is to be selected.
+          The automated module loads these test cases and then records the evaluation metrics.
+          These metrics are then output to another file for further analysis.
+        </p>
+      </div>
+      <div class="col m5 s12">
+        <figure class="right">
+          <img class="teaser" src="./static/img/example_decision_tree.png" alt="Example of a decision tree being transformed into an SQL query." />
+          <figcaption><b>Figure 3: </b>Example of a decision tree being transformed into an SQL query.</figcaption>
+        </figure>
+      </div>
+      <div class="col m7 s12">
+        <p>
+          The communication channel between the client and computation modules is realized using <a href="https://github.com/samuelhwilliams/Eel">Eel</a> version 0.12.2, which provides a minimalistic, JSON-based bridge between Python and web frameworks.
+          The client module sends lists of IDs of data items that were rendered inside the user selection through that channel, as well as the initial user parameters.
+          Additionally, the client can send messages to control the progression in the computation module, in order to pause, restart, and reset the computation.
+          Since our implementation is designed to assess the performance of steering-by-example instead of being used for productive visual analysis, the pausing functionality in ProSteer does indeed halt the progression rather than "muting" it into a background process that continues as the user investigates the visualization, which is commonly found in PVA tools.
+          The computation module on the other hand sends lists of items that were retrieved from the database through the Eel interface.
+          In keeping the information interchange between the modules to a minimum, the computation module remains isolated from the particular visualization and interaction technique used in the client.
+        </p>
+      </div>
+      <div class="col m5 s12">
+        <figure class="right">
+          <img class="teaser" src="./static/img/benchmarking_selections.png" alt="Selections on the airbnb dataset used in the benchmarks." />
+          <figcaption><b>Figure 4: </b>Selections on the airbnb dataset used in the benchmarks.</figcaption>
+        </figure>
+      </div>
+      <div class="col m7 s12">
+        <p>
+          Lastly, the database module uses a <a href="https://www.mysql.com">MySQL</a> version 8 database.
+          It communicates with the computation module through the <a href="https://pypi.org/project/mysql-connector-python/">mysql-connector-python package</a>.
+        </p>
       </div>
     </section>
 
