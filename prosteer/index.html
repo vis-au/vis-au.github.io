@@ -32,7 +32,7 @@
   <article class="container">
     <section class="row" id="map-like">
       <h2>Steering-by-Example for Progressive Visual Analytics</h2>
-      <p class="leader">companion website</p>
+      <p class="leader">TBA (under review)</p>
     </section>
 
     <section class="row">
@@ -42,6 +42,13 @@
         <a href="https://cs.au.dk/ hograefer" class="author"><span>Marius Hogräfer</span></a>
         <a href="http://www.diag.uniroma1.it/ santucci/" class="author"><span>Giuseppe Santucci</span></a>
         <a href="https://hjschulz.net/" class="author"><span>Hans-Jörg Schulz</span></a>
+
+        <figure class="teaser" style="color:#777">
+          <a href="https://github.com/vis-au/progressive-steering">
+            <img src="./static/img/frontend_full_screenshot.png" alt="Screenshot of ProSteer." />
+          </a>
+          <figcaption>Screenshot from <a href="#prosteer">ProSteer</a> showing a side-by-side view from a progression that uses the steering-by-example approach to steer the computation on the left, compared to a progression using random uniform sampling on the right.</figcaption>
+        </figure>
 
         <h3>Abstract</h3>
         <p>
@@ -94,7 +101,7 @@
 
     <section class="row">
       <div class="col m7 s12">
-        <h2><b>ProSteer:</b> An Experimental Visual Environment for Steering-by-Example</h2>
+        <h2 id="prosteer"><b>ProSteer:</b> An Experimental Visual Environment for Steering-by-Example</h2>
         <div class="row">
           <h4 class="highlight" style="margin: 2rem 0;">
             <a href="https://github.com/vis-au/progressive-steering">
@@ -103,15 +110,16 @@
           </h4>
         </div>
       </div>
-    </section>
-    <section class="row">
-      <div class="col s12 m7">
-        <figure style="padding:0;margin:0;color:#777">
-          <a href="https://github.com/vis-au/progressive-steering">
-            <img src="./static/img/frontend_full_screenshot.png" alt="Screenshot of ProSteer." />
-          </a>
-          <figcaption>Screenshot from ProSteer showing a side-by-side view from a progression that uses the steering-by-example approach to steer the computation on the left, compared to a progression using random uniform sampling on the right.</figcaption>
-        </figure>
+
+      <div class="col m3 s12 right">
+        <div class="toc">
+          <h2>Contents</h2>
+          <ul>
+            <li><a href="#architecture">Architecture</a></li>
+            <li><a href="#scenario">Scenario</a></li>
+            <li><a href="#implementation_details">Implementation Details</a></li>
+          </ul>
+        </div>
       </div>
     </section>
     <section class="row">
@@ -184,12 +192,12 @@
       </div>
       <div class="col m5 s12">
         <figure class="right">
-          <img class="teaser" src="./static/img/screenshots_heatmap_evolution_wide.png" alt="State diagram of ProSteer." />
+          <img src="./static/img/screenshots_heatmap_evolution_wide.png" alt="State diagram of ProSteer." />
           <figcaption><b>Figure 2: </b>Example progression scenario using steering-by-example. The steered region becomes present by the red background during the steering phase and then fades away, once steering is done.</figcaption>
         </figure>
       </div>
       <div class="col m7 s12">
-        <h3>Implementation Details</h3>
+        <h3 id="implementation_details">Implementation Details</h3>
         <p>
           The steering and computation modules use Python 3.8.1, building on functionalities from the DecisionTreeClassifier module of <a href="https://scikit-learn.org/stable/index.html">scikit-learn</a> in version 0.22.2 as well as <a href="https://numpy.org/">NumPy</a> version 1.18.1 and <a href="https://pandas.pydata.org/">Pandas</a> version 1.0.1.
           Scikit-learn's implementation of decision trees is an optimization of the CART algorithm, which includes some performance optimizations such as pruning subtrees that contribute the least to the overall accuracy of the classification <a href="https://scikit-learn.org/stable/modules/tree.html">in order to avoid overfitting</a>.
@@ -212,7 +220,7 @@
       </div>
       <div class="col m5 s12">
         <figure class="right">
-          <img class="teaser" src="./static/img/example_decision_tree.png" alt="Example of a decision tree being transformed into an SQL query." />
+          <img src="./static/img/example_decision_tree.png" alt="Example of a decision tree being transformed into an SQL query." />
           <figcaption><b>Figure 3: </b>Example of a decision tree being transformed into an SQL query.</figcaption>
         </figure>
       </div>
@@ -228,7 +236,7 @@
       </div>
       <div class="col m5 s12">
         <figure class="right">
-          <img class="teaser" src="./static/img/benchmarking_selections.png" alt="Selections on the airbnb dataset used in the benchmarks." />
+          <img src="./static/img/benchmarking_selections.png" alt="Selections on the airbnb dataset used in the benchmarks." />
           <figcaption><b>Figure 4: </b>Selections on the airbnb dataset used in the benchmarks.</figcaption>
         </figure>
       </div>
