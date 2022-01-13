@@ -115,8 +115,8 @@
         <div class="toc">
           <h2>Contents</h2>
           <ul>
-            <li><a href="#architecture">Architecture</a></li>
             <li><a href="#scenario">Scenario</a></li>
+            <li><a href="#architecture">Architecture</a></li>
             <li><a href="#implementation_details">Implementation Details</a></li>
           </ul>
         </div>
@@ -124,6 +124,32 @@
     </section>
     <section class="row">
       <div class="col m7 s12">
+
+        <h3 id="scenario">Scenario</h3>
+        <p>
+          We introduced the steering-by-example approach for progressive computations, for which their complexity prohibits running multiple passes over the entire dataset as it would simply take too long.
+          This could either be due to the size of the dataset being too large, or the computations run on the dataset taking too long.
+          As a realistic scenario for our benchmarks, we describe an example of the latter case, in which a business traveler uses steering-by-example while looking for a suitable accommodation in the city of Paris to attend a conference.
+        </p>
+        <p>
+          To determine, whether a housing listing is suitable or not, the traveler requires it to lie within walking distance to the conference venue, while at the same time having a reasonable price compared to its neighborhood.
+          There are thus two key performance indicators to this scenario on which the traveler bases her decision: the distance to walk to the conference center and the price in relation to other accommodations lying in a predefined radius of, e.g., 300 meters around a housing offer.
+          The former indicator can be computed using standard routing algorithms for the distance on foot between the conference venue and a particular housing option (e.g., the Google Distance Matrix service), while the latter indicator can be computed through a range analysis on the geographic location and housing price dimensions.
+          This traveler interest can only be computed on-demand, as it relies on the conference location for the former and on the travel dates for the latter.
+          Yet, as the dataset contains tens of thousands of housing listings, these on-demand computations also take some time to complete.
+        </p>
+        <p>
+          After the system has processed about 10% of the data, the traveler detects a cluster of housing listings that lie within a generally acceptable distance and offer good prices for their neighborhood.
+        </p>
+      </div>
+      <div class="col m7 s12">
+        <p>
+          Using steering-by-example, the traveler informs the PVA system to prioritize listings for that same visual cluster during the computation, by selecting it in the visualization through direct manipulation.
+          She observes how the next listings that are retrieved all fall within or in close proximity to the cluster she selected (see Fig. 1).
+          After finding a listing that she particularly likes, the traveler decides to go forth and book that housing option.
+          In total, she only needed to wait up until ca. 20% of the data was processed, because she could focus on a particular subspace early on once she noticed a particular pattern forming.
+        </p>
+
         <h3 id="architecture">Architecture</h3>
         <p>
           Here we give a high-level overview of the architecture of our steering-by-example implementation.
@@ -135,10 +161,16 @@
           We compare approaches from multiple perspectives, for instance comparing how many data items land inside versus outside the selection at a certain chunk, comparing how steering affects the data in view space at one time point of the progression versus another, or comparing the data distribution inside the selection versus outside.
         </p>
       </div>
+      <div class="col m5 s12">
+        <figure class="right">
+          <img src="./static/img/screenshots_heatmap_evolution_wide.png" alt="State diagram of ProSteer." />
+          <figcaption><b>Figure 1: </b>Example progression scenario using steering-by-example. The steered region becomes present by the red background during the steering phase and then fades away, once steering is done.</figcaption>
+        </figure>
+      </div>
       <div class="col m7 s12">
         <p>
           To be able to make these comparisons, we structured the implementation along a basic pipeline reflecting the scenario, where data is loaded from a database, processed by a computation, and then shown in a visualization, on which view space selections can be made to define a region of interest.
-          The four modules listed below that make up that pipeline are depicted in Fig. 1.
+          The four modules listed below that make up that pipeline are depicted in Fig. 2.
 
           <ol>
             <li>The <b>client</b>, which provides the user interface for visualizing and interacting with the progression. Using this module, one can assess the progression through a set of visualizations, monitor the performance of the steering-by-example algorithm, and define a region of interest through direct selection.</li>
@@ -151,7 +183,7 @@
       <div class="col m5 s12">
         <figure class="right">
           <img src="./static/img/implementation-overview.png" alt="Modules of implementation for steering-by-example.">
-          <figcaption class="caption"><b>Figure 1: </b>Overview of the modular architecture used in the implementation of steering-by-example.</figcaption>
+          <figcaption class="caption"><b>Figure 2: </b>Overview of the modular architecture used in the implementation of steering-by-example.</figcaption>
         </figure>
       </div>
       <div class="col m7 s12">
@@ -164,39 +196,6 @@
 
           We describe the particular implementation of the steering and computation modules in our paper, including the visual design of ProSteer, an implementation of the client module.
         </p>
-
-        <h3 id="scenario">Scenario</h3>
-        <p>
-          We introduced the steering-by-example approach for progressive computations, for which their complexity prohibits running multiple passes over the entire dataset as it would simply take too long.
-          This could either be due to the size of the dataset being too large, or the computations run on the dataset taking too long.
-          As a realistic scenario for our benchmarks, we describe an example of the latter case, in which a business traveler uses steering-by-example while looking for a suitable accommodation in the city of Paris to attend a conference.
-        </p>
-      </div>
-      <div class="col m7 s12">
-        <p>
-          To determine, whether a housing listing is suitable or not, the traveler requires it to lie within walking distance to the conference venue, while at the same time having a reasonable price compared to its neighborhood.
-          There are thus two key performance indicators to this scenario on which the traveler bases her decision: the distance to walk to the conference center and the price in relation to other accommodations lying in a predefined radius of, e.g., 300 meters around a housing offer.
-          The former indicator can be computed using standard routing algorithms for the distance on foot between the conference venue and a particular housing option (e.g., the Google Distance Matrix service), while the latter indicator can be computed through a range analysis on the geographic location and housing price dimensions.
-          This traveler interest can only be computed on-demand, as it relies on the conference location for the former and on the travel dates for the latter.
-          Yet, as the dataset contains tens of thousands of housing listings, these on-demand computations also take some time to complete.
-        </p>
-        <p>
-          After the system has processed about 10% of the data, the traveler detects a cluster of housing listings that lie within a generally acceptable distance and offer good prices for their neighborhood.
-        </p>
-        <p>
-          Using steering-by-example, the traveler informs the PVA system to prioritize listings for that same visual cluster during the computation, by selecting it in the visualization through direct manipulation.
-          She observes how the next listings that are retrieved all fall within or in close proximity to the cluster she selected (see Fig. 2).
-          After finding a listing that she particularly likes, the traveler decides to go forth and book that housing option.
-          In total, she only needed to wait up until ca. 20% of the data was processed, because she could focus on a particular subspace early on once she noticed a particular pattern forming.
-        </p>
-      </div>
-      <div class="col m5 s12">
-        <figure class="right">
-          <img src="./static/img/screenshots_heatmap_evolution_wide.png" alt="State diagram of ProSteer." />
-          <figcaption><b>Figure 2: </b>Example progression scenario using steering-by-example. The steered region becomes present by the red background during the steering phase and then fades away, once steering is done.</figcaption>
-        </figure>
-      </div>
-      <div class="col m7 s12">
         <h3 id="implementation_details">Implementation Details</h3>
         <p>
           The steering and computation modules use Python 3.8.1, building on functionalities from the DecisionTreeClassifier module of <a href="https://scikit-learn.org/stable/index.html">scikit-learn</a> in version 0.22.2 as well as <a href="https://numpy.org/">NumPy</a> version 1.18.1 and <a href="https://pandas.pydata.org/">Pandas</a> version 1.0.1.
