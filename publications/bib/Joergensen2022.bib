@@ -1,0 +1,11 @@
+@inproceedings{jorgensen_avid_2022,
+	title = {{AVID}: {GPU}-enabled Visual Analytics with {GPU-FAST-PROCLUS}},
+	isbn = {978-3-89318-085-7},
+	doi = {10.48786/edbt.2022.51},
+	abstract = {GPU-FAST-PROCLUS is a GPU-parallelized algorithm for projected clustering based on the k-medoids approach. It speeds up clustering to allow for real-time interaction -- even for datasets of millions of items. Interactivity allows users to quickly determine sensible clustering parameters such as the number of clusters k, provided a suitable visualization is available. Yet, as clustering and visualization are usually decoupled, cluster results are funneled from the GPU back to the CPU, only to be mapped onto appropriate graphics, which are then rendered on the GPU again. This introduces a bottleneck that hinders fluid interaction with clustering. As a solution to this, we propose AVID (Analysis and Visualization In Device). Following the principle ``What happens on the GPU, stays on the GPU'', AVID removes the round trip to the CPU and keeps clustering results on the GPU to render them on the GPU directly. By doing so, users can interactively tune projected clustering parameters and observe the effects without noticeable delay. In our demo system, we showcase the efficiency of our data management strategies for projected clustering as well as the efficacy of data visualization.},
+	booktitle = {Proceedings of the 25th International International Conference on Extending Database Technology (EDBT'22)},
+	publisher = {OpenProceedings.org},
+	author = {J\o{}rgensen, Jakob R\o{}dsgaard and Assent, Ira and Schulz, Hans-J\"org},
+	year = {2022},
+	pages = {562--565}
+}
