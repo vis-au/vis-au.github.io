@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>A Pipeline for Tailored Sampling for Progressive Visual Analytics</title>
+
+  <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="../static/css/fonts.css" media="screen,projection">
+  <link type="text/css" rel="stylesheet" href="../static/css/style.css" media="screen,projection">
+  <link type="text/css" rel="stylesheet" href="./style.css" media="screen,projection">
+  <script src="https://kit.fontawesome.com/cb26641bd1.js"></script>
+  <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav class="au-color">
+    <div class="nav-wrapper container">
+      <a href="../" class="brand-logo">
+        <img src="../static/img/auvis_logo_large_white.png" height="45px" alt="">
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="../publications/">Publications</a></li>
+        <li><a class="current" href="../software/">Software</a></li>
+        <li><a href="../teaching_materials/">Teaching Material</a></li>
+        <li><a href="../student_projects/">Student Projects</a></li>
+        <li><a href="../team/">Team</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="container">
+    <section class="row" id="map-like">
+      <h2>A Pipeline for Tailored Sampling for Progressive Visual Analytics</h2>
+      <p class="leader">Proceedings of the International EuroVis Workshop on Visual Analytics (to appear)</p>
+    </section>
+
+    <section class="row">
+      <div class="col s12 m7 abstract">
+        <h3>Authors</h3>
+        <a href="https://cs.au.dk/~hograefer" class="author"><span>Marius Hogräfer</span></a>
+        <a href="https://orcid.org/0000-0002-1678-6680" class="author"><span>Jakob Burkhardt</span></a>
+        <a href="https://hjschulz.net/" class="author"><span>Hans-Jörg Schulz</span></a>
+
+        <figure class="teaser" style="color:#777">
+          <a href="https://github.com/vis-au/progressive-steering">
+            <img src="./static/img/prosample_interface_screenshot.png" alt="Screenshot of ProSample." />
+          </a>
+          <figcaption>Screenshot from <b>ProSample</b> showing a side-by-side view from two pipelines (left and right views) sampling the spotify dataset, shown as binned scatterplots, as well as the delta between thes bins (center view).</figcaption>
+        </figure>
+
+        <h3>Abstract</h3>
+        <p>
+          Progressive Visual Analytics enables analysts to interactively work with partial results from  long-running computations early on instead of forcing them to wait.
+          For very large datasets, the first step is to divide that input data into smaller chunks using sampling, which are then passed down the progressive analysis pipeline all the way to their progressive visualization in the end.
+          The quality of the partial results produced by the progression heavily depends on the quality of these chunks, that is, chunks need to be representative of the dataset.
+          Whether or not a sampling approach produces representative chunks does however depend on the particular analysis scenario.
+        </p>
+      </div>
+
+      <div class="col s12 m3 right resources">
+        <h3>Resources</h3>
+
+        <h4> <a href=""><i class="icon fas fa-file-pdf"></i>Paper (preprint)</a></h4>
+        <h4> <a href=""><i class="icon fas fa-globe"></i>DOI (external)</a></h4>
+        <h4><a href=""><i class="icon fas fa-file-pdf"></i> Slides (pdf)</a></h4>
+        <h4><a href=""><i class="icon fas fa-quote-right"></i> BibTeX Citation</a></h4>
+        <h4 class="highlight"><a href="https://github.com/vis-au/prosample"><i class="icon fab fa-github"></i> Code on Github</a></h4>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="col s12 m7 abstract">
+        <h3>Citation in BibTeX</h3>
+
+      <p>To cite this article, we encourage you to use the following bibtex entry in your citation manager:</p>
+
+        <pre>
+  @article {sbe2022,
+    title = {Steering-by-Example for Progressive Visual Analytics},
+    author = {Angelini, Marco and Hogr\"afer, Marius and Santucci,
+              Giuseppe and Schulz, Hans-J\"org},
+    year = {2022},
+    number = {tbd},
+    journal = {tbd},
+    volume = {tbd},
+    pages = {tbd},
+    doi = {tbd}
+  }
+        </pre>
+      </div>
+    </section>
+
+    <section class="empty"></section>
+  </article>
+
+  <footer class="page-footer au-color darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Aarhus University Visualization Repository</h5>
+          <p class="grey-text text-lighten-4">
+          </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://cs.au.dk/">Department of Computer Science, Aarhus University</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://cs.au.dk/research/ubiquitous-computing-and-interaction/">Research Group for Ubiquitous Computing and Interaction</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <!-- <div class="container">
+        © 2020 Copyright Department of Computer Science, Aarhus University
+      <a class="grey-text text-lighten-4 right" href="#">back to top</a>
+      </div> -->
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="../static/js/materialize.min.js"></script>
+</body>
+</html>
