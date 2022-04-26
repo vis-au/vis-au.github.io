@@ -22,3 +22,6 @@ section div.person div.info .references {
 section div.person div.info .references .reference {
   margin-left: 0.75rem;
 }
+section#graduates ul {
+  margin-left: 0.75rem;
+}
