@@ -1,0 +1,58 @@
+h4.highlight a {
+  background: black;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 3px;
+}
+.resources h4 a {
+  font-family: AUPassataRegular;
+  font-size: 1.1rem;
+}
+.resources .icon {
+  margin-right: 0.5rem;
+}
+.resources h4 a:hover {
+  text-decoration: underline;
+}
+.row .row {
+  margin: 0;
+}
+figure.teaser {
+  margin: 0;
+  margin-top: 2rem;
+}
+div.abstract a.author {
+  text-decoration: underline;
+  margin-right: 0.2rem;
+}
+article .col.m7 a {
+  font-weight: bold;
+}
+.toc {
+  border-left: 1px solid #002546;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 1200px) {
+  .toc {
+    margin-top: 3rem;
+  }
+}
+.toc h2 {
+  font-family: AUPassataBold;
+  font-size: 1.4rem;
+  margin-top: 0;
+}
+.toc ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.toc ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.toc ul li a {
+  text-decoration: underline;
+}
