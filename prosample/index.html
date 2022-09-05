@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>A Pipeline for Tailored Sampling for Progressive Visual Analytics</title>
+  <title>Tailorable Sampling for Progressive Visual Analytics</title>
 
   <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css"  media="screen,projection"/>
   <link type="text/css" rel="stylesheet" href="../static/css/fonts.css" media="screen,projection">
@@ -28,6 +28,67 @@
       </ul>
     </div>
   </nav>
+
+  <article class="container">
+    <section class="row" id="map-like">
+      <h2>Tailorable Sampling for Progressive Visual Analytics</h2>
+      <p class="leader">(under review)</p>
+    </section>
+
+    <section class="row">
+      <div class="col s12 m7 abstract">
+        <h3>Authors</h3>
+        <a href="https://cs.au.dk/~hograefer" class="author"><span>Marius Hogräfer</span></a>
+        <a href="https://hjschulz.net/" class="author"><span>Hans-Jörg Schulz</span></a>
+
+        <figure class="teaser" style="color:#777">
+          <a href="">
+            <img src="./static/img/pipeline_v2.png" alt="Screenshot of ProSample." />
+          </a>
+          <figcaption>
+            Enabling tailorable PVA-sampling using a pipeline that structures the sampling process into three steps (linearization, subdivision, and selection). The steps are depicted here along the data format they operate on: The linearization takes in the input data structure and transforms it into linear format, which is then subdivided into bins in the subdivision step. The last step then produces the chunks forwarded into the PVA process by progressively selecting appropriate items from each bin.
+          </figcaption>
+        </figure>
+
+        <h3>Abstract</h3>
+        <p>
+          Progressive visual analytics (PVA) allows analysts to maintain their flow during otherwise long-running computations, by producing early, incomplete results that refine over time, for example, by running the computation over smaller partitions of the data. Generally, these partitions are created using sampling. The goal for sampling in PVA is, therefore, to draw samples of the dataset such that the progressive visualization becomes as useful as possible as soon as possible. What makes the visualization useful depends on the analysis task and, accordingly, some task-specific sampling methods have been proposed for PVA to address this need. However, as analysts see more and more of their data during the progression, the task in PVA often changes, which means that analysts need to restart the computation to switch the sampling method, causing them to lose their analysis flow. This poses a clear limitation to the proposed benefits of PVA. To this end, in this paper we propose a pipeline for PVA-sampling, which allows tailoring the data partitioning to analysis scenarios by changing out modules, and in a way that does not require restarting the analysis. We for the first time characterize the problem of PVA-sampling, formalize the pipeline in terms of the data format, discuss on-the-fly tailoring, and present additional examples demonstrating its usefulness.
+        </p>
+      </div>
+
+      <div class="col s12 m3 right resources">
+        <h3>Resources</h3>
+
+        <!-- <h4> <a href="https://cs.au.dk/~hjschulz/pdfs/eurova22.pdf"><i class="icon fas fa-file-pdf"></i>Paper</a></h4> -->
+        <!-- <h4> <a href="https://diglib.eg.org/handle/10.2312/eurova20221079"><i class="icon fas fa-globe"></i>DOI (external)</a></h4> -->
+        <h4><a href="./"><i class="icon fas fa-quote-right"></i> BibTeX Citation (tba)</a></h4>
+        <h4><a href="https://github.com/vis-au/prosample/blob/main/server/pipeline/figures.ipynb"><i class="icon fas fa-book"></i></i> Notebook for recreating figures</a></h4>
+        <h4 class="highlight"><a href="https://github.com/vis-au/prosample"><i class="icon fab fa-github"></i> Code on Github</a></h4>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="col s12 m7 abstract">
+        <h3>Citation in BibTeX</h3>
+
+      <p>To cite this article, we encourage you to use the following bibtex entry in your citation manager:</p>
+
+        <pre>
+@article{pva_tailorable_sampling2022,
+  title     = {Tailorable Sampling for Progressive Visual Analytics},
+  author    = {Hogr\"afer, Marius and Schulz, Hans-J\"org},
+  year      = {2022},
+  journal   = {TBA},
+  pages     = {TBA},
+  publisher = {TBA},
+  doi       = {TBA},
+}
+        </pre>
+      </div>
+    </section>
+
+    <section class="empty"></section>
+  </article>
 
   <article class="container">
     <section class="row" id="map-like">
