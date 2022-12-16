@@ -1,72 +1,58 @@
-.navbar-fixed nav h2 {
-  margin-top: 1rem;
-  margin-left: 300px;
+h4.highlight a {
+  background: black;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 3px;
 }
-
-article.container {
-  max-width: 1100px;
+.resources h4 a {
+  font-family: AUPassataRegular;
+  font-size: 1.1rem;
 }
-
-article.container .collection-item span.title {
-  font-weight: bold;
-}
-
-article.container .collection-item span {
-  color: grey;
-}
-
-#revize {
-  margin-bottom: 4rem;
-}
-#revize .project-links a:hover {
-  background: #eee;
-}
-
-.project-links {
-  float: right;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-wrap: wrap;
-}
-#revize .project-links {
-  float: left;
-}
-.project-links a {
-  height: 2rem;
-  border: 1px solid #ccc;
-  padding: 0.25rem 0.75rem;
-  margin-right: 0.25rem;
-  border-radius: 2rem;
-  transition: background 0.1s ease-in-out;
-  white-space: nowrap;
-}
-.project-links a:hover {
-  background: #ddd;
-}
-.project-links a i {
+.resources .icon {
   margin-right: 0.5rem;
 }
-
-p.subtitle {
-  font-style: italic;
+.resources h4 a:hover {
+  text-decoration: underline;
 }
-.collection-item {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  transition: background 0.15s ease-in;
-  cursor: default;
+.row .row {
+  margin: 0;
 }
-.collection-item:hover {
-  background: #eee;
+figure.teaser {
+  margin: 0;
+  margin-top: 2rem;
 }
-@media screen and (max-width: 1000px) {
-  .collection-item {
-    flex-direction: column;
+div.abstract a.author {
+  text-decoration: underline;
+  margin-right: 0.2rem;
+}
+article .col.m7 a {
+  font-weight: bold;
+}
+.toc {
+  border-left: 1px solid #002546;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+}
+@media screen and (min-width: 1200px) {
+  .toc {
+    margin-top: 3rem;
   }
-  .project-links a {
-    margin: 0.25rem 0.15rem;
-  }
+}
+.toc h2 {
+  font-family: AUPassataBold;
+  font-size: 1.4rem;
+  margin-top: 0;
+}
+.toc ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.toc ul li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.toc ul li a {
+  text-decoration: underline;
 }
