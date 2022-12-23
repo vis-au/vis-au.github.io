@@ -1,0 +1,20 @@
+section.row.teaser img {
+  float: none;
+}
+section.row.teaser::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
+  height: 200px;
+  margin-top: -200px;
+  width: 100%;
+  content: '';
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+  padding-left: 30px;
+}
+section ul:not(.browser-default) > li {
+  list-style: inside;
+  padding: 2px 0;
+}
