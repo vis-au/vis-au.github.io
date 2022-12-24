@@ -205,10 +205,9 @@ pre.bibtex {
   margin: 0.5rem;
 }
 
-.row.gallery img {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding: 5px;
+.gallery img.col.m3.s12 {
+  padding-right: 4px;
+  padding-bottom: 4px;
 }
 
 .overlay#bibtex {
