@@ -25,7 +25,7 @@
     "vega-embed": "^4.2.1"
   },
   "devDependencies": {
-    "webpack": "^4.35.3",
-    "webpack-cli": "^3.3.5"
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   }
 }
