@@ -1,7 +1,7 @@
-section.row.teaser img {
+.row.teaser img {
   float: none;
 }
-section.row.teaser::after {
+.row.teaser::after {
   display: block;
   position: relative;
   background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0, #fff 100%);
@@ -14,6 +14,7 @@ section.row.teaser::after {
   color: white;
   padding-left: 30px;
 }
+
 section ul:not(.browser-default) > li {
   list-style: inside;
   padding: 2px 0;
