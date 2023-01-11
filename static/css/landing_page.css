@@ -1,6 +1,6 @@
 body.landing-page article div.image {
   background-image: url("../img/CS-building-at-night.png");
-  background-size: 100%;
+  background-position-x: center;
   height: 635px;
   padding-top: 340px;
   color: white;
