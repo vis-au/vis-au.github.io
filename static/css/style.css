@@ -12,6 +12,10 @@ img.profile-pic {
   overflow: hidden;
 }
 
+nav {
+  position: sticky;
+  top: 0;
+}
 nav a.brand-logo {
   height: 100%;
   display: flex;
