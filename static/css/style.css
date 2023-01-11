@@ -37,6 +37,9 @@ nav li > a.current {
   border-top: 3px solid rgb(255, 255, 255);
 }
 @media screen and (max-width: 1280px) {
+  nav {
+    position: relative;
+  }
   nav a.brand-logo {
     position: relative;
   }
