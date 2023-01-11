@@ -32,6 +32,25 @@ nav li > a.current {
   background: rgba(200, 200, 200, .3);
   border-top: 3px solid rgb(255, 255, 255);
 }
+@media screen and (max-width: 1280px) {
+  nav a.brand-logo {
+    position: relative;
+  }
+  nav ul.hide-on-med-and-down {
+    display: flex !important;
+    float: left !important;
+    width: 100%;
+    margin-bottom: 30px;
+    background: #002546;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;;
+  }
+  nav ul li a {
+    line-height: 40px;
+  }
+}
 
 article section img.teaser {
   max-width: 100%;
