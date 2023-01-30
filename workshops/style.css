@@ -19,3 +19,83 @@ section ul:not(.browser-default) > li {
   list-style: inside;
   padding: 2px 0;
 }
+
+div.gallery img {
+  cursor: pointer;
+}
+
+div.gallery {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+div.gallery img {
+  width: 24%;
+  margin: 2px 0;
+}
+
+@media screen and (max-width: 1000px) {
+  div.gallery img {
+    width: 49%;
+    margin: 2px 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  div.gallery img {
+    width: 100%;
+    margin: 2px 0;
+  }
+}
+
+#clicked-image-overlay {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  align-items: center;
+  cursor: pointer;
+}
+#clicked-image-overlay .close {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  top: 25px;
+  text-align: right;
+  padding: 2rem;
+  width: 100%;
+}
+#clicked-image-overlay .close * {
+  font-size: 25px;
+  font-weight: bolder;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 2rem;
+  line-height: 1.8rem;
+  color: #666;
+}
+#clicked-image-overlay .close *:hover {
+  color: black;
+}
+#clicked-image-overlay .image-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#clicked-image-overlay img {
+  max-width: 90%;
+  max-height: 90vh;
+  box-shadow: 0 0 10px #aaa;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
