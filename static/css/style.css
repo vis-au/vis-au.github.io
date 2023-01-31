@@ -250,3 +250,18 @@ pre.bibtex {
 footer a:hover {
   text-decoration: underline;
 }
+
+details>summary {
+ 
+  list-style: none;
+}
+summary::-webkit-details-marker {
+  display: none
+}
+
+summary::after {
+  content: ' ►';
+}
+details[open] summary:after {
+  content: " ▼";
+}
