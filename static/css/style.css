@@ -250,3 +250,7 @@ pre.bibtex {
 footer a:hover {
   text-decoration: underline;
 }
+
+.numbering {
+  color: rgba(170, 170, 200)
+}
