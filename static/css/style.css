@@ -220,6 +220,17 @@ pre.bibtex {
 .student-project .abstract {
   margin: 0.2rem 0;
 }
+.student-project .video-icons {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.student-project .video-icons a{
+  align-self: flex-end;
+}
+
 .student-project .icons {
   font-size: 14px;
   display: flex;
@@ -228,6 +239,7 @@ pre.bibtex {
   align-content: flex-start;
   flex-wrap: wrap;
 }
+
 .student-project .icons i {
   margin: 0.5rem;
 }
