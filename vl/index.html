@@ -15,6 +15,9 @@
 </head>
 
 <body>
+  <div class="toast-message" id="on-embed-toast">
+    <span>Copied embed code to clipboard</span> 
+  </div>
   <nav class="au-color">
     <div class="nav-wrapper container">
       <a href="../" class="brand-logo">
@@ -63,10 +66,25 @@
                 </p>
               </div>
               <div class="col s1 video-icons">
-                <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=a5741e0a-e5fa-4aa3-9d4f-af93014be3c1"
-                  target="_blank"><i class="fas fa-video"></i></a>
+                <div class="video-icon">
+                  <div class="icon-image">
+                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=a5741e0a-e5fa-4aa3-9d4f-af93014be3c1"
+                    target="_blank"><i class="fas fa-video"></i></a>
+                  </div>
+                    <div class="icon-label">Play Video</div>
+                </div>
+                <div class="video-icon copy-embed">
+                  <div class="icon-image">
+                  <i class="fa fa-code"></i></div>
+                  <div class="icon-label">Copy Embed</div>
+                </div>
+                <div class="video-icon">
+                  <div class="icon-image">
                   <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=a5741e0a-e5fa-4aa3-9d4f-af93014be3c1"
-                  target="_blank"><i class="fa fa-code"></i></a>
+                  target="_blank"><i class="fa fa-file-code"></i></a></div>
+                  <div class="icon-label">View Code</div>
+                </div>
+                  
               </div>
             </li>
             <li class="collection-item student-project row">
@@ -80,7 +98,25 @@
                 </p>
               </div>
               <div class="col s1 video-icons">
-                <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=57403d63-e43d-49b4-9106-af93014be392" target="_blank"><i class="fas fa-video"></i></a>
+                <div class="video-icon">
+                  <div class="icon-image">
+                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=57403d63-e43d-49b4-9106-af93014be392"
+                    target="_blank"><i class="fas fa-video"></i></a>
+                  </div>
+                    <div class="icon-label">Play Video</div>
+                </div>
+                <div class="video-icon">
+                  <div class="icon-image">
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=57403d63-e43d-49b4-9106-af93014be392"
+                  target="_blank"><i class="fa fa-code"></i></a></div>
+                  <div class="icon-label">Copy Embed</div>
+                </div>
+                <div class="video-icon">
+                  <div class="icon-image">
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=57403d63-e43d-49b4-9106-af93014be392"
+                  target="_blank"><i class="fa fa-file-code"></i></a></div>
+                  <div class="icon-label">Code</div>
+                </div>
               </div>
             </li>
           </ul>
@@ -105,8 +141,25 @@
                 </p>
               </div>
               <div class="col s1 video-icons">
-                <a target = "_blank"href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=510173d1-e615-4307-b867-af90009b2dfa"><i
-                    class="fas fa-video"></i></a>
+                <div class="video-icon">
+                  <div class="icon-image">
+                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=510173d1-e615-4307-b867-af90009b2dfa"
+                    target="_blank"><i class="fas fa-video"></i></a>
+                  </div>
+                    <div class="icon-label">Play Video</div>
+                </div>
+                <div class="video-icon">
+                  <div class="icon-image">
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=510173d1-e615-4307-b867-af90009b2dfa"
+                  target="_blank"><i class="fa fa-code"></i></a></div>
+                  <div class="icon-label">Copy Embed</div>
+                </div>
+                <div class="video-icon">
+                  <div class="icon-image">
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=510173d1-e615-4307-b867-af90009b2dfa"
+                  target="_blank"><i class="fa fa-file-code"></i></a></div>
+                  <div class="icon-label">Code</div>
+                </div>    
               </div>
             </li>
           </ul>
@@ -632,6 +685,8 @@
   </footer>
 
   <script type="text/javascript" src="../static/js/materialize.min.js"></script>
+  
+  <script type="text/javascript" src="./script.js"></script>
 </body>
 
 </html>
