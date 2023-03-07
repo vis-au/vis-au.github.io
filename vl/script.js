@@ -1,5 +1,5 @@
 const EMBED_TOAST_ID = "#on-embed-toast";
-[
+const VIDEO_EMBEDS = [
 	{
 		id: 1,
 		embed: '<iframe src="https://panopto.au.dk/Panopto/Pages/Embed.aspx?id=a5741e0a-e5fa-4aa3-9d4f-af93014be3c1&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>',
@@ -131,12 +131,23 @@ const EMBED_TOAST_ID = "#on-embed-toast";
 ];
 document.querySelectorAll(".copy-embed").forEach((icon) => {
 	icon.addEventListener("click", (event) => {
-		showToast(EMBED_TOAST_ID);
-		window.setInterval(() => {
-			hideToast(EMBED_TOAST_ID);
-		}, 4000);
+		const videoId = getVideoId(event.target);
+		if(videoId){
+			const embedCode = VIDEO_EMBEDS[videoId];
+			navigator.clipboard.writeText(embedCode.embed);
+			showToast(EMBED_TOAST_ID);
+			window.setInterval(() => {
+				hideToast(EMBED_TOAST_ID);
+			}, 4000);
+
+		}
 	});
 });
+
+function getVideoId(innerElement) {
+	const listItem = innerElement.closest("li");
+	return listItem.getAttribute("video-id");
+}
 
 function showToast(id) {
 	document.querySelector(id).classList.add("activated");
