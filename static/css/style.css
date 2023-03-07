@@ -318,3 +318,16 @@ footer a:hover {
   flex-direction: column;
   justify-content: space-around;
 }
+
+.references {
+  font-style: italic;
+}
+
+.references a{
+  color: darkblue;
+  text-decoration: underline;
+}
+
+.references span {
+  text-decoration: underline;
+}
