@@ -90,7 +90,7 @@ const VIDEO_EMBEDS = [
 	},
 	{
 		id: 7.2,
-		embed: '<iframe src="https://panopto.au.dk/Panopto/Pages/Embed.aspx?id=09b0a843-0051-46de-b010-af8c00b4ca6c&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>',
+		embed: '<iframe src="https://panopto.au.dk/Panopto/Pages/Embed.aspx?id=e624ce13-67fe-4872-badf-afbe00da3edb&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>',
 	},
 	{
 		id: 7.3,
@@ -127,6 +127,10 @@ const VIDEO_EMBEDS = [
 	{
 		id: 10.3,
 		embed: '<iframe src="https://panopto.au.dk/Panopto/Pages/Embed.aspx?id=74217546-3103-4fad-b397-afba00f09f1e&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>',
+	},
+	{
+		id: 10.4,
+		embed: '<iframe src="https://panopto.au.dk/Panopto/Pages/Embed.aspx?id=32087dde-838d-4426-827b-afbe00d03e90&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>',
 	},
 ];
 document.querySelectorAll(".copy-embed").forEach((icon) => {
