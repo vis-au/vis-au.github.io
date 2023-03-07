@@ -133,8 +133,8 @@ document.querySelectorAll(".copy-embed").forEach((icon) => {
 	icon.addEventListener("click", (event) => {
 		const videoId = getVideoId(event.target);
 		if(videoId){
-			const embedCode = getEmbedCode(videoId);
-			navigator.clipboard.writeText(embedCode.embed);
+			const videoData = getVideoData(videoId);
+			navigator.clipboard.writeText(videoData.embed);
 			showToast(EMBED_TOAST_ID);
 			window.setInterval(() => {
 				hideToast(EMBED_TOAST_ID);
@@ -143,9 +143,8 @@ document.querySelectorAll(".copy-embed").forEach((icon) => {
 	});
 });
 
-function getEmbedCode(videoId) {
-	let datum = VIDEO_EMBEDS.find(v=> v.id.toString() === videoId);
-	return datum.embed;
+function getVideoData(videoId) {
+	return VIDEO_EMBEDS.find(v=> v.id.toString() === videoId);
 }
 
 function getVideoId(innerElement) {
