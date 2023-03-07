@@ -220,6 +220,17 @@ pre.bibtex {
 .student-project .abstract {
   margin: 0.2rem 0;
 }
+.student-project .video-icons {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.student-project .video-icons a{
+  align-self: flex-end;
+}
+
 .student-project .icons {
   font-size: 14px;
   display: flex;
@@ -228,6 +239,7 @@ pre.bibtex {
   align-content: flex-start;
   flex-wrap: wrap;
 }
+
 .student-project .icons i {
   margin: 0.5rem;
 }
@@ -253,4 +265,69 @@ footer a:hover {
 
 .numbering {
   color: rgba(170, 170, 200)
+}
+
+.icon-label {
+  visibility: hidden;
+}
+
+.icon-image{
+  text-align: center;
+  cursor: pointer;
+}
+
+.icon-image:hover + .icon-label {
+  visibility:visible;
+}
+
+.video-icon {
+  text-align: center;
+  display:grid;
+}
+
+.toast-message{
+  position: fixed;
+  margin-bottom: -10;
+  background-color: white;
+  box-shadow: 3px 3px 8px 3px #888888;
+  width: 18rem;
+  height: 3.5rem;
+  display: flex;
+  justify-content: center;
+  border-radius:1rem;
+  transition: all 0.2s;
+  opacity: 0;
+  z-index: -1;
+  bottom:0;
+  margin-bottom:20px;
+  left: 50%;
+  margin-left: -9rem;
+}
+
+.toast-message.activated {
+  opacity: 1;
+  z-index: 4;
+}
+
+.toast-message span {
+  align-self: center;
+}
+
+.thumbnail {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.references {
+  font-style: italic;
+}
+
+.references a{
+  color: darkblue;
+  text-decoration: underline;
+}
+
+.references span {
+  text-decoration: underline;
 }
