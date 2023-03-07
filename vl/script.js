@@ -133,16 +133,20 @@ document.querySelectorAll(".copy-embed").forEach((icon) => {
 	icon.addEventListener("click", (event) => {
 		const videoId = getVideoId(event.target);
 		if(videoId){
-			const embedCode = VIDEO_EMBEDS[videoId];
+			const embedCode = getEmbedCode(videoId);
 			navigator.clipboard.writeText(embedCode.embed);
 			showToast(EMBED_TOAST_ID);
 			window.setInterval(() => {
 				hideToast(EMBED_TOAST_ID);
 			}, 4000);
-
 		}
 	});
 });
+
+function getEmbedCode(videoId) {
+	let datum = VIDEO_EMBEDS.find(v=> v.id.toString() === videoId);
+	return datum.embed;
+}
 
 function getVideoId(innerElement) {
 	const listItem = innerElement.closest("li");
