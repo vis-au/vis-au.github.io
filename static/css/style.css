@@ -312,3 +312,9 @@ footer a:hover {
 .toast-message span {
   align-self: center;
 }
+
+.thumbnail {
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
