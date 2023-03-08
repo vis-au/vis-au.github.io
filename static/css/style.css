@@ -337,7 +337,7 @@ footer a:hover {
   right: 0;
   display: flex;
   flex-direction: column;
-  width: 36rem;
+  width: 80%;
 }
 
 .icon-legend-entry {
@@ -350,5 +350,5 @@ footer a:hover {
 }
 
 .icon-legend-entry span {
-  margin-left : 0px;
+  margin-left : 15px;
 }
