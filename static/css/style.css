@@ -276,7 +276,7 @@ footer a:hover {
   cursor: pointer;
 }
 
-.icon-image:hover + .icon-label {
+.video-icon:hover .icon-label {
   visibility:visible;
 }
 
@@ -330,4 +330,25 @@ footer a:hover {
 
 .references span {
   text-decoration: underline;
+}
+
+.icon-legend {
+  position: relative;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  width: 36rem;
+}
+
+.icon-legend-entry {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.icon-legend-entry i {
+  width: 2rem;
+}
+
+.icon-legend-entry span {
+  margin-left : 0px;
 }
