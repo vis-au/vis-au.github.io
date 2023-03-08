@@ -2,16 +2,16 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <title>Vega-Lite Tutorial | AU Visualization Research Repository</title>
 
   <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css" media="screen,projection" />
-  <link type="text/css" rel="stylesheet" href="../static/css/fonts.css" media="screen,projection">
-  <link type="text/css" rel="stylesheet" href="../static/css/style.css" media="screen,projection">
+  <link type="text/css" rel="stylesheet" href="../static/css/fonts.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="../static/css/style.css" media="screen,projection" />
   <script src="https://kit.fontawesome.com/cb26641bd1.js"></script>
-  <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -21,12 +21,14 @@
   <nav class="au-color">
     <div class="nav-wrapper container">
       <a href="../" class="brand-logo">
-        <img src="../static/img/auvis_logo_large_white.png" height="45px" alt="">
+        <img src="../static/img/auvis_logo_large_white.png" height="45px" alt="" />
       </a>
       <ul class="right hide-on-med-and-down">
         <li><a href="../publications/">Publications</a></li>
         <li><a href="../software/">Software</a></li>
-        <li><a class="current" href="../teaching_materials/">Teaching Material</a></li>
+        <li>
+          <a class="current" href="../teaching_materials/">Teaching Material</a>
+        </li>
         <li><a href="../student_projects/">Student Projects</a></li>
         <li><a href="../workshops/">Workshops</a></li>
         <li><a href="../team/">Team</a></li>
@@ -36,22 +38,44 @@
 
   <article class="container">
     <section class="row">
-
       <h2>Vega-Lite Tutorial</h2>
 
       <p class="leader">
-        Welcome to the tutorial on Vega-Lite - a declarative visualization grammar! It provides a concise JSON syntax
-        for supporting quick creation of visualizations to support analysis. You can read more about Vega-Lite at <a
-          href="https://vega.github.io/vega-lite/" target="_blank">vega.github.io/vega-lite</a>. <br /> Here, you will
-        find videos explaining
-        the features of Vega-Lite, code walkthroughs for each feature and examples of visualizations.
+        Welcome to the tutorial on Vega-Lite - a declarative
+        visualization grammar! It provides a concise JSON syntax for
+        supporting quick creation of visualizations to support
+        analysis. You can read more about Vega-Lite at
+        <a href="https://vega.github.io/vega-lite/" target="_blank">vega.github.io/vega-lite</a>. <br />
+        Here, you will find videos explaining the features of
+        Vega-Lite, code walkthroughs for each feature and examples
+        of visualizations.
       </p>
+      <div class="icon-legend">
+        <div class="icon-legend-entry">
+          <i class="fas fa-video"></i>
+          <span><b>Play video</b> - Opens a new tab playing the
+            video</span>
+        </div>
+        <div class="icon-legend-entry">
+          <i class="fa fa-code"></i>
+          <span><b>Copy Embed</b> - Copies HTML code to embed the
+            video</span>
+        </div>
+        <div class="icon-legend-entry">
+          <i class="fa fa-file-code"></i>
+          <span><b>View Code</b> - Opens the online Vega-Lite
+            Editor with the JSON code
+          </span>
+        </div>
+      </div>
     </section>
 
     <section class="row" id="student-projects">
       <div class="row">
         <div class="col s12">
-          <h3 id="course-projects-2021"> <span class="numbering">1.</span> Introduction </h3>
+          <h3 id="course-projects-2021">
+            <span class="numbering">1.</span> Introduction
+          </h3>
         </div>
         <div class="col s12">
           <ul class="collection">
@@ -61,26 +85,37 @@
                   target="_blank"><img src="./img/thumbnails/1.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">1</span> Overview of Vega-Lite</span>
+                <span class="title"><span class="numbering">1</span>
+                  Overview of Vega-Lite</span>
                 <p class="abstract">
-                  Introducting Vega-Lite, a declarative visualization grammar that makes coding visualizations easier!
-                  This video compares imperative vs. declarative visualizations, motivate the use of Vega-Lite and the
-                  structure of the Vega stack.
+                  Introducting Vega-Lite, a declarative
+                  visualization grammar that makes coding
+                  visualizations easier! This video
+                  compares imperative vs. declarative
+                  visualizations, motivate the use of
+                  Vega-Lite and the structure of the Vega
+                  stack.
                 </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/" target="_blank">Vega-Lite Home Page</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/" target="_blank">Vega-Lite Home Page</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon play-video">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=a5741e0a-e5fa-4aa3-9d4f-af93014be3c1"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=a5741e0a-e5fa-4aa3-9d4f-af93014be3c1"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -88,7 +123,6 @@
                   </div>
                   <div class="icon-label">Copy Embed</div>
                 </div>
-
               </div>
             </li>
             <li video-id="1.1" class="collection-item student-project row">
@@ -97,24 +131,33 @@
                   target="_blank"><img img src="./img/thumbnails/1.1.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">1.1</span> JSON and the online Vega Editor</span>
+                <span class="title"><span class="numbering">1.1</span> JSON
+                  and the online Vega Editor</span>
                 <p class="abstract">
-                  Checking out the online editor and a brief overview of the Vega-Lite JSON schema
+                  Checking out the online editor and a
+                  brief overview of the Vega-Lite JSON
+                  schema
                 </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://www.json.org/json-en.html" target="_blank">JSON Introduction</a></li>
+                    <li>
+                      <a href="https://www.json.org/json-en.html" target="_blank">JSON Introduction</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=57403d63-e43d-49b4-9106-af93014be392"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=57403d63-e43d-49b4-9106-af93014be392"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -123,25 +166,29 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICCNsRpwIUmfIC+SiDiRQassmgCMYpUzYNZyiH0AM0EGCBhFEGIoOSg1NABtUGRtAGt9JiRtSPgaMiw0ADYABiU4WRjlFzdNEAAPNFAmFzRMbQY4JSDzQWV9AEkAWQARACEAAgAlNWrIpDqaQNRZBkFBOxAAT0aQJDIybT5MOH0Yv0xI6CRBE9rlNmQW1ATS92L3gF0NzDob-RAbICFKAHE5ZqhPN5fP4liAQmEIkoYDEKvFnsksul0IcoBcyhU2FVXDsGrVmvJUG0Ol0en10EMxlMZsSNtsyU8qZ04bT9JM2NhyuMACoPNRsCxMn4spQxQRsbK1PYHI63EBnWQXQF2DFpDJZSIAdxoynoRVKIHKlXBoDZTQ57S53TgvV5-OOsmFosw4ogktmSnmizQKzWG1JoCVhwox1O0LxICufzuoqeLwUb0+31+qoBgK+Hxlcm6NVAZjgBp2EDabFSqraSFkoMOGtzNiAA"
-                      target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICCNsRpwIUmfIC+SiDiRQassmgCMYpUzYNZyiH0AM0EGCBhFEGIoOSg1NABtUGRtAGt9JiRtSPgaMiw0ADYABiU4WRjlFzdNEAAPNFAmFzRMbQY4JSDzQWV9AEkAWQARACEAAgAlNWrIpDqaQNRZBkFBOxAAT0aQJDIybT5MOH0Yv0xI6CRBE9rlNmQW1ATS92L3gF0NzDob-RAbICFKAHE5ZqhPN5fP4liAQmEIkoYDEKvFnsksul0IcoBcyhU2FVXDsGrVmvJUG0Ol0en10EMxlMZsSNtsyU8qZ04bT9JM2NhyuMACoPNRsCxMn4spQxQRsbK1PYHI63EBnWQXQF2DFpDJZSIAdxoynoRVKIHKlXBoDZTQ57S53TgvV5-OOsmFosw4ogktmSnmizQKzWG1JoCVhwox1O0LxICufzuoqeLwUb0+31+qoBgK+Hxlcm6NVAZjgBp2EDabFSqraSFkoMOGtzNiAA"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
           </ul>
         </div>
       </div>
-      </div>
       <div class="row">
         <div class="col s12">
-          <h3 id="course-projects-2020"> <span class="numbering">2.</span> Data</h3>
+          <h3 id="course-projects-2020">
+            <span class="numbering">2.</span> Data
+          </h3>
         </div>
-        <div class="col s12 ">
+        <div class="col s12">
           <ul class="collection">
-
             <li video-id="2" class="collection-item student-project row">
               <div class="thumbnail col s2 m2">
                 <a target="_blank"
@@ -149,25 +196,34 @@
                     src="./img/thumbnails/2.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">2</span> Importing datasets into Vega-Lite</span>
+                <span class="title"><span class="numbering">2</span>
+                  Importing datasets into Vega-Lite</span>
                 <p class="abstract">
-                  Overview of Vega-Lite's data model, how to import datasets, and how to generate data.
+                  Overview of Vega-Lite's data model, how
+                  to import datasets, and how to generate
+                  data.
                 </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/data.html
-                      " target="_blank">Vega-Lite's Data Model</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/data.html
+                      " target="_blank">Vega-Lite's Data Model</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=510173d1-e615-4307-b867-af90009b2dfa"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=510173d1-e615-4307-b867-af90009b2dfa"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -175,7 +231,6 @@
                   </div>
                   <div class="icon-label">Copy Embed</div>
                 </div>
-
               </div>
             </li>
           </ul>
@@ -184,11 +239,12 @@
 
       <div class="row">
         <div class="col s12">
-          <h3 id="course-projects-2020"><span class="numbering">3.</span> Transforms</h3>
+          <h3 id="course-projects-2020">
+            <span class="numbering">3.</span> Transforms
+          </h3>
         </div>
-        <div class="col s12 ">
+        <div class="col s12">
           <ul class="collection">
-
             <li video-id="3" class="collection-item student-project row">
               <div class="thumbnail col s2 m2">
                 <a target="_blank"
@@ -196,24 +252,35 @@
                     src="./img/thumbnails/3.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"> <span class="numbering">3</span> Transforms Overview</span>
+                <span class="title">
+                  <span class="numbering">3</span>
+                  Transforms Overview</span>
                 <p class="abstract">
-                  Overview of transforms, how to declare them, and how to use the Vega Expression language. </p>
+                  Overview of transforms, how to declare
+                  them, and how to use the Vega Expression
+                  language.
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/transform.html
-                        " target="_blank">Vega-Lite Transforms</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/transform.html
+                        " target="_blank">Vega-Lite Transforms</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=36fd99c4-e93f-4fa6-b776-af90009b9145"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=36fd99c4-e93f-4fa6-b776-af90009b9145"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -221,7 +288,6 @@
                   </div>
                   <div class="icon-label">Copy Embed</div>
                 </div>
-
               </div>
             </li>
             <li video-id="3.1" class="collection-item student-project row">
@@ -231,27 +297,39 @@
                     src="./img/thumbnails/3.1.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">3.1</span> Sampling and Filtering transforms examples</span>
+                <span class="title"><span class="numbering">3.1</span>
+                  Sampling and Filtering transforms
+                  examples</span>
                 <p class="abstract">
-                  Sampling "n" data points and filtering data using predicates (conditions). </p>
+                  Sampling "n" data points and filtering
+                  data using predicates (conditions).
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/sample.html
-                        " target="_blank">Sampling Transform</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/sample.html
+                        " target="_blank">Sampling Transform</a>
+                    </li>
 
-                    <li><a href="https://vega.github.io/vega-lite/docs/filter.html
-                        " target="_blank">Filtering Transform</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/filter.html
+                        " target="_blank">Filtering Transform</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=2abcee26-ab82-434c-94f8-af90009ae6f3"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=2abcee26-ab82-434c-94f8-af90009ae6f3"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -260,11 +338,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4Ig7glgJgLgFiAXAVgAyoDQjgUwgczhiQBZ0sASAZwGNcBbAQyWxhgAcrEB6bgNxz5GAOnwR4AVwBGwiAHtutBo36DGAWgA24nP2TCAVlTkA7EFiiMYzRKAkAnTS0vXuNRvaqHjZgL5YYe0YTKgAzOXt6JABtUCpGenZNHCQAJnR-UFCITRgce2crCXphAAkIqhx2OTB8gAIAPjqARnQQTJBs3PykLIgcTSgWAGEAT20TKHyqcxBTHAB5UJiAZgwSDGQMADYAXV9fXawmewBrFhoIexpk2ZwTGjkoCBN8XpAAD3fsgaHEEHKniqNR6AVG7BS-wAjhJgjBxFYIAJ2lhRt9+oMWABZHI4KgAfQh9nxAHFGJpNKZZjBwZCQDC4Qj4cj-CBHpSCrZOhi-iAxhMpp52gcgA"
-                      target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4Ig7glgJgLgFiAXAVgAyoDQjgUwgczhiQBZ0sASAZwGNcBbAQyWxhgAcrEB6bgNxz5GAOnwR4AVwBGwiAHtutBo36DGAWgA24nP2TCAVlTkA7EFiiMYzRKAkAnTS0vXuNRvaqHjZgL5YYe0YTKgAzOXt6JABtUCpGenZNHCQAJnR-UFCITRgce2crCXphAAkIqhx2OTB8gAIAPjqARnQQTJBs3PykLIgcTSgWAGEAT20TKHyqcxBTHAB5UJiAZgwSDGQMADYAXV9fXawmewBrFhoIexpk2ZwTGjkoCBN8XpAAD3fsgaHEEHKniqNR6AVG7BS-wAjhJgjBxFYIAJ2lhRt9+oMWABZHI4KgAfQh9nxAHFGJpNKZZjBwZCQDC4Qj4cj-CBHpSCrZOhi-iAxhMpp52gcgA"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -275,24 +357,33 @@
                     src="./img/thumbnails/3.2.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">3.2</span> Calculate transform example</span>
+                <span class="title"><span class="numbering">3.2</span>
+                  Calculate transform example</span>
                 <p class="abstract">
-                  Adding a new attribute to your dataset, based on another attribute </p>
+                  Adding a new attribute to your dataset,
+                  based on another attribute
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/sample.html
-                        " target="_blank">Calculate Transform</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/sample.html
+                        " target="_blank">Calculate Transform</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=3c3d50fb-955c-4ffe-b5d7-af9901408733"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=3c3d50fb-955c-4ffe-b5d7-af9901408733"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -301,11 +392,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4Ig7glgJgLgFiAXAVgAyoDQjgUwgczhiQBZ0sASAZwGNcBbAQyWxhgAcrEB6bgNxz5GAOnwR4AVwBGwiAHtutBo36DGAWgA24nP2TCAVlTkA7EFiiMYzRKAkAnTS0vXuNRvaqHjZgL5YYe0YTKgAzOXt6JABtUHdNGglNKxwWACYAZn00gEZkbhcJemEAWQhNHCoAfXYceyqAcUZNTVNzEEYqFm0YOura+pz0AGso3wBdLCZ7YZZ2OQgTYiwcExo5KEX8JFAADx2QUIgcTSgWAAkIqhx5sDr2mABPWpYARwlgmHErCAEQfxAjwORxOZ0QIB6fRqdSqQ1Qowez1S4Pen2+Xz+vixQA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4Ig7glgJgLgFiAXAVgAyoDQjgUwgczhiQBZ0sASAZwGNcBbAQyWxhgAcrEB6bgNxz5GAOnwR4AVwBGwiAHtutBo36DGAWgA24nP2TCAVlTkA7EFiiMYzRKAkAnTS0vXuNRvaqHjZgL5YYe0YTKgAzOXt6JABtUHdNGglNKxwWACYAZn00gEZkbhcJemEAWQhNHCoAfXYceyqAcUZNTVNzEEYqFm0YOura+pz0AGso3wBdLCZ7YZZ2OQgTYiwcExo5KEX8JFAADx2QUIgcTSgWAAkIqhx5sDr2mABPWpYARwlgmHErCAEQfxAjwORxOZ0QIB6fRqdSqQ1Qowez1S4Pen2+Xz+vixQA
+                    " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -316,24 +411,34 @@
                     src="./img/thumbnails/3.3.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">3.3</span> Aggregation transform example</span>
+                <span class="title"><span class="numbering">3.3</span>
+                  Aggregation transform example</span>
                 <p class="abstract">
-                  Averages, standard deviations, sums - this transform lets you aggregate your data </p>
+                  Averages, standard deviations, sums -
+                  this transform lets you aggregate your
+                  data
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/aggregate.html
-                        " target="_blank">Aggregate Transform</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/aggregate.html
+                        " target="_blank">Aggregate Transform</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=930253bd-3b15-4951-b9b1-af90009a7ea7"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=930253bd-3b15-4951-b9b1-af90009a7ea7"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -342,11 +447,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4Ig7glgJgLgFiAXAVgAyoDQjgUwgczhiQBZ0sASAZwGNcBbAQyWxhgAcrEB6bgNxz5GAOnwR4AVwBGwiAHtutBo36DGAWgA24nP2TCAVlTkA7EFiiMYzRKAkAnTS0vXuNRvaqHjZgL5YYe0YTKgAzOXt6JABtUEZ8fHs1GBwY0Dl2FnocYPMQUIgcTSgWAFkITRwqAH12HHtqgHFGTU1TPMYqLJyTavp2fBBfAF0sRLkJdikATxiQAGFp7RMoeq6sAHl7AggzYZGsJnsAaxYaCHsaSrycExo5KF3B2xAADyRQAqKSxAWl3dWniGWFmLy+xW6wT6AzyMGmdRYAEcJMEYOIrBABMCQPc2vYPvlChDflsdn5fL4gA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4Ig7glgJgLgFiAXAVgAyoDQjgUwgczhiQBZ0sASAZwGNcBbAQyWxhgAcrEB6bgNxz5GAOnwR4AVwBGwiAHtutBo36DGAWgA24nP2TCAVlTkA7EFiiMYzRKAkAnTS0vXuNRvaqHjZgL5YYe0YTKgAzOXt6JABtUEZ8fHs1GBwY0Dl2FnocYPMQUIgcTSgWAFkITRwqAH12HHtqgHFGTU1TPMYqLJyTavp2fBBfAF0sRLkJdikATxiQAGFp7RMoeq6sAHl7AggzYZGsJnsAaxYaCHsaSrycExo5KF3B2xAADyRQAqKSxAWl3dWniGWFmLy+xW6wT6AzyMGmdRYAEcJMEYOIrBABMCQPc2vYPvlChDflsdn5fL4gA
+                    " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -357,24 +466,32 @@
                     src="./img/thumbnails/3.4.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">3.4</span> Lookup transform example</span>
+                <span class="title"><span class="numbering">3.4</span>
+                  Lookup transform example</span>
                 <p class="abstract">
-                  Combining multiple datasets into one </p>
+                  Combining multiple datasets into one
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/lookup.html
-                        " target="_blank">Aggregate Transform</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/lookup.html
+                        " target="_blank">Aggregate Transform</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=6b54bbb3-7851-49ef-9376-af9901408705"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=6b54bbb3-7851-49ef-9376-af9901408705"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -383,11 +500,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICgtmwDWDHAH0y2tpYiUoEYiAC+SzNqSyIAMzZtBDQAbVATc0t9HDhtGXklPztgzQN1NC1dfVV1Y1MLaxi2HEE4Jxd3JTM4AE99WSQEOEUQPxo4QWUIUJAkMmaleBoyLBAAXTc3MaVkbTN9JiRtdyA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICgtmwDWDHAH0y2tpYiUoEYiAC+SzNqSyIAMzZtBDQAbVATc0t9HDhtGXklPztgzQN1NC1dfVV1Y1MLaxi2HEE4Jxd3JTM4AE99WSQEOEUQPxo4QWUIUJAkMmaleBoyLBAAXTc3MaVkbTN9JiRtdyA
+                    " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -398,26 +519,37 @@
                     src="./img/thumbnails/3.5.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">3.5</span> Binning transform example</span>
+                <span class="title"><span class="numbering">3.5</span>
+                  Binning transform example</span>
                 <p class="abstract">
-                  Another form of aggregation, especially useful for histograms and heatmaps </p>
+                  Another form of aggregation, especially
+                  useful for histograms and heatmaps
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/bin.html
-                        " target="_blank">Binning Transform</a></li>
-                    <li><a href="https://vega.github.io/vega-lite/docs/bin.html#example-histogram-with-bin-transform
-                          " target="_blank">Histogram example</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/bin.html
+                        " target="_blank">Binning Transform</a>
+                    </li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/bin.html#example-histogram-with-bin-transform
+                          " target="_blank">Histogram example</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=5cd7d8e4-28bd-4b23-a7b5-af90009ad205"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=5cd7d8e4-28bd-4b23-a7b5-af90009ad205"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -426,11 +558,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4Ig7glgJgLgFiAXAVgAyoDQjgUwgczhiQBZ0sASAZwGNcBbAQyWxhgAcrEB6bgNxz5GAOnwR4AVwBGwiAHtutBo36DGAWgA24nP2TCAVlTkA7EFiiMYzRKAkAnTS0vXu9OXwg4qh42YC+WDD2jCZUAGZy9vRIANqgUhBmiMESOFjhXppQLACSALIAIgBCAAQASlZJ+OYgjFQsiSYmOFAA+hD0UFIg-gC6WEz2ANaNjPa1OCY0clDVSKAAHgsgmTjZjUkt7Z3dtU0rTdtIqekgVDA47EgAjP6BIIsATCtrG4ggR60dXVJtUzkHgBPFaMfD4exqS4sGYSEzEe7+IA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4Ig7glgJgLgFiAXAVgAyoDQjgUwgczhiQBZ0sASAZwGNcBbAQyWxhgAcrEB6bgNxz5GAOnwR4AVwBGwiAHtutBo36DGAWgA24nP2TCAVlTkA7EFiiMYzRKAkAnTS0vXu9OXwg4qh42YC+WDD2jCZUAGZy9vRIANqgUhBmiMESOFjhXppQLACSALIAIgBCAAQASlZJ+OYgjFQsiSYmOFAA+hD0UFIg-gC6WEz2ANaNjPa1OCY0clDVSKAAHgsgmTjZjUkt7Z3dtU0rTdtIqekgVDA47EgAjP6BIIsATCtrG4ggR60dXVJtUzkHgBPFaMfD4exqS4sGYSEzEe7+IA
+                    " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -439,12 +575,13 @@
       </div>
 
       <div class="row">
-        <div class="col s12 ">
-          <h3 id="course-projects-2020"><span class="numbering">4.</span> Marks</h3>
+        <div class="col s12">
+          <h3 id="course-projects-2020">
+            <span class="numbering">4.</span> Marks
+          </h3>
         </div>
-        <div class="col s12 ">
+        <div class="col s12">
           <ul class="collection">
-
             <li video-id="4" class="collection-item student-project row">
               <div class="thumbnail col s2 m2">
                 <a target="_blank"
@@ -452,37 +589,41 @@
                     src="./img/thumbnails/4.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">4</span> Marks Overview </span>
+                <span class="title"><span class="numbering">4</span> Marks
+                  Overview
+                </span>
                 <p class="abstract">
-                  Overview of the mark object, how to declare them and their relation to encodings </p>
+                  Overview of the mark object, how to
+                  declare them and their relation to
+                  encodings
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/mark.html
-                        " target="_blank">Vega-Lite Marks</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/mark.html
+                        " target="_blank">Vega-Lite Marks</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=70883839-bf3a-40c6-95f5-af90009bf1c4"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=70883839-bf3a-40c6-95f5-af90009bf1c4"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
                     <i class="fa fa-code"></i>
                   </div>
                   <div class="icon-label">Copy Embed</div>
-                </div>
-                <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=70883839-bf3a-40c6-95f5-af90009bf1c4"
-                      target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
                 </div>
               </div>
             </li>
@@ -493,28 +634,42 @@
                     src="./img/thumbnails/4.1.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">4.1</span> Point, Line and Bar Marks Examples</span>
+                <span class="title"><span class="numbering">4.1</span>
+                  Point, Line and Bar Marks Examples</span>
                 <p class="abstract">
-                  Examples for 3 mark types, and their specific encoding channels and properties </p>
+                  Examples for 3 mark types, and their
+                  specific encoding channels and
+                  properties
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/point.html
-                        " target="_blank">Point Mark</a></li>
-                    <li><a href="https://vega.github.io/vega-lite/docs/line.html
-                          " target="_blank">Line Mark</a></li>
-                    <li><a href="https://vega.github.io/vega-lite/docs/bar.html
-                            " target="_blank">Bar Mark</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/point.html
+                        " target="_blank">Point Mark</a>
+                    </li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/line.html
+                          " target="_blank">Line Mark</a>
+                    </li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/bar.html
+                            " target="_blank">Bar Mark</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=d7c1a11e-2186-4412-aa06-af9500a9a112"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=d7c1a11e-2186-4412-aa06-af9500a9a112"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -523,11 +678,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQxKHKhJMaANqgA7jQAm9NGIAMppfBpksaACzmlBjSlSgGAJ0FoQzzEgJ1DwgpGXkAXyVkDwBrNFBMAE8cOB8cNhpZTUiQOFlVA0yyeJAADxKAMxo4QQMfAAk2YLh03TgPRRAklJ8ARwYkLLoNGlIQHMTK6tqfAFkaQTgIAH0Uj2WAcSRBQTlO7tT0fsHMYdOxnIgYJB63ECqauvQAeQ9rTP3kw5BZNgRM7bjJQQGgAL0OoAeM3QAGFEsJZAZ2hBPrcQMchv5zqlwriFHpDMZUGYLBg4NZbKgHKS-K53F4fLTOJg2FAYiEoBBiECQNE4ugEaklHkCkUSuU7lCnr4NEKul8fJhEOkPICJlNHmk3lA5Qc+gNMSMLsDMB42DE4AARJBXDXQkAQRIIJhsbxKPXoX7-WRqvEEowwNAAdkcZIpmmJodpJU83nQTIMb2IRVCexyfJKHpAgs66UyEdNDDgORFbEKsmKdwlkOm0v+ixR7oVRwNpyxozl0G2EJA4LNaAq2wgxfddEWPktNAg-nycAABBUzQg5zA-vOABT1pYASh5k0ltZ8FEb8rRGLbRs76nHdz7bAHQ+LOSaSI6B816EScCQHVxkVAVg2BGADMUYuCUxDbEWKKoDoIDqEqZBNPuIAAIKdGQZoMDgPjlEokGCEWaCmJQACM-7wbKSEeCh6FKJhbDYT4kz4VBhwkQAbBRCHkMhPh0SADFMegoKdARRGoCRACc3FUXx6AAEIYVhOHoHhyhscRlBBrJiHySASn0SpzFiZpkmUAATLpvE0T4hmCcZImmYRhykWR1nUShMLKYxqllM5EmcR5+neUZvkmaxLlaeR+KUXptmwj5wm9gF7GWeEAC66Y-vyIBMD+nSluWlagNW9yHugPGeXudrSuJurNuirZnB2PKlM8FQVMOEY1h+DnhTkqi7G+vX2kJOF-llQA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQxKHKhJMaANqgA7jQAm9NGIAMppfBpksaACzmlBjSlSgGAJ0FoQzzEgJ1DwgpGXkAXyVkDwBrNFBMAE8cOB8cNhpZTUiQOFlVA0yyeJAADxKAMxo4QQMfAAk2YLh03TgPRRAklJ8ARwYkLLoNGlIQHMTK6tqfAFkaQTgIAH0Uj2WAcSRBQTlO7tT0fsHMYdOxnIgYJB63ECqauvQAeQ9rTP3kw5BZNgRM7bjJQQGgAL0OoAeM3QAGFEsJZAZ2hBPrcQMchv5zqlwriFHpDMZUGYLBg4NZbKgHKS-K53F4fLTOJg2FAYiEoBBiECQNE4ugEaklHkCkUSuU7lCnr4NEKul8fJhEOkPICJlNHmk3lA5Qc+gNMSMLsDMB42DE4AARJBXDXQkAQRIIJhsbxKPXoX7-WRqvEEowwNAAdkcZIpmmJodpJU83nQTIMb2IRVCexyfJKHpAgs66UyEdNDDgORFbEKsmKdwlkOm0v+ixR7oVRwNpyxozl0G2EJA4LNaAq2wgxfddEWPktNAg-nycAABBUzQg5zA-vOABT1pYASh5k0ltZ8FEb8rRGLbRs76nHdz7bAHQ+LOSaSI6B816EScCQHVxkVAVg2BGADMUYuCUxDbEWKKoDoIDqEqZBNPuIAAIKdGQZoMDgPjlEokGCEWaCmJQACM-7wbKSEeCh6FKJhbDYT4kz4VBhwkQAbBRCHkMhPh0SADFMegoKdARRGoCRACc3FUXx6AAEIYVhOHoHhyhscRlBBrJiHySASn0SpzFiZpkmUAATLpvE0T4hmCcZImmYRhykWR1nUShMLKYxqllM5EmcR5+neUZvkmaxLlaeR+KUXptmwj5wm9gF7GWeEAC66Y-vyIBMD+nSluWlagNW9yHugPGeXudrSuJurNuirZnB2PKlM8FQVMOEY1h+DnhTkqi7G+vX2kJOF-llQA
+                    " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -538,31 +697,48 @@
                     src="./img/thumbnails/4.2.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">4.2</span> Rule and Area marks</span>
+                <span class="title"><span class="numbering">4.2</span> Rule
+                  and Area marks</span>
                 <p class="abstract">
-                  Overlaying rule marks on existing visualizations, and exploring area charts, stacked area charts and
-                  stream graphs </p>
+                  Overlaying rule marks on existing
+                  visualizations, and exploring area
+                  charts, stacked area charts and stream
+                  graphs
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/rule.html
-                        " target="_blank">Rule Mark</a></li>
-                    <li><a href=" https://vega.github.io/vega-lite/docs/rule.html#properties
-                          " target="_blank">Rule x, x2, y, y2 interactive demo</a></li>
-                    <li><a href=" https://vega.github.io/vega-lite/docs/area.html
-                          " target="_blank">Area Mark</a></li>
-                    <li><a href="https://vega.github.io/vega-lite/docs/area.html#streamgraph
-                            " target="_blank">Stream Graph Example</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/rule.html
+                        " target="_blank">Rule Mark</a>
+                    </li>
+                    <li>
+                      <a href=" https://vega.github.io/vega-lite/docs/rule.html#properties
+                          " target="_blank">Rule x, x2, y, y2
+                        interactive demo</a>
+                    </li>
+                    <li>
+                      <a href=" https://vega.github.io/vega-lite/docs/area.html
+                          " target="_blank">Area Mark</a>
+                    </li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/area.html#streamgraph
+                            " target="_blank">Stream Graph Example</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=af92eee7-4090-4ac4-80f8-af9d00f9aea7"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=af92eee7-4090-4ac4-80f8-af9d00f9aea7"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -571,11 +747,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEzjQATjRyZ289AGVMbKAGsABDk1Q1ZtgDMzYswBU4sMwGE2CHElk0bNlJ1FxoEODMAdzoYMwBBYKQyNUpFFSRMFFRQBnVBNHTMziNTCEooCGIQAF8lQSQATzh1NABtUGjlejQxAAZepXgaMiw0ABZ+pWR1EwLhWTg0uFkoNmUaWTI0UAAPbZA7AMFlAuUMxaVMBpxF9ExEHDZ1JHzakAb9w7hjgssaazSVxuBQAjgw-DpMjpSDUlKtBE9PkcTugIA0EEw2PlLtdbiBZN4Ni8atVaqBprNsiAgXj1AxBBcQBBMOo2CY4AARJAQGBtADMCj5AF03stVutNvsPlSvj90H8AUokmR1Hx7gVwn5YUyaAAvW6gYgvBi3ABMb3hiJlyIKaIxWJJ1RFQA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEzjQATjRyZ289AGVMbKAGsABDk1Q1ZtgDMzYswBU4sMwGE2CHElk0bNlJ1FxoEODMAdzoYMwBBYKQyNUpFFSRMFFRQBnVBNHTMziNTCEooCGIQAF8lQSQATzh1NABtUGjlejQxAAZepXgaMiw0ABZ+pWR1EwLhWTg0uFkoNmUaWTI0UAAPbZA7AMFlAuUMxaVMBpxF9ExEHDZ1JHzakAb9w7hjgssaazSVxuBQAjgw-DpMjpSDUlKtBE9PkcTugIA0EEw2PlLtdbiBZN4Ni8atVaqBprNsiAgXj1AxBBcQBBMOo2CY4AARJAQGBtADMCj5AF03stVutNvsPlSvj90H8AUokmR1Hx7gVwn5YUyaAAvW6gYgvBi3ABMb3hiJlyIKaIxWJJ1RFQA
+                    " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -585,11 +765,12 @@
 
       <div class="row">
         <div class="col s12">
-          <h3 id="course-projects-2020"><span class="numbering">5.</span> Encoding</h3>
+          <h3 id="course-projects-2020">
+            <span class="numbering">5.</span> Encoding
+          </h3>
         </div>
-        <div class="col s12 ">
+        <div class="col s12">
           <ul class="collection">
-
             <li video-id="5" class="collection-item student-project row">
               <div class="thumbnail col s2 m2">
                 <a target="_blank"
@@ -597,24 +778,34 @@
                     src="./img/thumbnails/5.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">5</span> Encodings Overview </span>
+                <span class="title"><span class="numbering">5</span>
+                  Encodings Overview
+                </span>
                 <p class="abstract">
-                  Overview of encoding channels & channel definitions </p>
+                  Overview of encoding channels & channel
+                  definitions
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/encoding.html
-                        " target="_blank">Vega-Lite Encoding</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/encoding.html
+                        " target="_blank">Vega-Lite Encoding</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=54b67cf5-e8f6-43df-bbee-af8c00b4a355"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=54b67cf5-e8f6-43df-bbee-af8c00b4a355"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -623,11 +814,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=54b67cf5-e8f6-43df-bbee-af8c00b4a355"
-                      target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=54b67cf5-e8f6-43df-bbee-af8c00b4a355"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -638,24 +833,35 @@
                     src="./img/thumbnails/5.1.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">5.1</span> Scales - Overview & custom scales example</span>
+                <span class="title"><span class="numbering">5.1</span>
+                  Scales - Overview & custom scales
+                  example</span>
                 <p class="abstract">
-                  Overview of scales, domains and ranges. Plus an example in code to set custom scales </p>
+                  Overview of scales, domains and ranges.
+                  Plus an example in code to set custom
+                  scales
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/scale.html
-                        " target="_blank">Vega-Lite Scale Object</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/scale.html
+                        " target="_blank">Vega-Lite Scale Object</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=ebd4e4f5-7b51-4592-a67d-af9601049695"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=ebd4e4f5-7b51-4592-a67d-af9601049695"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -664,11 +870,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICUJNohSZ8gL5KA7jWX00YgAwul8GmSxoALG6VkbQBrfRw2GllMRRA4WSg2ZUiyNFAAD1SQADMaOEFlfQAJNjM4cNs4bRjMAE8cOH1MRHDtJD0bEBrMnLyC9ABZGkE4CAB9eu1RgHE2wTlquob0AEcGJCi6NRpSEA6EuarNbNz8-QARGggcQSQoRDjopVr6-VX1zE2PnaVoNqXQVqyMhLADaIG0cAKShqeTmthiZAhcRAAF0lMo2MhIoM+gAmNxWQlWIA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICUJNohSZ8gL5KA7jWX00YgAwul8GmSxoALG6VkbQBrfRw2GllMRRA4WSg2ZUiyNFAAD1SQADMaOEFlfQAJNjM4cNs4bRjMAE8cOH1MRHDtJD0bEBrMnLyC9ABZGkE4CAB9eu1RgHE2wTlquob0AEcGJCi6NRpSEA6EuarNbNz8-QARGggcQSQoRDjopVr6-VX1zE2PnaVoNqXQVqyMhLADaIG0cAKShqeTmthiZAhcRAAF0lMo2MhIoM+gAmNxWQlWIA
+                    " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -679,32 +889,46 @@
                     src="./img/thumbnails/5.2.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">5.2</span> Position Channels and Mark Property Encoding
-                  Channels Example</span>
+                <span class="title"><span class="numbering">5.2</span>
+                  Position Channels and Mark Property
+                  Encoding Channels Example</span>
                 <p class="abstract">
-                  Coding examples for: <br>
-                  1) position ("x", "y") , and secondary position channels ("x2", "y2") <br>
-                  2) mark property channels - color, shape, size
+                  Coding examples for: <br />
+                  1) position ("x", "y") , and secondary
+                  position channels ("x2", "y2") <br />
+                  2) mark property channels - color,
+                  shape, size
                 </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/encoding.html#position
-                      " target="_blank">Position Channels</a></li>
-                    <li><a href="https://vega.github.io/vega-lite/docs/encoding.html#mark-prop
-                        " target="_blank">Mark Property Channels</a></li>
-                    <li><a href="https://vega.github.io/vega-lite/docs/bar.html#ranged
-                          " target="_blank">Gantt Chart (Ranged bars)</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/encoding.html#position
+                      " target="_blank">Position Channels</a>
+                    </li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/encoding.html#mark-prop
+                        " target="_blank">Mark Property Channels</a>
+                    </li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/bar.html#ranged
+                          " target="_blank">Gantt Chart (Ranged
+                        bars)</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=bc0fa5dd-d20a-4777-afca-af97011644c2"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=bc0fa5dd-d20a-4777-afca-af97011644c2"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -721,25 +945,34 @@
                     src="./img/thumbnails/5.3.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">5.3</span> Time Units example</span>
+                <span class="title"><span class="numbering">5.3</span> Time
+                  Units example</span>
                 <p class="abstract">
-                  Different types of time-units, how Vega-Lite handles time-data and three ways of using time-units.
+                  Different types of time-units, how
+                  Vega-Lite handles time-data and three
+                  ways of using time-units.
                 </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/timeunit.html
-                      " target="_blank">Time Units</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/timeunit.html
+                      " target="_blank">Time Units</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=82a359c6-66b8-47be-90ba-af9d01146ada"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=82a359c6-66b8-47be-90ba-af9d01146ada"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -748,11 +981,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVJOcNZkFx+AdxP042ylAjEQAXyWZtSWRABmbbQhoANqgPjSCmHZooTRwgsr6qpGKIHJwAPI+wSAAUgyycCl5ggCeKQCCDGQMEJggALruNAhwAKqydPoIcvSuLo0gyNoA1vrCBSmWNMq9qGIADPNK8DRkWGgALItKcLJQbMo0smTRIAAep5jNbR116N2y9EmFSmFxCejPKZglOIXokQQOH8SD0bhAZU0IDe8X0OG0cCgNBwdDU7Hk7l+-xAAEcGF4ruorqQUkgyGQERRkvcTPIXOD9rIwicoUgzjQIKdBEgmHEAGI9ADKNAAXv8AIxiJpmOACx7CsVoSXg8xkXYfUDc3mCOWYBUSqUgQnmXX6pViekuIA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVJOcNZkFx+AdxP042ylAjEQAXyWZtSWRABmbbQhoANqgPjSCmHZooTRwgsr6qpGKIHJwAPI+wSAAUgyycCl5ggCeKQCCDGQMEJggALruNAhwAKqydPoIcvSuLo0gyNoA1vrCBSmWNMq9qGIADPNK8DRkWGgALItKcLJQbMo0smTRIAAep5jNbR116N2y9EmFSmFxCejPKZglOIXokQQOH8SD0bhAZU0IDe8X0OG0cCgNBwdDU7Hk7l+-xAAEcGF4ruorqQUkgyGQERRkvcTPIXOD9rIwicoUgzjQIKdBEgmHEAGI9ADKNAAXv8AIxiJpmOACx7CsVoSXg8xkXYfUDc3mCOWYBUSqUgQnmXX6pViekuIA
+                    " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -762,11 +999,12 @@
 
       <div class="row">
         <div class="col s12">
-          <h3 id="course-projects-2020"><span class="numbering">6.</span> Params</h3>
+          <h3 id="course-projects-2020">
+            <span class="numbering">6.</span> Params
+          </h3>
         </div>
-        <div class="col s12 ">
+        <div class="col s12">
           <ul class="collection">
-
             <li video-id="6" class="collection-item student-project row">
               <div class="thumbnail col s2 m2">
                 <a target="_blank"
@@ -774,25 +1012,38 @@
                     src="./img/thumbnails/6.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">6</span> Params Overview </span>
+                <span class="title"><span class="numbering">6</span> Params
+                  Overview
+                </span>
                 <p class="abstract">
-                  How interaction in Vega-Lite is defined with 2 types of params (variable and selection), how to
-                  declare them and how to use them as predicates, in expressions strings and for data extents. </p>
+                  How interaction in Vega-Lite is defined
+                  with 2 types of params (variable and
+                  selection), how to declare them and how
+                  to use them as predicates, in
+                  expressions strings and for data
+                  extents.
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/parameter.html
-                        " target="_blank">Vega-Lite Params</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/parameter.html
+                        " target="_blank">Vega-Lite Params</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=969e06c0-31f8-4a17-b901-af8c00b4a359"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=969e06c0-31f8-4a17-b901-af8c00b4a359"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -809,26 +1060,38 @@
                     src="./img/thumbnails/6.1.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">6.1</span> Variable Parameters</span>
+                <span class="title"><span class="numbering">6.1</span>
+                  Variable Parameters</span>
                 <p class="abstract">
-                  Drop-downs, sliders, input elements - variable parameters and how to use them </p>
+                  Drop-downs, sliders, input elements -
+                  variable parameters and how to use them
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/parameter.html#variable-parameters
-                        " target="_blank">Variable Params</a></li>
-                    <li><a href="https://vega.github.io/vega/docs/signals/#bind
-                          " target="_blank">Vega Signals - Input Element Binding</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/parameter.html#variable-parameters
+                        " target="_blank">Variable Params</a>
+                    </li>
+                    <li>
+                      <a href="https://vega.github.io/vega/docs/signals/#bind
+                          " target="_blank">Vega Signals - Input
+                        Element Binding</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=0d94ed9c-2a8e-4ee6-a191-af99015d3806"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=0d94ed9c-2a8e-4ee6-a191-af99015d3806"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -837,11 +1100,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoMcGmSxoALAAYtSgO40AJvU06lhpJhSpQDAE6C0IC1YJQkdiFJnyAvkpwPJAQINABtUFlguCcoAE9hWUM4T0UQYiRBBhjUMSUmGiS0UEKcBkwnOyRZMhilBEK0AEZ6pAAPNAAOJQhMOBxmpSiEHJAAYQTC5M8AAgA+AF4QX39I6KcIGDY9AHk7VUalDKyczDts-KnikFLy2PgoAGsmNg6VgF0lM+qIADM2OwIcKgX40QR9OxOFwMBCUCaJaYQeYLGbxBEpUK+T4gZB2R7XTBxHCjHBsQoVfwgOCyKBsQyFMjXDo2ECguCCQxOAASAIg-W2KTShOJTgAjgxqpg6JYaKRlko4tc2RynABZMFwCAAfWJdi1AHFMoI5EKiaNxZLpVK5T13IIcqBDGxkI1UGFdAA2LTvFZKWnGyEs2lJOjseQsvq9a6BKpA9CbbZ7A5+JTKznoJO0eRfM1OWTOwqZZYrXxAA"
-                      target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoMcGmSxoALAAYtSgO40AJvU06lhpJhSpQDAE6C0IC1YJQkdiFJnyAvkpwPJAQINABtUFlguCcoAE9hWUM4T0UQYiRBBhjUMSUmGiS0UEKcBkwnOyRZMhilBEK0AEZ6pAAPNAAOJQhMOBxmpSiEHJAAYQTC5M8AAgA+AF4QX39I6KcIGDY9AHk7VUalDKyczDts-KnikFLy2PgoAGsmNg6VgF0lM+qIADM2OwIcKgX40QR9OxOFwMBCUCaJaYQeYLGbxBEpUK+T4gZB2R7XTBxHCjHBsQoVfwgOCyKBsQyFMjXDo2ECguCCQxOAASAIg-W2KTShOJTgAjgxqpg6JYaKRlko4tc2RynABZMFwCAAfWJdi1AHFMoI5EKiaNxZLpVK5T13IIcqBDGxkI1UGFdAA2LTvFZKWnGyEs2lJOjseQsvq9a6BKpA9CbbZ7A5+JTKznoJO0eRfM1OWTOwqZZYrXxAA"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -852,24 +1119,33 @@
                     src="./img/thumbnails/6.2.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">6.2</span> Point Selections</span>
+                <span class="title"><span class="numbering">6.2</span>
+                  Point Selections</span>
                 <p class="abstract">
-                  Click and select individual or a group of data points</p>
+                  Click and select individual or a group
+                  of data points
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/selection.html
-                        " target="_blank">Point Selections</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/selection.html
+                        " target="_blank">Point Selections</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=a452e482-65c7-43c8-8cba-af8c00b4af40"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=a452e482-65c7-43c8-8cba-af8c00b4af40"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -878,11 +1154,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgFgpglg5mAuIBcAWADGgNCA7lAJvGMgKwbYAkAzgMaQC2AhsuPPAA5VID03AbhBiMAdDChEArgCNhUAPbdaDRv0GMAtABtxEfiWEArKnIB2IbPkbxmSUBIBOmlpevcaje1UPGzAX2zsHoz0VMgA2qAmwRAs7PCh2FQQmhA0iLYg8ACe7DFIIOxyUCaI2KYs9HISSXIC9uYgAGZQyfihSGEgAMJZ2ib4EJ4gALr+IFLF+CwpMBD9IL7D2Ez2ANbIoNm5LDRQ9jQpDVTw9nKreeOajDTriSdnEADygbvZLGjCAIwL2HM0cvhijANiAAB4g5qtFgACTkngghRwgwaWwuAEcJIwSuIrFABD8QFkIS1NFN8gBZKApKgAfVy9hpAHFGJpNOVsKiWBisfAcbz8WN-mz6hlaCy8qAlBB6Bcssk2Tg4VjZlJTjg-NhIaSWD0+gMhmMqFAAF4SkD-frieRmDKBezBWLxBrSuJEpCNFlJbB8FkSPIAJgwYx9mj9pDQvkjQA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgFgpglg5mAuIBcAWADGgNCA7lAJvGMgKwbYAkAzgMaQC2AhsuPPAA5VID03AbhBiMAdDChEArgCNhUAPbdaDRv0GMAtABtxEfiWEArKnIB2IbPkbxmSUBIBOmlpevcaje1UPGzAX2zsHoz0VMgA2qAmwRAs7PCh2FQQmhA0iLYg8ACe7DFIIOxyUCaI2KYs9HISSXIC9uYgAGZQyfihSGEgAMJZ2ib4EJ4gALr+IFLF+CwpMBD9IL7D2Ez2ANbIoNm5LDRQ9jQpDVTw9nKreeOajDTriSdnEADygbvZLGjCAIwL2HM0cvhijANiAAB4g5qtFgACTkngghRwgwaWwuAEcJIwSuIrFABD8QFkIS1NFN8gBZKApKgAfVy9hpAHFGJpNOVsKiWBisfAcbz8WN-mz6hlaCy8qAlBB6Bcssk2Tg4VjZlJTjg-NhIaSWD0+gMhmMqFAAF4SkD-frieRmDKBezBWLxBrSuJEpCNFlJbB8FkSPIAJgwYx9mj9pDQvkjQA
+                    " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -893,25 +1173,34 @@
                     src="./img/thumbnails/6.3.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">6.3</span> Interval Selections</span>
+                <span class="title"><span class="numbering">6.3</span>
+                  Interval Selections</span>
                 <p class="abstract">
-                  Drag and select to select data points in an interval, using a scatterplot matrix example.
+                  Drag and select to select data points in
+                  an interval, using a scatterplot matrix
+                  example.
                 </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/selection.html
-                      " target="_blank">Interval Selections</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/selection.html
+                      " target="_blank">Interval Selections</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=2d107f03-f556-4eaf-9bb0-af8c00b4af53"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=2d107f03-f556-4eaf-9bb0-af8c00b4af53"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -920,11 +1209,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICUJNohSZ8gL5LtcHHDVpQ2tgHc0AbRAAJNmft3OG1FEABBKCg4QWC1dnklAFkaGIgAfQdtNIBxJEFBORAAXSUoNkEGBHlUb2TUjOCcvIKE8Mjo2Mx40L8AnCCQopsQCAcoZxBBJABPYK9QZG0Aa31+mllMUJxTJAQIeZBZXbh9Jm0GCBhQiA6oTc0QTGmHfXXMYOI8kCsrEpA4WRlZTrMgTAAeEwAZjRosoJnYHE50GUKlVvkoni90ABHBhIDZ0OKkdEgaZQmGCOEPBGOe4gVweYaYk44vEE9RdYnDFH+CZlWTArqFB7bbS7U7nS6haGw-QAeW0NForWZ+lkbAQ6y+w0+FRZIDIdjJPxsoEwYtkEEh-gQB2hgneIRFO1t6DOFyuPz+ixW6HOMVCAKBIImZIeMsp8PstP0DJJSDIhr4730CEc1iUYIATBNdQwWVmACwABmGEIeeZZpZ+CjNFqtNrtKUdE1F4rdks9vyUPv07zBmyUQbYwNkoIe-fuoAjVJc0aR9Pc8cTdgoKfQafxJPLoEraCL1d+PyAA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICUJNohSZ8gL5LtcHHDVpQ2tgHc0AbRAAJNmft3OG1FEABBKCg4QWC1dnklAFkaGIgAfQdtNIBxJEFBORAAXSUoNkEGBHlUb2TUjOCcvIKE8Mjo2Mx40L8AnCCQopsQCAcoZxBBJABPYK9QZG0Aa31+mllMUJxTJAQIeZBZXbh9Jm0GCBhQiA6oTc0QTGmHfXXMYOI8kCsrEpA4WRlZTrMgTAAeEwAZjRosoJnYHE50GUKlVvkoni90ABHBhIDZ0OKkdEgaZQmGCOEPBGOe4gVweYaYk44vEE9RdYnDFH+CZlWTArqFB7bbS7U7nS6haGw-QAeW0NForWZ+lkbAQ6y+w0+FRZIDIdjJPxsoEwYtkEEh-gQB2hgneIRFO1t6DOFyuPz+ixW6HOMVCAKBIImZIeMsp8PstP0DJJSDIhr4730CEc1iUYIATBNdQwWVmACwABmGEIeeZZpZ+CjNFqtNrtKUdE1F4rdks9vyUPv07zBmyUQbYwNkoIe-fuoAjVJc0aR9Pc8cTdgoKfQafxJPLoEraCL1d+PyAA
+                    " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -934,11 +1227,12 @@
 
       <div class="row">
         <div class="col s12">
-          <h3 id="course-projects-2020"><span class="numbering">7.</span> View Composition</h3>
+          <h3 id="course-projects-2020">
+            <span class="numbering">7.</span> View Composition
+          </h3>
         </div>
-        <div class="col s12 ">
+        <div class="col s12">
           <ul class="collection">
-
             <li video-id="7" class="collection-item student-project row">
               <div class="thumbnail col s2 m2">
                 <a target="_blank"
@@ -946,25 +1240,37 @@
                     src="./img/thumbnails/7.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">7</span> View Composition Overview </span>
+                <span class="title"><span class="numbering">7</span> View
+                  Composition Overview
+                </span>
                 <p class="abstract">
-                  Overview of methods for combining multiple views, and one-sliders on the four methods. </p>
+                  Overview of methods for combining
+                  multiple views, and one-sliders on the
+                  four methods.
+                </p>
 
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/composition.html
-                        " target="_blank">Vega-Lite View Composition</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/composition.html
+                        " target="_blank">Vega-Lite View
+                        Composition</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=4d8ca6c3-cf23-4589-9d16-af8c00b4b2b6"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=4d8ca6c3-cf23-4589-9d16-af8c00b4b2b6"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -973,11 +1279,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=510173d1-e615-4307-b867-af90009b2dfa"
-                      target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=510173d1-e615-4307-b867-af90009b2dfa"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -988,26 +1298,37 @@
                     src="./img/thumbnails/7.1.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">7.1</span> Layering Example</span>
+                <span class="title"><span class="numbering">7.1</span>
+                  Layering Example</span>
                 <p class="abstract">
-                  Layering one plot on top of the other </p>
+                  Layering one plot on top of the other
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/layer.html
-                        " target="_blank">Layering</a></li>
-                    <li><a href="https://vega.github.io/vega-lite/examples/layer_line_rolling_mean_point_raw.html
-                        " target="_blank">Layering Rolling Mean Example</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/layer.html
+                        " target="_blank">Layering</a>
+                    </li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/examples/layer_line_rolling_mean_point_raw.html
+                        " target="_blank">Layering Rolling Mean
+                        Example</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=2061d015-73b0-49f6-b24e-af8c00b4b732"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=2061d015-73b0-49f6-b24e-af8c00b4b732"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -1016,11 +1337,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEzjQATjRyZ289AAVBbTAAIIMNgHcassiaQmAzAAYTypAE8T6toOG37UnUkMjgTa3pvJEsTYiRBBjUTGxN6MKYkKABrMh8GWWVKRRBrZXo0ABZnZyV4GjIsNBcalSRMFFRQBnVBNFb2zjg2zEE4fkshtPVKKAhiEABfJUxg2QgAMzZ1BDQAbVBrAqs90HWaOEFlPsxEHAB9ZAAPYrYcPoQh+SUkCD6fPxsZAen0WAF0lOtgh89vwAIxiBTw0ELcEgOCyKBsZSAtCgZ6dEBnC5XdDuG7FTAeHBwa63LbxCl0UZ9AAibRpSxAHlxIEp1L6AEcGEhZDp2jpSMUkI8aL8CWLmegALLSkwAFVucGCmG6YRFyhMACVfP47EqQQtLUpBJ4tScQMh1FkeXyaegcGwbJgXjhMnRuahnJRHJz0ZjsbYeQHTudLrSEPcnoyRm6QCrHurNdrdYsraBHc75VTU-4aUpMUZ1H84FclBAaAAvN0hpRhrE4gnRwmxkkgf6m4Ei5OKkDGgEBc0ikxsdYmdOZhNato5y0ohZAA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEzjQATjRyZ289AAVBbTAAIIMNgHcassiaQmAzAAYTypAE8T6toOG37UnUkMjgTa3pvJEsTYiRBBjUTGxN6MKYkKABrMh8GWWVKRRBrZXo0ABZnZyV4GjIsNBcalSRMFFRQBnVBNFb2zjg2zEE4fkshtPVKKAhiEABfJUxg2QgAMzZ1BDQAbVBrAqs90HWaOEFlPsxEHAB9ZAAPYrYcPoQh+SUkCD6fPxsZAen0WAF0lOtgh89vwAIxiBTw0ELcEgOCyKBsZSAtCgZ6dEBnC5XdDuG7FTAeHBwa63LbxCl0UZ9AAibRpSxAHlxIEp1L6AEcGEhZDp2jpSMUkI8aL8CWLmegALLSkwAFVucGCmG6YRFyhMACVfP47EqQQtLUpBJ4tScQMh1FkeXyaegcGwbJgXjhMnRuahnJRHJz0ZjsbYeQHTudLrSEPcnoyRm6QCrHurNdrdYsraBHc75VTU-4aUpMUZ1H84FclBAaAAvN0hpRhrE4gnRwmxkkgf6m4Ei5OKkDGgEBc0ikxsdYmdOZhNato5y0ohZAA
+                    " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -1031,26 +1356,39 @@
                     src="./img/thumbnails/7.2.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">7.2</span> Concatenation Example </span>
+                <span class="title"><span class="numbering">7.2</span>
+                  Concatenation Example
+                </span>
                 <p class="abstract">
-                  Placing multiple independent plots next to each other</p>
+                  Placing multiple independent plots next
+                  to each other
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/concat.html
-                        " target="_blank">Concatenation</a></li>
-                    <li><a href="https://vega.github.io/vega-lite/examples/concat_marginal_histograms.html
-                          " target="_blank">Histograms on Heatmap Example</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/concat.html
+                        " target="_blank">Concatenation</a>
+                    </li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/examples/concat_marginal_histograms.html
+                          " target="_blank">Histograms on Heatmap
+                        Example</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=e624ce13-67fe-4872-badf-afbe00da3edb"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=e624ce13-67fe-4872-badf-afbe00da3edb"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -1059,11 +1397,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICCNsRpwIUmfIC+SiDiRQassmgCMYpUzYNZyiH0AM0EGCBhFEGIoOSg1NABtUGRtAGt9JiRtSIB3GmV6NABmAAYSpThZGOUXN00QAA80UCYXNExtBjglIPNBZX0ASQBZABEAIQACACU1WsikBppA1FkGQUE7EABPZpAkMjJtPkw4fRi-TEjoJEEz+uU2ZDbUBPL3MpKAXS3MOjv9CAbMCFKAYDEqvFXqA8gUIqhSuUMHAaGQsMUykoUul0McoFcKlU2DVXHsmvVWvJUB0uj0+gN0CMJjM5qStrsKS8ad0QL04P19NM2NhKpMACpPNRsCwsv5spQxQRsbL1A5HE73EAXWRXYF2ZJZHEgTLZJTwVHohGYkCVarzeoclpczo8vkC9BCkWycWSzDSiCy+ZKRbLNBrDZbcmgNXHCinc6+HXXOIAh6Sl5vBQfMo-JR-TCpkBA4E-L4KuS9OqgMxwHJ7CAdNipTUdJCyBxZSq64FAA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICCNsRpwIUmfIC+SiDiRQassmgCMYpUzYNZyiH0AM0EGCBhFEGIoOSg1NABtUGRtAGt9JiRtSIB3GmV6NABmAAYSpThZGOUXN00QAA80UCYXNExtBjglIPNBZX0ASQBZABEAIQACACU1WsikBppA1FkGQUE7EABPZpAkMjJtPkw4fRi-TEjoJEEz+uU2ZDbUBPL3MpKAXS3MOjv9CAbMCFKAYDEqvFXqA8gUIqhSuUMHAaGQsMUykoUul0McoFcKlU2DVXHsmvVWvJUB0uj0+gN0CMJjM5qStrsKS8ad0QL04P19NM2NhKpMACpPNRsCwsv5spQxQRsbL1A5HE73EAXWRXYF2ZJZHEgTLZJTwVHohGYkCVarzeoclpczo8vkC9BCkWycWSzDSiCy+ZKRbLNBrDZbcmgNXHCinc6+HXXOIAh6Sl5vBQfMo-JR-TCpkBA4E-L4KuS9OqgMxwHJ7CAdNipTUdJCyBxZSq64FAA
+                    " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -1074,25 +1416,34 @@
                     src="./img/thumbnails/7.3.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">7.3</span> Faceting Example</span>
+                <span class="title"><span class="numbering">7.3</span>
+                  Faceting Example</span>
                 <p class="abstract">
-                  Repeating a visualization based on values of an attribute - especially useful for Trellis plots
+                  Repeating a visualization based on
+                  values of an attribute - especially
+                  useful for Trellis plots
                 </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/facet.html
-                      " target="_blank">Faceting</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/facet.html
+                      " target="_blank">Faceting</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=45156b71-08ea-4992-bc77-af8c00b4d3d1"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=45156b71-08ea-4992-bc77-af8c00b4d3d1"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -1101,11 +1452,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICUJNohSZ8gL5Lk2gNb6mpxSDiyobZTVlk0oAA9-ECYfYOQA0NkINABGMRsQADMaOEFlfQAJNjM4HDYAdzhtV0wATxw4fQBHBiRZTDo1GlIQRLLgpDIybT5MKvRPBgbSioGQWvrG9UbWxO1C4JS0jPQAeW0aWmsrKyA"
-                      target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICUJNohSZ8gL5Lk2gNb6mpxSDiyobZTVlk0oAA9-ECYfYOQA0NkINABGMRsQADMaOEFlfQAJNjM4HDYAdzhtV0wATxw4fQBHBiRZTDo1GlIQRLLgpDIybT5MKvRPBgbSioGQWvrG9UbWxO1C4JS0jPQAeW0aWmsrKyA"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -1116,29 +1471,45 @@
                     src="./img/thumbnails/7.4.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">7.4</span> Repeating Views Example </span>
+                <span class="title"><span class="numbering">7.4</span>
+                  Repeating Views Example
+                </span>
                 <p class="abstract">
-                  Repeating a visualization based on different attributes
+                  Repeating a visualization based on
+                  different attributes
                 </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/repeat.html
-                      " target="_blank">Repeating </a></li>
-                    <li><a href="https://vega.github.io/vega-lite/docs/repeat.html#repeat-mapping
-                      " target="_blank">Repeating example with weather data</a></li>
-                    <li><a href="https://vega.github.io/vega-lite/docs/repeat.html#scatterplot-matrix-splom
-                      " target="_blank">SPLOM: ScatterPLOt Matrix</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/repeat.html
+                      " target="_blank">Repeating
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/repeat.html#repeat-mapping
+                      " target="_blank">Repeating example with
+                        weather data</a>
+                    </li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/repeat.html#scatterplot-matrix-splom
+                      " target="_blank">SPLOM: ScatterPLOt
+                        Matrix</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=1b321938-bf88-4933-8020-af9000a17ce3"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=1b321938-bf88-4933-8020-af9000a17ce3"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -1147,11 +1518,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEzjQATjRyZ289IpVJMKVKAbrBaQ8YIB3OEfjrKUCMRABfJcShyoRtABtUHU4HAdMIJBMRBwAfWQADwMYhHiEGnklHFCoLTojXRAAXSUIcKg0UGR1AGsrYVk4AzhZX2VMsiqQZNMQADMaOEFlK2UjZqUdBDgAVVk6KwQ5ek8lAE9uweHRvtDwgPR9iLWQJDIyUIoYpYd5LxBfQTZ1LaGRhrZ-HTlPD3+FCEwic+oIkOs4K9UIForEEkhklM4Rl5MUHuU4JU+jV6uhGpMQK12p1ur1QNsPuhxjcpjQZvNFuhlrJVg9Nn0KbsgQdInjwZDTph1uErABHBhIFkFHSkAznS58G5Mu6nJ4vN47T7fIrozDqNi1OAAESQEBg3WpDAQ3WOhxAYIhr3+zrRQA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEzjQATjRyZ289IpVJMKVKAbrBaQ8YIB3OEfjrKUCMRABfJcShyoRtABtUHU4HAdMIJBMRBwAfWQADwMYhHiEGnklHFCoLTojXRAAXSUIcKg0UGR1AGsrYVk4AzhZX2VMsiqQZNMQADMaOEFlK2UjZqUdBDgAVVk6KwQ5ek8lAE9uweHRvtDwgPR9iLWQJDIyUIoYpYd5LxBfQTZ1LaGRhrZ-HTlPD3+FCEwic+oIkOs4K9UIForEEkhklM4Rl5MUHuU4JU+jV6uhGpMQK12p1ur1QNsPuhxjcpjQZvNFuhlrJVg9Nn0KbsgQdInjwZDTph1uErABHBhIFkFHSkAznS58G5Mu6nJ4vN47T7fIrozDqNi1OAAESQEBg3WpDAQ3WOhxAYIhr3+zrRQA
+                  " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -1161,11 +1536,12 @@
 
       <div class="row">
         <div class="col s12">
-          <h3 id="course-projects-2020"><span class="numbering">8.</span> Config</h3>
+          <h3 id="course-projects-2020">
+            <span class="numbering">8.</span> Config
+          </h3>
         </div>
-        <div class="col s12 ">
+        <div class="col s12">
           <ul class="collection">
-
             <li video-id="8" class="collection-item student-project row">
               <div class="thumbnail col s2 m2">
                 <a target="_blank"
@@ -1173,24 +1549,35 @@
                     src="./img/thumbnails/8.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">8</span> Config overview </span>
+                <span class="title"><span class="numbering">8</span> Config
+                  overview
+                </span>
                 <p class="abstract">
-                  Overview of config object plus an example in code. </p>
+                  Overview of config object plus an
+                  example in code.
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/config.html
-                        " target="_blank">Config </a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/config.html
+                        " target="_blank">Config
+                      </a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=dbc3ffc3-db70-409c-9246-af9900eb78da"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=dbc3ffc3-db70-409c-9246-af9900eb78da"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -1199,26 +1586,31 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICCNsRpwIUmfIC+SiDiRQassmgCMYpUzYNZyiH0AM0EGCBhFEGIoOSg1NABtUGRtAGs0UEwATxw4fSYkbUiIbME89BhTOG0kJjKQOxAAdxplejQAZgAGLqU4WRjlFzdNEAAPDJAmFzRMbQY4JSDzQWV9AEkAWQARACEAAgAlNWHIpDGaQNRZBkFBRqzJpDIybT5McpAYv0xiuPrRso2MgZqgEr13D0ugBdRqYOgAkANGx2UAwGIDeJg0AtNoRVDdXoYOA0MhYTo9JQpdKjbK5fRvKC-exzNipco3O6NfqDU6jCajabyVBzBZLFZrdBbPZHE6uBpKR6C0GixYgZZwVb6Q5sbD9fYAFWBajYFll8PljRigjYRVGz1e70+31kvxRqJA1MmdM+BSKLKyiMqpBqdTyjXgpPJBMpIB5bCG8tGStAQtm8zVGq16B1etkhuNmFNEHNpyU50uaE59yUAtADreFA++hdzJA0CQANAQJBwvBCkhPVhSnhmERyJssOhSgxyxGoDMcCakxK2jZnzmSFkDkK-TdVMKNNAq-X+UETnSjRKgfKaKqoa7ICLbEE8Jw6bFXx0MjtIBwbBcD4indGwgA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAEySYUqUAwBOgtCrVICCNsRpwIUmfIC+SiDiRQassmgCMYpUzYNZyiH0AM0EGCBhFEGIoOSg1NABtUGRtAGs0UEwATxw4fSYkbUiIbME89BhTOG0kJjKQOxAAdxplejQAZgAGLqU4WRjlFzdNEAAPDJAmFzRMbQY4JSDzQWV9AEkAWQARACEAAgAlNWHIpDGaQNRZBkFBRqzJpDIybT5McpAYv0xiuPrRso2MgZqgEr13D0ugBdRqYOgAkANGx2UAwGIDeJg0AtNoRVDdXoYOA0MhYTo9JQpdKjbK5fRvKC-exzNipco3O6NfqDU6jCajabyVBzBZLFZrdBbPZHE6uBpKR6C0GixYgZZwVb6Q5sbD9fYAFWBajYFll8PljRigjYRVGz1e70+31kvxRqJA1MmdM+BSKLKyiMqpBqdTyjXgpPJBMpIB5bCG8tGStAQtm8zVGq16B1etkhuNmFNEHNpyU50uaE59yUAtADreFA++hdzJA0CQANAQJBwvBCkhPVhSnhmERyJssOhSgxyxGoDMcCakxK2jZnzmSFkDkK-TdVMKNNAq-X+UETnSjRKgfKaKqoa7ICLbEE8Jw6bFXx0MjtIBwbBcD4indGwgA
+                  " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
-
           </ul>
         </div>
       </div>
 
       <div class="row">
         <div class="col s12">
-          <h3 id="course-projects-2020"><span class="numbering">9.</span> Cross-cutting examples</h3>
+          <h3 id="course-projects-2020">
+            <span class="numbering">9.</span> Cross-cutting
+            examples
+          </h3>
         </div>
-        <div class="col s12 ">
+        <div class="col s12">
           <ul class="collection">
-
             <li video-id="9.1" class="collection-item student-project row">
               <div class="thumbnail col s2 m2">
                 <a target="_blank"
@@ -1226,25 +1618,38 @@
                     src="./img/thumbnails/9.1.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">9.1</span> Interactive Dashboard Example </span>
+                <span class="title"><span class="numbering">9.1</span>
+                  Interactive Dashboard Example
+                </span>
                 <p class="abstract">
-                  Creating a dashboard based on the cars dataset with linking and brushing between histograms and a
-                  scatterplot. </p>
+                  Creating a dashboard based on the cars
+                  dataset with linking and brushing
+                  between histograms and a scatterplot.
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://observablehq.com/@weiglemc/brushing-and-linking-example-with-vega-lite
-                        " target="_blank">"Brushing and Linking Example with Vega-Lite", Michele Weigle </a></li>
+                    <li>
+                      <a href="https://observablehq.com/@weiglemc/brushing-and-linking-example-with-vega-lite
+                        " target="_blank">"Brushing and Linking
+                        Example with Vega-Lite",
+                        Michele Weigle
+                      </a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=5729d416-8336-441a-bb04-afa40110fdc1"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=5729d416-8336-441a-bb04-afa40110fdc1"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -1253,11 +1658,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJghgLhIFygK4CcA29zQgegMYWQGcA6AK0IHsA7EAXwBoQALXa-KeAbVEIAcBTXPFCoIAT37IuoALYEA1hgBGBEIyb8AlgHMmHOAEYALAAZGvAhBmFpIKlf4YmmwlAD6S5IkJM1IQvyogvqgyPyUqABujnAgmlRQkgG4HIz8VKxg8do2cJwgAB4gALqMUGICGPGJyJEQ6LS0pSDpmdnChR0AZpqBYB1hAtAYyBQA7nSMEAUu3RTIcvrgkyBK8R1yBWtUuQDMZiAy8a78vPAGDCDllbEAjogQCZowUJrRK6yo8x2Jrh1UFBCIAsyCsThc7k83l8jUYdVQiBiIFQOj02lBYhWmIQIAg2nR-G00CRrEQCTosNkCmUqnUWl0+mMB1aFCyVG0HSKOJ6fQGp34w1iowml2ms2580WGH6l22G2m2z2ByOO0SZ0Ml2uSPuj1eLzejkun2+OPhiIwJ0CSgRhsY2NAeIJRMSGFJ5NhV1BOy6ktsPVQNQ6ILBsWcrg8Xh8FOKTUugwFQOFXBAAEFcLhApJoJpqH4ACIuXiiDMydKpEAAYTEKKoYCSJUph2psV4FGqfg0qP0AFZTGkMqz2jiuaAeah+rEALKaIKENwCZBuADi9S+NDKFW1Dye+veRooXykpvq5tiKIZ6PEflYteeOZo3N644wAHlkDp1uZLDJweGoVGPXtEAxwnEAAAl5gCVsxkkPwtQwHUd2zPdLjGTQwCgXw4AANhMEwmkYAASQhcA0OQnCgKBeEIOBsGwaIiWIbRniYRAlGIHNsBIsicAYiAAFoUUSejuzISgaFoIA
-                    " target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJghgLhIFygK4CcA29zQgegMYWQGcA6AK0IHsA7EAXwBoQALXa-KeAbVEIAcBTXPFCoIAT37IuoALYEA1hgBGBEIyb8AlgHMmHOAEYALAAZGvAhBmFpIKlf4YmmwlAD6S5IkJM1IQvyogvqgyPyUqABujnAgmlRQkgG4HIz8VKxg8do2cJwgAB4gALqMUGICGPGJyJEQ6LS0pSDpmdnChR0AZpqBYB1hAtAYyBQA7nSMEAUu3RTIcvrgkyBK8R1yBWtUuQDMZiAy8a78vPAGDCDllbEAjogQCZowUJrRK6yo8x2Jrh1UFBCIAsyCsThc7k83l8jUYdVQiBiIFQOj02lBYhWmIQIAg2nR-G00CRrEQCTosNkCmUqnUWl0+mMB1aFCyVG0HSKOJ6fQGp34w1iowml2ms2580WGH6l22G2m2z2ByOO0SZ0Ml2uSPuj1eLzejkun2+OPhiIwJ0CSgRhsY2NAeIJRMSGFJ5NhV1BOy6ktsPVQNQ6ILBsWcrg8Xh8FOKTUugwFQOFXBAAEFcLhApJoJpqH4ACIuXiiDMydKpEAAYTEKKoYCSJUph2psV4FGqfg0qP0AFZTGkMqz2jiuaAeah+rEALKaIKENwCZBuADi9S+NDKFW1Dye+veRooXykpvq5tiKIZ6PEflYteeOZo3N644wAHlkDp1uZLDJweGoVGPXtEAxwnEAAAl5gCVsxkkPwtQwHUd2zPdLjGTQwCgXw4AANhMEwmkYAASQhcA0OQnCgKBeEIOBsGwaIiWIbRniYRAlGIHNsBIsicAYiAAFoUUSejuzISgaFoIA
+                  " target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -1268,28 +1677,45 @@
                     src="./img/thumbnails/9.2.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">9.2</span> Geovisualization in Vega-Lite - Examples </span>
+                <span class="title"><span class="numbering">9.2</span>
+                  Geovisualization in Vega-Lite - Examples
+                </span>
                 <p class="abstract">
-                  Topojsons, projections and geoviz in Vega-Lite with two examples. </p>
+                  Topojsons, projections and geoviz in
+                  Vega-Lite with two examples.
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/docs/projection.html
-                      " target="_blank">Projections </a></li>
-                      <li><a href="https://vega.github.io/vega-lite/examples/geo_choropleth.html
-                          " target="_blank">Cloropleth Example </a></li>
-                          <li><a href="https://vega.github.io/vega-lite/examples/geo_layer.html
-                              " target="_blank">Layering on GeoVis Example </a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/docs/projection.html
+                      " target="_blank">Projections
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/examples/geo_choropleth.html
+                          " target="_blank">Cloropleth Example
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/examples/geo_layer.html
+                              " target="_blank">Layering on GeoVis Example
+                      </a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=cd3600a0-9ced-4903-b424-afa1009c7a05"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=cd3600a0-9ced-4903-b424-afa1009c7a05"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -1298,11 +1724,15 @@
                   <div class="icon-label">Copy Embed</div>
                 </div>
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAdxoATemjEAGbUvg0yWNAGZdSwUgCecAE5oA2qDVJMKVKAa3BaEC7cEDBD8AIzaCFIy8koAZmy2yJhooJhWOHC+mGw4bNJyiiAxcK5eGegQbphwECAAvrVKOLa5cFCY7PIeIKnpvkiCTHYQAKoQKA0gyLYA1sndaWUgZHBsEDBIvbE0gj7owkaYZLbWBRXN04vKMCJ1Dc6u7p7evv5IBEg0tjm2mBCUUBBiHVGs1JK12vkuj1Fv1BrYRmNgZMkDNfFBPlBBBklHBZFA2GoaLIyHNBHJaJgGGoyqAYjQ4II1L4ycS6FTsfNeugAI4MJCydqVGikJGWQXsuZ0hlMvauNnUgrQ3y8-mCuUiiYQGgALxpIGI-QYZTCE3xZPsXQNgiNvgqcAZTGtGXqtQAurUgA"
-                      target="_blank"><i class="fa fa-file-code"></i></a>
-                  </div>
-                  <div class="icon-label">View Code</div>
+                  <a href="https://vega.github.io/editor/#/url/vega-lite/N4IgJAzgxgFgpgWwIYgFwhgF0wBwqgegIDc4BzJAOjIEtMYBXAI0poHsDp5kTykBaADZ04JAKyUAVhDYA7EABoQAdxoATemjEAGbUvg0yWNAGZdSwUgCecAE5oA2qDVJMKVKAa3BaEC7cEDBD8AIzaCFIy8koAZmy2yJhooJhWOHC+mGw4bNJyiiAxcK5eGegQbphwECAAvrVKOLa5cFCY7PIeIKnpvkiCTHYQAKoQKA0gyLYA1sndaWUgZHBsEDBIvbE0gj7owkaYZLbWBRXN04vKMCJ1Dc6u7p7evv5IBEg0tjm2mBCUUBBiHVGs1JK12vkuj1Fv1BrYRmNgZMkDNfFBPlBBBklHBZFA2GoaLIyHNBHJaJgGGoyqAYjQ4II1L4ycS6FTsfNeugAI4MJCydqVGikJGWQXsuZ0hlMvauNnUgrQ3y8-mCuUiiYQGgALxpIGI-QYZTCE3xZPsXQNgiNvgqcAZTGtGXqtQAurUgA"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <div class="icon-label">
+                      View Code
+                    </div>
+                  </a>
                 </div>
               </div>
             </li>
@@ -1313,24 +1743,36 @@
                     src="./img/thumbnails/9.3.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">9.3</span> Streaming Data Example with Vega-Lite API </span>
+                <span class="title"><span class="numbering">9.3</span>
+                  Streaming Data Example with Vega-Lite
+                  API
+                </span>
                 <p class="abstract">
-                  Handling data that changes over time, using the Vega-Lite and Vega View APIs</p>
+                  Handling data that changes over time,
+                  using the Vega-Lite and Vega View APIs
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/tutorials/streaming.html
-                        " target="_blank">Streaming Data Tutorial </a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/tutorials/streaming.html
+                        " target="_blank">Streaming Data Tutorial
+                      </a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=7df34e05-4dc8-446f-ae91-afa50128ccd9"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=7df34e05-4dc8-446f-ae91-afa50128ccd9"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -1345,11 +1787,13 @@
       </div>
       <div class="row">
         <div class="col s12">
-          <h3 id="course-projects-2020"><span class="numbering">10.</span> Embedding Vega-Lite projects</h3>
+          <h3 id="course-projects-2020">
+            <span class="numbering">10.</span> Embedding
+            Vega-Lite projects
+          </h3>
         </div>
-        <div class="col s12 ">
+        <div class="col s12">
           <ul class="collection">
-
             <li video-id="10.1" class="collection-item student-project row">
               <div class="thumbnail col s2 m2">
                 <a target="_blank"
@@ -1357,25 +1801,36 @@
                     src="./img/thumbnails/10.1.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"> <span class="numbering">10.1</span> Vega-Lite & the Web - Embedding into HTML
+                <span class="title">
+                  <span class="numbering">10.1</span>
+                  Vega-Lite & the Web - Embedding into
+                  HTML
                 </span>
                 <p class="abstract">
-                  Embedding Vega-Lite visualizations into webpages using vegaEmbed() </p>
+                  Embedding Vega-Lite visualizations into
+                  webpages using vegaEmbed()
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite/usage/embed.html
-                        " target="_blank">Using VegaEmbed()</a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite/usage/embed.html
+                        " target="_blank">Using VegaEmbed()</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=f4d0fd2f-5fb8-41d2-abb1-afa201091500"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=f4d0fd2f-5fb8-41d2-abb1-afa201091500"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -1383,7 +1838,6 @@
                   </div>
                   <div class="icon-label">Copy Embed</div>
                 </div>
-
               </div>
             </li>
             <li video-id="10.2" class="collection-item student-project row">
@@ -1393,26 +1847,40 @@
                     src="./img/thumbnails/10.2.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">10.2</span> Altair - Using Vega-Lite with Python</span>
+                <span class="title"><span class="numbering">10.2</span>
+                  Altair - Using Vega-Lite with
+                  Python</span>
                 <p class="abstract">
-                  Embedding Vega-Lite into python (jupyter) notebooks using the Altair API </p>
+                  Embedding Vega-Lite into python
+                  (jupyter) notebooks using the Altair API
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href=" https://altair-viz.github.io/index.html#
-                        " target="_blank">Altair Home Page </a></li>
-                        <li><a href="https://altair-viz.github.io/gallery/choropleth.html
-                            " target="_blank">Cloropleth Map - Altair </a></li>
+                    <li>
+                      <a href=" https://altair-viz.github.io/index.html#
+                        " target="_blank">Altair Home Page
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://altair-viz.github.io/gallery/choropleth.html
+                            " target="_blank">Cloropleth Map - Altair
+                      </a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=006d7e7a-7325-4d67-83cc-afa20117339e"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=006d7e7a-7325-4d67-83cc-afa20117339e"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -1420,7 +1888,6 @@
                   </div>
                   <div class="icon-label">Copy Embed</div>
                 </div>
-
               </div>
             </li>
 
@@ -1431,26 +1898,46 @@
                     src="./img/thumbnails/10.2.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">10.3</span> Vega-Lite API</span>
+                <span class="title"><span class="numbering">10.3</span>
+                  Vega-Lite API</span>
                 <p class="abstract">
-                  Building visualizations in JavaScript using the Vega-Lite API </p>
+                  Building visualizations in JavaScript
+                  using the Vega-Lite API
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://vega.github.io/vega-lite-api/
-                        " target="_blank">Vega-Lite API </a></li>
-                        <li><a href="https://observablehq.com/@vega/vega-lite-api#standalone_use
-                            " target="_blank">Stand-Alone Usage in a Web Browser - VL API Observable </a></li>
+                    <li>
+                      <a href="https://vega.github.io/vega-lite-api/
+                        " target="_blank">Vega-Lite API
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://observablehq.com/@vega/vega-lite-api#standalone_use" target="_blank">Stand-Alone
+                        Usage in a Web
+                        Browser - VL API Observable
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.classcentral.com/course/youtube-learning-vega-lite-api-for-javascript-on-observable-93383"
+                        target="_blank">"Learning Vega-Lite API for
+                        Javascript on Observable",
+                        John Alexis Guerra Gomez</a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=74217546-3103-4fad-b397-afba00f09f1e"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=74217546-3103-4fad-b397-afba00f09f1e"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -1458,7 +1945,6 @@
                   </div>
                   <div class="icon-label">Copy Embed</div>
                 </div>
-
               </div>
             </li>
 
@@ -1469,24 +1955,36 @@
                     src="./img/thumbnails/10.2.jpg" alt="" class="teaser" /></a>
               </div>
               <div class="col s9 m9">
-                <span class="title"><span class="numbering">10.4</span> VegaLite.jl - Using Vega-Lite with Julia</span>
+                <span class="title"><span class="numbering">10.4</span>
+                  VegaLite.jl - Using Vega-Lite with
+                  Julia</span>
                 <p class="abstract">
-                  Embedding Vega-Lite into Julia (jupyter) notebooks using the VegaLite.jl package. </p>
+                  Embedding Vega-Lite into Julia (jupyter)
+                  notebooks using the VegaLite.jl package.
+                </p>
                 <div class="references">
                   <span>References</span>
                   <ol>
-                    <li><a href="https://www.queryverse.org/VegaLite.jl/stable/
-                        " target="_blank">VegaLite.jl package for Julia </a></li>
+                    <li>
+                      <a href="https://www.queryverse.org/VegaLite.jl/stable/
+                        " target="_blank">VegaLite.jl package for
+                        Julia
+                      </a>
+                    </li>
                   </ol>
                 </div>
               </div>
               <div class="col s2 video-icons">
                 <div class="video-icon">
-                  <div class="icon-image">
-                    <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=32087dde-838d-4426-827b-afbe00d03e90"
-                      target="_blank"><i class="fas fa-video"></i></a>
-                  </div>
-                  <div class="icon-label">Play Video</div>
+                  <a href="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=32087dde-838d-4426-827b-afbe00d03e90"
+                    target="_blank">
+                    <div class="icon-image">
+                      <i class="fas fa-video"></i>
+                    </div>
+                    <div class="icon-label">
+                      Play Video
+                    </div>
+                  </a>
                 </div>
                 <div class="video-icon copy-embed">
                   <div class="icon-image">
@@ -1494,13 +1992,11 @@
                   </div>
                   <div class="icon-label">Copy Embed</div>
                 </div>
-
               </div>
             </li>
           </ul>
         </div>
       </div>
-
     </section>
 
     <section class="empty"></section>
@@ -1510,17 +2006,23 @@
     <div class="container">
       <div class="row">
         <div class="col l6 s12">
-          <h5 class="white-text">Aarhus University Visualization Repository</h5>
-          <p class="grey-text text-lighten-4">
-          </p>
+          <h5 class="white-text">
+            Aarhus University Visualization Repository
+          </h5>
+          <p class="grey-text text-lighten-4"></p>
         </div>
         <div class="col l4 offset-l2 s12">
           <ul>
-            <li><a class="grey-text text-lighten-3" href="https://cs.au.dk/">Department of Computer Science, Aarhus
-                University</a></li>
-            <li><a class="grey-text text-lighten-3"
+            <li>
+              <a class="grey-text text-lighten-3" href="https://cs.au.dk/">Department of Computer Science, Aarhus
+                University</a>
+            </li>
+            <li>
+              <a class="grey-text text-lighten-3"
                 href="https://cs.au.dk/research/ubiquitous-computing-and-interaction/">Research Group for Ubiquitous
-                Computing and Interaction</a></li>
+                Computing and
+                Interaction</a>
+            </li>
           </ul>
         </div>
       </div>
