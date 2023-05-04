@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Protein Sequence Coverage Map</title>
+
+    <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../static/css/fonts.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="../static/css/style.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="./style.css" media="screen,projection">
+    <script src="https://kit.fontawesome.com/cb26641bd1.js"></script>
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="au-color">
+        <div class="nav-wrapper container">
+            <a href="../" class="brand-logo">
+                <img src="../static/img/auvis_logo_large_white.png" height="45px" alt="">
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="../publications/">Publications</a></li>
+                <li><a class="current" href="../software/">Software</a></li>
+                <li><a href="../teaching_materials/">Teaching Material</a></li>
+                <li><a href="../student_projects/">Student Projects</a></li>
+                <li><a href="../workshops/">Workshops</a></li>
+                <li><a href="../team/">Team</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="container">
+        <section class="row" id="map-like">
+            <h2>Protein Sequence Coverage Map</h2>
+            <p class="leader">## Food science journal time ##</p>
+        </section>
+
+        <section class="row">
+            <div class="col s12 m7 abstract">
+                <h3>Authors</h3>
+                <a href="https://www.linkedin.com/in/s%C3%B8ren-drud-heydary-nielsen-76829225/?originalSubdomain=dk"
+                    target="_blank" class="author"><span>Soeren Drud-Heydary Nielsen</span></a>
+                <a href="https://pure.au.dk/portal/en/persons/harith-rathish(abd9352b-490f-4118-b668-30497074c27e).html"
+                    target="_blank" class="author"><span>Harith Rathish</span></a>
+                <a href="https://hjschulz.net/" class="author"><span>Hans-Jörg Schulz</span></a>
+
+                <figure class="teaser" style="color:#777;border: 1px solid #ccc">
+                    <a href="https://github.com/harith1996/peptide_bioactive_viz">
+                        <img src="../static/img/protein-seq-map.jpeg" alt="Cover image of Protein Sequence Map." />
+                    </a>
+                    <figcaption>Cover image of Protein Sequence Map. Click this image to get to the code.</figcaption>
+                </figure>
+
+                <h3>Overview</h3>
+                <p>Introduction</p>
+                <p>Related work: This plot is widely used in proteomics to provide an overview of the peptides associated to a protein. It is most commonly known in the literature as a "sequence coverage map" \cite. However, there is no formal publication on the visualization itself. </p>
+                <p>Structure of input data
+                    <p> Protein Sequences</p>
+                    <p> Peptides </p>
+                </p>
+                <p>Order of stacking: For each amino acid "X", the longest peptide that starts with "X" is shown on top. From top to down, the length of the peptides decrease. </p>
+                <p>Color Scheme: We are using a categorical color scheme prescribed in Figure 4 of Qualititative Color Schemes in <a href="https://personal.sron.nl/~pault/" target="_blank">Paul Tol's notes</a>. </p>
+                <p>Static mapping to bioactive functions: The bioactive functions map to the same colors as shown in the figure, regardless of their order in any input dataset.</p>
+                <p>Wrapping of lines: Peptides that span across amino acids near the edges of the plot wrap around and are shown on the axis below. The wrapped lines are indicted by arrow marks. </p>
+                <p>Length of signal peptide: This indicates the number of amino acids to hide from the beginning of the sequence. </p>
+                <p>Max axis length: This indicates the maximum number of amino acids shown per axis.</p>
+                <p>Export options: Currently we support exporting the plot as an SVG image, which contains the plot alone without the legend or the controls.</p>
+                <p>Figure caption</p>
+            </div>
+
+            <div class="col s12 m3 right resources">
+                <h3>Resources</h3>
+
+                <!-- <h4> <a href=""><i class="icon fas fa-file-pdf"></i> Paper</a></h4> -->
+                <h4> <a href="https://doi.org/10.1109/TestVis57757.2022.00006"><i class="icon fas fa-globe"></i>
+                        Publisher</a></h4>
+                <h4><a href="https://cs.au.dk/~hjschulz/pdfs/testvis.pdf"><i class="icon fas fa-file-pdf"></i> Paper</a>
+                </h4>
+                <h4><a href="../publications/bib/Madsen2022vaos.bib"><i class="icon fas fa-quote-right"></i> BibTeX
+                        Citation</a></h4>
+                <br />
+
+                <h4><a href="./static/demo-video.mp4"><i class="icon fas fa-video"></i> Demo video</a></h4>
+                <h4><a href="./static/vaos_example_dataset.zip"><i class="icon fas fa-database"></i> Example dataset</a>
+                </h4>
+                <h4><a href="https://github.com/J-Matzen/VAOS/releases/download/v1.0.1/VAOS_User_Manual.pdf"><i
+                            class="icon fas fa-file-pdf"></i> Documentation</a></h4>
+                <h4><a href="https://github.com/J-Matzen/VAOS/releases/latest"><i class="icon fas fa-download"></i>
+                        Download ProtoCover</a></h4>
+                <h4 class="highlight"><a href="https://github.com/harith1996/peptide_bioactive_viz"><i
+                            class="icon fab fa-github"></i> Code on Github</a></h4>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col s12 m7 abstract">
+                <h3>Citation in BibTeX</h3>
+
+                <p>To cite this article, we encourage you to use the following bibtex entry in your citation manager:
+                </p>
+
+                <pre>
+  @InProceedings{VAOS2022,
+    author    = {Madsen, Jonas and Sode, Lasse and Frost Dahl, Julie and Corredig, Milena and
+                 Schulz, Hans-J\"org},
+    booktitle = {Proc. of First International Workshop on Visualization in Testing of Hardware,
+                 Software, and Manufacturing},
+    title     = {Visual Exploration of Rheological Test Results from Soft Materials},
+    year      = {2022},
+    publisher = {IEEE}
+  }
+
+        </pre>
+            </div>
+        </section>
+
+        <section class="empty"></section>
+    </article>
+
+    <footer class="page-footer au-color darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Aarhus University Visualization Repository</h5>
+                    <p class="grey-text text-lighten-4">
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://cs.au.dk/">Department of Computer Science,
+                                Aarhus University</a></li>
+                        <li><a class="grey-text text-lighten-3"
+                                href="https://cs.au.dk/research/ubiquitous-computing-and-interaction/">Research Group
+                                for Ubiquitous Computing and Interaction</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <!-- <div class="container">
+        © 2020 Copyright Department of Computer Science, Aarhus University
+      <a class="grey-text text-lighten-4 right" href="#">back to top</a>
+      </div> -->
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../static/js/materialize.min.js"></script>
+</body>
+
+</html>
