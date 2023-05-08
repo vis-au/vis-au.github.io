@@ -267,7 +267,7 @@ footer a:hover {
   color: rgba(170, 170, 200)
 }
 
-.video-icon .icon-label {
+.video-icon-label {
   visibility: hidden;
 }
 
@@ -276,7 +276,7 @@ footer a:hover {
   cursor: pointer;
 }
 
-.video-icon:hover .icon-label {
+.video-icon:hover .video-icon-label {
   visibility:visible;
 }
 
