@@ -20,8 +20,8 @@
         <img src="../static/img/auvis_logo_large_white.png" height="45px" alt="">
       </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="../publications/">Publications</a></li>
-        <li><a class="current" href="../software/">Software</a></li>
+        <li><a class="current" href="../publications/">Publications</a></li>
+        <li><a href="../software/">Software</a></li>
         <li><a href="../teaching_materials/">Teaching Material</a></li>
         <li><a href="../student_projects/">Student Projects</a></li>
         <li><a href="../workshops/">Workshops</a></li>
@@ -33,7 +33,7 @@
   <article class="container">
     <section class="row" id="map-like">
       <h2>Tailorable Sampling for Progressive Visual Analytics</h2>
-      <p class="leader">(under review)</p>
+      <p class="leader">IEEE Transactions on Visualization and Computer Graphics (2023, to appear)</p>
     </section>
 
     <section class="row">
@@ -53,17 +53,31 @@
 
         <h3>Abstract</h3>
         <p>
-          Progressive visual analytics (PVA) allows analysts to maintain their flow during otherwise long-running computations, by producing early, incomplete results that refine over time, for example, by running the computation over smaller partitions of the data. Generally, these partitions are created using sampling. The goal for sampling in PVA is, therefore, to draw samples of the dataset such that the progressive visualization becomes as useful as possible as soon as possible. What makes the visualization useful depends on the analysis task and, accordingly, some task-specific sampling methods have been proposed for PVA to address this need. However, as analysts see more and more of their data during the progression, the task in PVA often changes, which means that analysts need to restart the computation to switch the sampling method, causing them to lose their analysis flow. This poses a clear limitation to the proposed benefits of PVA. To this end, in this paper we propose a pipeline for PVA-sampling, which allows tailoring the data partitioning to analysis scenarios by changing out modules, and in a way that does not require restarting the analysis. We for the first time characterize the problem of PVA-sampling, formalize the pipeline in terms of the data format, discuss on-the-fly tailoring, and present additional examples demonstrating its usefulness.
+          Progressive visual analytics (PVA) allows analysts to maintain their flow during otherwise
+          long-running computations by producing early, incomplete results that refine over time,
+          for example, by running the computation over smaller partitions of the data. These
+          partitions are created using sampling, whose goal it isto draw samples of the dataset such
+          that the progressive visualization becomes as useful as possible as soon as possible. What
+          makes the visualization useful depends on the analysis task and, accordingly, some
+          task-specific sampling methods have been proposed for PVA to address this need. However,
+          as analysts see more and more of their data during the progression, the analysis task at
+          hand often changes, which means that analysts need to restart the computation to switch
+          the sampling method, causing them to lose their analysis flow. This poses a clear
+          limitation to the proposed benefits of PVA. Hence, we propose a pipeline for PVA-sampling
+          that allows tailoring the data partitioning to analysis scenarios by switching out modules
+          in a way that does not require restarting the analysis. To that end, we characterize the
+          problem of PVA-sampling, formalize the pipeline in terms of data structures, discuss
+          on-the-fly tailoring, and present additional examples demonstrating its usefulness.
         </p>
       </div>
 
       <div class="col s12 m3 right resources">
         <h3>Resources</h3>
 
-        <!-- <h4> <a href="https://cs.au.dk/~hjschulz/pdfs/eurova22.pdf"><i class="icon fas fa-file-pdf"></i>Paper</a></h4> -->
-        <!-- <h4> <a href="https://diglib.eg.org/handle/10.2312/eurova20221079"><i class="icon fas fa-globe"></i>DOI (external)</a></h4> -->
-        <h4><a href="./"><i class="icon fas fa-quote-right"></i> BibTeX Citation (tba)</a></h4>
-        <h4><a href="https://github.com/vis-au/prosample/blob/main/server/pipeline/figures.ipynb"><i class="icon fas fa-book"></i></i> Notebook for recreating figures</a></h4>
+        <h4> <a href="./"><i class="icon fas fa-file-pdf"></i>Paper (preprint)</a></h4>
+        <h4> <a href="./"><i class="icon fas fa-globe"></i>DOI (tba)</a></h4>
+        <h4><a href="../publications/bib/Hograefer2023_sampling.bib"><i class="icon fas fa-quote-right"></i> BibTeX Citation</a></h4>
+        <h4><a href="https://github.com/vis-au/prosample/blob/main/server/pipeline/figures.ipynb"><i class="icon fas fa-book"></i> Notebook for recreating figures</a></h4>
         <h4><a href="./static/video/prosample demo.mp4"><i class="icon fas fa-video"></i> ProSample demo</a></h4>
         <h4 class="highlight"><a href="https://github.com/vis-au/prosample"><i class="icon fab fa-github"></i> Code on Github</a></h4>
       </div>
@@ -76,14 +90,16 @@
       <p>To cite this article, we encourage you to use the following bibtex entry in your citation manager:</p>
 
         <pre>
-@article{pva_tailorable_sampling2022,
+@article{pva_tailorable_sampling2023,
   title     = {Tailorable Sampling for Progressive Visual Analytics},
   author    = {Hogr\"afer, Marius and Schulz, Hans-J\"org},
-  year      = {2022},
-  journal   = {TBA},
-  pages     = {TBA},
-  publisher = {TBA},
-  doi       = {TBA},
+  year      = {2023},
+  journal   = {IEEE Transactions on Visualization and Computer Graphics},
+  volume    = {},
+  number    = {},
+  pages     = {},
+  doi       = {},
+  url       = {https://vis-au.github.io/prosample}
 }
         </pre>
       </div>
