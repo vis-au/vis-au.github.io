@@ -352,3 +352,12 @@ footer a:hover {
 .icon-legend-entry span {
   margin-left : 15px;
 }
+
+#author-list {
+  
+  font-weight: bold;
+}
+
+#author-list a {
+  text-decoration: underline;
+}
