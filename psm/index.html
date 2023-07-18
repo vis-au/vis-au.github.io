@@ -35,201 +35,230 @@
     <article class="container">
         <section class="row" id="map-like">
             <h2>Protein Sequence Coverage Map</h2>
-            <p class="leader">## Food science journal title ##</p>
+            <p class="leader">This page showcases an enhanced version of the protein sequence coverage map, which is commonly used in proteomics and mass spectrometry. This software was used in a <a href="#">publication</a> in the food science and nutrition field. Details of the software are written below, while that of the publication are on the links to the right. </p>
         </section>
 
         <section class="row">
             <div class="col s12 m7 abstract">
                 <h3>Authors</h3>
-                <a href="https://www.linkedin.com/in/s%C3%B8ren-drud-heydary-nielsen-76829225/?originalSubdomain=dk"
-                    target="_blank" class="author"><span>Soeren Drud-Heydary Nielsen</span></a>
-                <a href="https://pure.au.dk/portal/en/persons/harith-rathish(abd9352b-490f-4118-b668-30497074c27e).html"
-                    target="_blank" class="author"><span>Harith Rathish</span></a>
-                <a href="https://hjschulz.net/" class="author"><span>Hans-Jörg Schulz</span></a>
+                <div id="author-list">
+                    <a href="https://pure.au.dk/portal/en/persons/harith-rathish(abd9352b-490f-4118-b668-30497074c27e).html"
+                        target="_blank" class="author"><span>Harith Rathish</span></a>,
+                    <a href="https://www.linkedin.com/in/s%C3%B8ren-drud-heydary-nielsen-76829225/?originalSubdomain=dk"
+                        target="_blank" class="author"><span>Soeren Drud-Heydary Nielsen</span></a>,
+                    <a href="https://hjschulz.net/" class="author"><span>Hans-Jörg Schulz</span></a>
+                </div>
 
                 <figure class="teaser" style="color:#777;border: 1px solid #ccc">
                     <a href="https://youtu.be/TnAurhwSrhs" target="_blank">
-                        <img src="../static/img/protein-seq-map-annotated.png" alt="Cover image of Protein Sequence Map." />
+                        <img src="../static/img/protein-seq-map-annotated.png"
+                            alt="Cover image of Protein Sequence Map." />
                     </a>
-                    <figcaption>Cover image of Protein Sequence Map. Details of the labels are given in the description. Click this image to watch the demo video.</figcaption>
+                    <figcaption>Cover image of Protein Sequence Map. Details of the labels are given in the description.
+                        <b>Click this image to watch the demo video.</b></figcaption>
                 </figure>
 
                 <h3>Overview</h3>
-                The protein sequence coverage map is widely used (<a href="https://www.researchgate.net/figure/Sequence-coverage-map-of-full-length-EBP50-Bars-indicate-the-identified-peptic-peptides_fig2_273780845" style="color: blue;font-weight: bolder;">1</a>, <a href="https://www.researchgate.net/figure/Coverage-map-of-the-peptide-map-obtained-by-the-characterization-stage-of-MAM-analysis_fig4_345028794" style="color: blue;font-weight: bolder;">2</a>, <a href="https://www.researchgate.net/figure/Protein-sequence-coverage-by-mass-spectrometry-of-the-serpin-purified-from-the-hemolymph_fig5_259723603" style="color: blue;font-weight: bolder;">3</a>) to provide an overview of the peptides associated to a protein. This implementation is targeted for <b>use cases where horizontal space is limited, e.g., in a paper.</b> 
+                The protein sequence coverage map is widely used (<a
+                    href="https://www.researchgate.net/figure/Sequence-coverage-map-of-full-length-EBP50-Bars-indicate-the-identified-peptic-peptides_fig2_273780845"
+                    style="color: blue;font-weight: bolder;">1</a>, <a
+                    href="https://www.researchgate.net/figure/Coverage-map-of-the-peptide-map-obtained-by-the-characterization-stage-of-MAM-analysis_fig4_345028794"
+                    style="color: blue;font-weight: bolder;">2</a>, <a
+                    href="https://www.researchgate.net/figure/Protein-sequence-coverage-by-mass-spectrometry-of-the-serpin-purified-from-the-hemolymph_fig5_259723603"
+                    style="color: blue;font-weight: bolder;">3</a>) to provide an overview of the peptides associated to
+                a protein. This implementation is targeted for <b>use cases where horizontal space is limited, e.g., in
+                    a paper.</b>
 
                 <h3>Description</h3>
-                <p>The visualizations show a horizontal line <b>(8)</b> for each peptide, with a different color for different bioactive functions <b>(7)</b>. The purpose of this plot is to provide an overview of all the peptides that were associated with the protein. The lines that wrap around the edges of the image are indicated with an arrow mark <b>(11)</b>. 
-                    
-                    For each amino acid "X", the longest peptide that starts with "X" is shown on top. From top to down, the length of the peptides decrease. </p>
-                    <p> Currently we support exporting the plot as an SVG image <b>(6) </b>, which contains the plot
-                        alone without the legend or the controls.</p>
+                <p>The visualizations show a horizontal line <b>(1)</b> for each peptide, with a different color for
+                    different bioactive functions <b>(2)</b>. The purpose of this plot is to provide an overview of all
+                    the peptides that were associated with the protein. The lines that wrap around the edges of the
+                    image are indicated with an arrow mark <b>(3)</b>.
 
-                    
+                    For each amino acid "X", the longest peptide that starts with "X" is shown on top. From top to down,
+                    the length of the peptides decrease. </p>
+                <p> Currently we support exporting the plot as an SVG image <b>(4) </b>, which contains the plot
+                    alone without the legend or the controls.</p>
+
+
                 <h3>Interaction</h3>
-                
-                <p><b>Choose a protein (3) </b>: Users can choose a protein out of the list of unique values for <b>"Entry"</b> from the protein sequences dataset. The sequence will be built and peptides will be stacked based on this choice.</p>
-                    <p><b>Length of signal peptide (4) </b>: This indicates the number of amino acids to hide from the beginning of the
-                        sequence. </p>
-                    <p><b>Max axis length (5) </b>: This indicates the maximum number of amino acids shown per axis. If it's set to 0, then the number is calculated based on available screen width. This lets users control the width according to their horizontal space limits.</p>
-                    
+
+                <p><b>Choose a protein (5) </b>: Users can choose a protein out of the list of unique values for
+                    <b>"Entry"</b> from the protein sequences dataset. The sequence will be built and peptides will be
+                    stacked based on this choice.
+                </p>
+                <p><b>Length of signal peptide (6) </b>: This indicates the number of amino acids to hide from the
+                    beginning of the
+                    sequence. </p>
+                <p><b>Max axis length (7) </b>: This indicates the maximum number of amino acids shown per axis. If it's
+                    set to 0, then the number is calculated based on available screen width. This lets users control the
+                    width according to their horizontal space limits.</p>
+
 
                 <h3>Design Choices</h3>
 
                 <h4> Color Scheme</h4>
 
                 <p>The plot uses a categorical color scheme prescribed in Figure 4 of Qualititative Color
-                    Schemes in <a href="https://personal.sron.nl/~pault/" target="_blank" style="color:blue">Paul Tol's notes</a>. We chose this scheme as it is developed with the help of mathematical descriptions of colour differences and the two main types of colour-blind vision. The only change we've made is darkening the grey color from #DDDDDD to #BBBBBB, due to printability reasons. </p>
+                    Schemes in <a href="https://personal.sron.nl/~pault/" target="_blank" style="color:blue">Paul Tol's
+                        notes</a>. We chose this scheme as it is developed with the help of mathematical descriptions of
+                    colour differences and the two main types of colour-blind vision. The only change we've made is
+                    darkening the grey color from #DDDDDD to #BBBBBB, due to printability reasons. </p>
                 <p>As of now, the bioactive functions map to the same colors as shown in the
-                    figure, regardless of their order in any input dataset. The color codes for each bioactive function is shown in the table below. </p>
-                    <table>
-                        <th>
-                            <td><b>Bioactive Function</b></td>
-                            <td><b>Color Hexcode</b></td>
-                        </th>
-                        <tr>
-                            <td></td>
-                            <td>ACE-inhibitory</td>
-                            <td style="color: #CC6677;"> #CC6677
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td></td>
-                            <td>Antimicrobial</td>
-                            <td style="color: #DDCC77;"> #DDCC77
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Antioxidant</td>
-                            <td style="color: #117733;"> #117733
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>DPP-IV Inhibitor</td>
-                            <td style="color: #88CCEE;"> #88CCEE
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Opioid</td>
-                            <td style="color: #999933;"> #999933
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>immunomodulatory</td>
-                            <td style="color: #44AA99;"> #44AA99
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Anticancer</td>
-                            <td style="color: #AA4499;"> #AA4499
-                            </td>
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td>Others</td>
-                            <td style="color: #BBBBBB;"> #BBBBBB
-                            </td>
-                        </tr>
-                    </table>
+                    figure, regardless of their order in any input dataset. The color codes for each bioactive function
+                    is shown in the table below. </p>
+                <table>
+                    <th>
+                    <td><b>Bioactive Function</b></td>
+                    <td><b>Color Hexcode</b></td>
+                    </th>
+                    <tr>
+                        <td></td>
+                        <td>ACE-inhibitory</td>
+                        <td style="color: #CC6677;"> #CC6677
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td>Antimicrobial</td>
+                        <td style="color: #DDCC77;"> #DDCC77
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Antioxidant</td>
+                        <td style="color: #117733;"> #117733
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>DPP-IV Inhibitor</td>
+                        <td style="color: #88CCEE;"> #88CCEE
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Opioid</td>
+                        <td style="color: #999933;"> #999933
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>immunomodulatory</td>
+                        <td style="color: #44AA99;"> #44AA99
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Anticancer</td>
+                        <td style="color: #AA4499;"> #AA4499
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>Others</td>
+                        <td style="color: #BBBBBB;"> #BBBBBB
+                        </td>
+                    </tr>
+                </table>
                 </p>
-                <br/>
+                <br />
                 <h4>Structure of input data</h4>
-                There are two datasets to be uploaded in <b>.csv</b> format, the structure of which are as follows:
-                <p> <b>Protein Sequences</b> <br/>
-                    Should contain two columns, one for the protein ID ("Entry") and one for the protein sequence ("Sequence"). The protein ID should be unique, and should match an entry in the <b> < protein database website ></protein></b>
-                    <table>
-                        <caption>Example for protein sequences </caption>
-                        <th>
-                            <td><b>Entry</b></td>
-                            <td><b>Sequence</b></td>
-                        </th>
-                        <tr>
-                            <td></td>
-                            <td>P02663</td>
-                            <td>MKFFIFTCL...
-                            </td>
-                        </tr>
-                        
-                        <tr>
-                            <td></td>
-                            <td>P02662</td>
-                            <td>MKLLILTCL...
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
+                There are two datasets to be uploaded in <b>.csv</b> format onto fields <b>(8)</b> and <b>(9)</b>, the structure of which are as follows:
+                <p> <b>Protein Sequences</b> <br />
+                    Should contain two columns, one for the protein ID ("Entry") and one for the protein sequence
+                    ("Sequence"). The protein ID should be unique, and should match an entry in the <b>
+                        UniProt</b> database. The sequence string should have no spaces or line breaks. An example is shown below:
+                <table>
+                    <caption>Example for protein sequences </caption>
+                    <th>
+                    <td><b>Entry</b></td>
+                    <td><b>Sequence</b></td>
+                    </th>
+                    <tr>
+                        <td></td>
+                        <td>P02663</td>
+                        <td>MKFFIFTCL...
+                        </td>
+                    </tr>
 
-                            </td>
-                            <td>...</td>
-                            <td>...</td>
-                        </tr>
-                    </table>
+                    <tr>
+                        <td></td>
+                        <td>P02662</td>
+                        <td>MKLLILTCL...
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                </table>
                 </p>
-                <br/>
-                <p> <b>Peptides</b> <br/>
-                    Should contain three columns, one for the protein ID ("proteinID"), one for the peptide sequence ("Peptide") and one for the bioactive function of the peptide ("function"). The protein ID should match one and only one entry in the protein sequences dataset.
-                    <table>
-                        <caption>Example for peptides </caption>
-                        <th>
-                            <td><b>proteinID</b></td>
-                            <td><b>Peptide</b></td>
-                            <td><b>function</b></td>
-                        </th>
-                        <tr>
-                            <td></td>
-                            <td>P02663</td>
-                            <td>TKVIPYVRYL
-                            </td>
-                            <td>Antimicrobial</td>
-                        </tr>
-                        
-                        <tr>
-                            <td></td>
-                            <td>P02662</td>
-                            <td>FFVAP
-                            </td>
-                            <td>
-                                ACE-inhibitory
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>
+                <br />
+                <p> <b>Peptides</b> <br />
+                    Should contain three columns, one for the protein ID ("proteinID"), one for the peptide sequence
+                    ("Peptide") and one for the bioactive function of the peptide ("function"). The protein ID should
+                    match one and only one entry in the protein sequences dataset.
+                <table>
+                    <caption>Example for peptides </caption>
+                    <th>
+                    <td><b>proteinID</b></td>
+                    <td><b>Peptide</b></td>
+                    <td><b>function</b></td>
+                    </th>
+                    <tr>
+                        <td></td>
+                        <td>P02663</td>
+                        <td>TKVIPYVRYL
+                        </td>
+                        <td>Antimicrobial</td>
+                    </tr>
 
-                            </td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                        </tr>
-                    </table></p>
-                    <br/>
-                
+                    <tr>
+                        <td></td>
+                        <td>P02662</td>
+                        <td>FFVAP
+                        </td>
+                        <td>
+                            ACE-inhibitory
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td>...</td>
+                        <td>...</td>
+                        <td>...</td>
+                    </tr>
+                </table>
+                </p>
+                <br />
+
             </div>
 
             <div class="col s12 m3 right resources">
                 <h3>Resources</h3>
 
                 <!-- <h4> <a href=""><i class="icon fas fa-file-pdf"></i> Paper</a></h4> -->
-                <h4> <a href="https://doi.org/10.1109/TestVis57757.2022.00006"><i class="icon fas fa-globe"></i>
+                <h4> <a href="https://www.tandfonline.com/toc/bfsn20/current"><i class="icon fas fa-globe"></i>
                         Publisher</a></h4>
-                <h4><a href="https://cs.au.dk/~hjschulz/pdfs/testvis.pdf"><i class="icon fas fa-file-pdf"></i> Paper</a>
+                <h4><a href="#"><i class="icon fas fa-file-pdf"></i> Paper</a>
                 </h4>
-                <h4><a href="../publications/bib/Madsen2022vaos.bib"><i class="icon fas fa-quote-right"></i> BibTeX
+                <h4><a href="#"><i class="icon fas fa-quote-right"></i> BibTeX
                         Citation</a></h4>
                 <br />
-
-                <h4><a href="./static/demo-video.mp4"><i class="icon fas fa-video"></i> Demo video</a></h4>
-                <h4><a href="./static/vaos_example_dataset.zip"><i class="icon fas fa-database"></i> Example dataset</a>
+                <h4><a href="https://harith1996.github.io/peptide_bioactive_viz" target="_blank"><i class="icon fas fa-external-link-alt"></i> Try it online!</a></h4>
+                <h4><a href="https://youtu.be/TnAurhwSrhs" target="_blank"><i class="icon fas fa-video"></i> Demo video</a></h4>
+                <h4><a href="#"><i class="icon fas fa-database"></i> Example dataset</a>
                 </h4>
-                <h4><a href="https://github.com/J-Matzen/VAOS/releases/download/v1.0.1/VAOS_User_Manual.pdf"><i
-                            class="icon fas fa-file-pdf"></i> Documentation</a></h4>
-                <h4><a href="https://github.com/J-Matzen/VAOS/releases/latest"><i class="icon fas fa-download"></i>
+                <h4><a href="#"><i class="icon fas fa-download"></i>
                         Download</a></h4>
-                <h4 class="highlight"><a href="https://github.com/harith1996/peptide_bioactive_viz"><i
+                <h4 class="highlight"><a href="https://github.com/harith1996/peptide_bioactive_viz" target="_blank"><i
                             class="icon fab fa-github"></i> Code on Github</a></h4>
             </div>
         </section>
@@ -242,16 +271,7 @@
                 </p>
 
                 <pre>
-  @InProceedings{VAOS2022,
-    author    = {Madsen, Jonas and Sode, Lasse and Frost Dahl, Julie and Corredig, Milena and
-                 Schulz, Hans-J\"org},
-    booktitle = {Proc. of First International Workshop on Visualization in Testing of Hardware,
-                 Software, and Manufacturing},
-    title     = {Visual Exploration of Rheological Test Results from Soft Materials},
-    year      = {2022},
-    publisher = {IEEE}
-  }
-
+ tba
         </pre>
             </div>
         </section>
