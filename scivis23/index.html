@@ -33,20 +33,20 @@
   <article class="container">
     <section class="row" id="map-like">
       <h2>Immersive Exploration of Brain Simulation Data</h2>
-      <p class="leader">IEEE SciVis Contest 2023</p>
+      <p class="leader">Our entry to the <a href="https://sciviscontest2023.github.io/" target="_blank">2023 IEEE SciVis Contest</a></p>
     </section>
 
     <section class="row">
       <div class="col s12 m7 abstract">
         <h3>The Aarhus University IEEE SciVis Contest Team</h3>
         Corneliu Boboc,
-        <a href="https://www.linkedin.com/in/joachim-brendborg-40b275154/"><span>Joachim Brendborg,</span></a>
-        <a href="https://github.com/mahog" class="author"><span>Marius Hogräfer,</span></a>
+        <a href="https://www.linkedin.com/in/joachim-brendborg-40b275154/" class="author"><span>Joachim Brendborg,</span></a>
+        <a href="https://linkedin.com/in/hograefer" class="author"><span>Marius Hogräfer,</span></a>
         Andreas Asferg Jacobsen,
         Jacob Møller Kjeldsen,
         <a href="https://mott.in/" class="author"><span>Davide Mottin,</span></a>
         <a href="https://kenpfeuffer.com/" class="author"><span>Ken Pfeuffer,</span></a>
-        Asger Ullersted Rasmussen,
+        <a href="https://www.linkedin.com/in/asger-ullersted-rasmussen-07a8b5166/" class="author">Asger Ullersted Rasmussen,</a>
         <a href="https://pure.au.dk/portal/en/persons/troels-rasmussen(2ff4e233-28d4-42e8-873b-9187be0cf2f7).html" class="author"><span>Troels Rasmussen,</span></a>
         <a href="https://pure.au.dk/portal/en/persons/juan-manuel-rodriguez(0e1e1c1d-5a79-49d0-986d-556b7fa65c28).html" class="author"><span>Juan Manuel Rodriguez,</span></a>
         Mathias Ryborg,
@@ -55,7 +55,8 @@
         Vidur Singh,
         Theodor Tollersrud
 
-        <iframe width="100%" height="408" src="https://www.youtube.com/embed/Z7L2hTcXTGE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" style="margin:50px 0" allowfullscreen></iframe>
+        <h3>Submission Video</h3>
+        <iframe width="100%" height="408" min-width="400" src="https://www.youtube.com/embed/Z7L2hTcXTGE?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
 
       <div class="col s12 m3 right resources">
@@ -71,6 +72,24 @@
         <p>
           Our submission tackles the visual analysis of the brain simulation through the use of VR. To that end, we built a VR software framework that allows for immersive exploration of the data. At its core, our solution builds on a hierarchical clustering of the brain network, which is used throughout our software framework - from the organization of the database backend to the interactive adjustment of the level of detail in the frontend. The framework integrates customized methods for clustering, extraction of perceptually important points, 3D edge-bundling, and tangible interaction to realize a fluid analytic workflow on the given simulation data. Two domain experts used our framework to explore the contest data and we report on some of their observations and explanations.
         </p>
+
+        <h3>Additional Features</h3>
+
+        <h4>Tactile Interaction</h4>
+        <p>To make it easier to communicate insights with domain experts outside of VR, we have created a physical 3D model of the brain as a tangible and trackable input device to our framework. Not only is the 3D view synced with the orientation of the physical model, but the model can be tapped with a stylus-like pointer and the cluster corresponding to the tapped region will then unfold into its subclusters in the 3D view.</p>
+        <iframe src="https://panopto.au.dk/Panopto/Pages/Embed.aspx?id=1beab7ec-f986-47fe-a96b-b05000828df1&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" height="405" width="100%" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
+
+        <h4>Space-filling Curves</h4>
+        <p>To place multiple simulation trajectories in a line chart, we needed to order the trajectories of clusters/neurons to maintain their spatial proximity as observed in the 3D neuronal network view as best as possible.
+        This was achieved by constructing a space-filling curve across all neurons and clusters.
+        Yet, a 3D space-filling curve does not work well in this case, as all neurons lie on the surface of the brain, leaving it hollow, which creates rather unreasonable curves/linear orders.
+        Making use of the likeness between neurons on the brain's surface and points on a globe, we first applied a map projection to the 3D data and then used a 2D space-filling curve on the resulting "map of the brain".
+        After testing various projections and space-filling curves, we chose a combination of the <a href="https://en.wikipedia.org/wiki/Van_der_Grinten_projection">Van der Grinten projection</a> and a <a href="https://en.wikipedia.org/wiki/Hilbert_curve">Hilbert curve</a> that gave us the best overall fit.</p>
+        <figure style="margin:0">
+          <img src="./static/space-filling.gif" alt="GIF of the space-filling Hilbert curve progressively covering the shape of a brain along neurons." width="100%" style="border: 1px solid #ccc;"/>
+          <figcaption style="margin:0;color:#888">Animation of the space-filling curve computed over the neurons.</figcaption>
+        </figure>
+
       </div>
     </section>
 
