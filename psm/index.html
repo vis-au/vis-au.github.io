@@ -35,7 +35,11 @@
     <article class="container">
         <section class="row" id="map-like">
             <h2>Protein Sequence Coverage Map</h2>
-            <p class="leader">This page showcases an enhanced version of the protein sequence coverage map, which is commonly used in proteomics and mass spectrometry. This software was used in a <a href="#">publication</a> in the food science and nutrition field. Details of the software are written below, while that of the publication are on the links to the right. </p>
+            <p class="leader">Protein sequence coverage maps are visualizations used in proteomics and peptidomics to
+                show the distribution of peptides across their parent protein. This software was developed in
+                collaboration with Aarhus University’s Department of Food Science. Further details on the software and
+                its use are provided below. To reference the software, please cite the accompanied review article on
+                bioactive milk peptides. </p>
         </section>
 
         <section class="row">
@@ -45,7 +49,7 @@
                     <a href="https://pure.au.dk/portal/en/persons/harith-rathish(abd9352b-490f-4118-b668-30497074c27e).html"
                         target="_blank" class="author"><span>Harith Rathish</span></a>,
                     <a href="https://www.linkedin.com/in/s%C3%B8ren-drud-heydary-nielsen-76829225/?originalSubdomain=dk"
-                        target="_blank" class="author"><span>Soeren Drud-Heydary Nielsen</span></a>,
+                        target="_blank" class="author"><span>Søren Drud-Heydary Nielsen</span></a>,
                     <a href="https://hjschulz.net/" class="author"><span>Hans-Jörg Schulz</span></a>
                 </div>
 
@@ -55,7 +59,8 @@
                             alt="Cover image of Protein Sequence Map." />
                     </a>
                     <figcaption>Cover image of Protein Sequence Map. Details of the labels are given in the description.
-                        <b>Click this image to watch the demo video.</b></figcaption>
+                        <b>Click this image to watch the demo video.</b>
+                    </figcaption>
                 </figure>
 
                 <h3>Overview</h3>
@@ -115,61 +120,63 @@
                     <tr>
                         <td></td>
                         <td>ACE-inhibitory</td>
-                        <td style="color: #CC6677;"> #CC6677
+                        <td style="color: #CC6677;"> <b>#CC6677</b>
                         </td>
                     </tr>
 
                     <tr>
                         <td></td>
                         <td>Antimicrobial</td>
-                        <td style="color: #DDCC77;"> #DDCC77
+                        <td style="color: #DDCC77;"> <b>#DDCC77</b>
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>Antioxidant</td>
-                        <td style="color: #117733;"> #117733
+                        <td style="color: #117733;"> <b>#117733</b>
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>DPP-IV Inhibitor</td>
-                        <td style="color: #88CCEE;"> #88CCEE
+                        <td style="color: #88CCEE;"> <b>#88CCEE</b>
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>Opioid</td>
-                        <td style="color: #999933;"> #999933
+                        <td style="color: #999933;"> <b>#999933</b>
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>immunomodulatory</td>
-                        <td style="color: #44AA99;"> #44AA99
+                        <td style="color: #44AA99;"> <b>#44AA99</b>
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>Anticancer</td>
-                        <td style="color: #AA4499;"> #AA4499
+                        <td style="color: #AA4499;"> <b>#AA4499</b>
                         </td>
                     </tr>
                     <tr>
                         <td></td>
                         <td>Others</td>
-                        <td style="color: #BBBBBB;"> #BBBBBB
+                        <td style="color: #BBBBBB;"> <b>#BBBBBB</b>
                         </td>
                     </tr>
                 </table>
                 </p>
                 <br />
                 <h4>Structure of input data</h4>
-                There are two datasets to be uploaded in <b>.csv</b> format onto fields <b>(8)</b> and <b>(9)</b>, the structure of which are as follows:
+                There are two datasets to be uploaded in <b>.csv</b> format onto fields <b>(8)</b> and <b>(9)</b>, the
+                structure of which are as follows:
                 <p> <b>Protein Sequences</b> <br />
                     Should contain two columns, one for the protein ID ("Entry") and one for the protein sequence
                     ("Sequence"). The protein ID should be unique, and should match an entry in the <b>
-                        UniProt</b> database. The sequence string should have no spaces or line breaks. An example is shown below:
+                        UniProt</b> database. The sequence string should have no spaces or line breaks. An example is
+                    shown below:
                 <table>
                     <caption>Example for protein sequences </caption>
                     <th>
@@ -207,7 +214,7 @@
                     <caption>Example for peptides </caption>
                     <th>
                     <td><b>proteinID</b></td>
-                    <td><b>Peptide</b></td>
+                    <td><b>peptide</b></td>
                     <td><b>function</b></td>
                     </th>
                     <tr>
@@ -245,18 +252,24 @@
                 <h3>Resources</h3>
 
                 <!-- <h4> <a href=""><i class="icon fas fa-file-pdf"></i> Paper</a></h4> -->
-                <h4> <a href="https://www.tandfonline.com/toc/bfsn20/current"><i class="icon fas fa-globe"></i>
+                <h4> <a href="https://doi.org/10.1080/10408398.2023.2240396" target="_blank"><i
+                            class="icon fas fa-globe"></i>
                         Publisher</a></h4>
-                <h4><a href="#"><i class="icon fas fa-file-pdf"></i> Paper</a>
+                <h4><a href="https://doi.org/10.1080/10408398.2023.2240396" target="_blank"><i
+                            class="icon fas fa-file-pdf"></i> Paper</a>
                 </h4>
-                <h4><a href="#"><i class="icon fas fa-quote-right"></i> BibTeX
+                <h4><a href="../publications/bib/Harith2023_peptides.bib" target="_blank"><i
+                            class="icon fas fa-quote-right"></i> BibTeX
                         Citation</a></h4>
                 <br />
-                <h4><a href="https://harith1996.github.io/peptide_bioactive_viz" target="_blank"><i class="icon fas fa-external-link-alt"></i> Try it online!</a></h4>
-                <h4><a href="https://youtu.be/TnAurhwSrhs" target="_blank"><i class="icon fas fa-video"></i> Demo video</a></h4>
-                <h4><a href="#"><i class="icon fas fa-database"></i> Example dataset</a>
+                <h4><a href="https://harith1996.github.io/peptide_bioactive_viz" target="_blank"><i
+                            class="icon fas fa-external-link-alt"></i> Try it online!</a></h4>
+                <h4><a href="https://youtu.be/TnAurhwSrhs" target="_blank"><i class="icon fas fa-video"></i> Demo
+                        video</a></h4>
+                <h4><a href="../static/resources/psm_example_dataset.zip"><i class="icon fas fa-database"></i> Example dataset</a>
                 </h4>
-                <h4><a href="https://github.com/harith1996/peptide_bioactive_viz/releases/tag/v1"><i class="icon fas fa-download"></i>
+                <h4><a href="https://github.com/harith1996/peptide_bioactive_viz/releases/tag/v1"><i
+                            class="icon fas fa-download"></i>
                         Download</a></h4>
                 <h4 class="highlight"><a href="https://github.com/harith1996/peptide_bioactive_viz" target="_blank"><i
                             class="icon fab fa-github"></i> Code on Github</a></h4>
@@ -271,7 +284,24 @@
                 </p>
 
                 <pre>
- tba
+@article{doi:10.1080/10408398.2023.2240396,
+author = {Søren Drud-Heydary Nielsen and Ningjian Liang and Harith Rathish and Bum Jin Kim and Jiraporn Lueangsakulthai and Jeewon Koh and Yunyao Qu and Hans-Jörg Schulz and David C. Dallas},
+title = {Bioactive milk peptides: an updated comprehensive overview and database},
+journal = {Critical Reviews in Food Science and Nutrition},
+volume = {0},
+number = {0},
+pages = {1-20},
+year  = {2023},
+publisher = {Taylor & Francis},
+doi = {10.1080/10408398.2023.2240396},
+    note ={PMID: 37504497},
+URL = { 
+        https://doi.org/10.1080/10408398.2023.2240396
+},
+eprint = { 
+        https://doi.org/10.1080/10408398.2023.2240396
+}
+}
         </pre>
             </div>
         </section>
