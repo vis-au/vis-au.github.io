@@ -118,7 +118,7 @@ const VIDEO_EMBEDS = [
 	},
 	{
 		id: 10.1,
-		embed: '<iframe src="https://panopto.au.dk/Panopto/Pages/Embed.aspx?id=f4d0fd2f-5fb8-41d2-abb1-afa201091500&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&captions=false&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>',
+		embed: '<iframe src="https://panopto.au.dk/Panopto/Pages/Viewer.aspx?id=c35dfc9b-8473-422d-b248-b05300a68d3c" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>',
 	},
 	{
 		id: 10.2,
