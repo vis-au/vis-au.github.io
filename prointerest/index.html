@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Combining Degree of Interest Functions and Progressive Visualization | AU Visualization Research Repository</title>
+
+  <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css"  media="screen,projection"/>
+  <link type="text/css" rel="stylesheet" href="../static/css/fonts.css" media="screen,projection">
+  <link type="text/css" rel="stylesheet" href="../static/css/style.css" media="screen,projection">
+  <link type="text/css" rel="stylesheet" href="./style.css" media="screen,projection">
+  <script src="https://kit.fontawesome.com/cb26641bd1.js"></script>
+  <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <nav class="au-color">
+    <div class="nav-wrapper container">
+      <a href="../" class="brand-logo">
+        <img src="../static/img/auvis_logo_large_white.png" height="45px" alt="">
+      </a>
+      <ul class="right hide-on-med-and-down">
+        <li><a class="current" href="../publications/">Publications</a></li>
+        <li><a href="../software/">Software</a></li>
+        <li><a href="../teaching_materials/">Teaching Material</a></li>
+        <li><a href="../student_projects/">Student Projects</a></li>
+        <li><a href="../workshops/">Workshops</a></li>
+        <li><a href="../team/">Team</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="container">
+    <section class="row" id="map-like">
+      <h2>Combining Degree of Interest Functions and Progressive Visualization</h2>
+      <p class="leader">IEEE VIS 2023 Short Papers (accepted)</p>
+    </section>
+
+    <section class="row">
+      <div class="col s12 m7 abstract">
+        <h3>Authors</h3>
+        <a href="https://linkedin.com/in/hograefer" class="author"><span>Marius Hogräfer,</span></a>
+        <span>Dominik Moritz,</span>
+        <span>Adam Perer,</span>
+        <a href="https://hjschulz.net/" class="author"><span>Hans-Jörg Schulz</span></a>
+
+        <!-- <figure class="teaser" style="color:#777">
+          <a href="./static/video/prosample demo.mp4">
+            <img src="./static/img/pipeline_v2.png" alt="Screenshot of ProSample." />
+          </a>
+          <figcaption>
+            Enabling tailorable PVA-sampling using a pipeline that structures the sampling process into three steps (linearization, subdivision, and selection). The steps are depicted here along the data format they operate on: The linearization takes in the input data structure and transforms it into linear format, which is then subdivided into bins in the subdivision step. The last step then produces the chunks forwarded into the PVA process by progressively selecting appropriate items from each bin.
+          </figcaption>
+        </figure> -->
+
+        <h3>Abstract</h3>
+        <p>
+          When visualizing large datasets, an important goal is to emphasize data that is relevant to the task at hand. A common way of achieving this is to compute the relevance of the data using degree of interest (DOI) functions, which apply a scenario-specific metric to quantify the data items according to their relevance to the users and their tasks. These DOI values can then be used to adjust the visual encoding through mechanisms like focus+context or information hiding.
+        </p>
+        <p>
+          For datasets too large to be visualized at once, an alternative approach is to visualize it progressively in chunks, allowing analysts to reason about partial results and concluding their analysis much earlier than had they waited for all data. Combining the advantages of both approaches to tailor the visualization seems synergistic, yet, in practice turns out to be challenging, as DOI functions require the context of all data to produce useful values, requiring lengthy computations that break analysts' flow in progressive visualization. In this paper, we propose an approach for uniting DOI functions with progressive visualization. We first introduce a new model for quantifying the user interest in analysis scenarios where the data is only partially available, by computing the interest for available data and predicting it for the rest. We then propose regression trees for implementing this approach in practice and evaluate it in benchmarks.
+        </p>
+        <p>
+          With DOI values now available for progressive visualization as well, our approach opens the door for tailoring the visualization of large datasets to the analysis task at interactive update rates.
+          </p>
+      </div>
+
+      <div class="col s12 m3 right resources">
+        <h3>Resources</h3>
+
+        <h4> <a href="#" target="_blank"><i class="icon fas fa-file-pdf"></i>Paper (preprint)</a></h4>
+        <!-- <h4> <a href="https://doi.org/10.1109/TVCG.2023.3278084"><i class="icon fas fa-globe"></i>DOI</a></h4> -->
+        <!-- <h4><a href="../publications/bib/Hograefer2023_sampling.bib"><i class="icon fas fa-quote-right"></i> BibTeX Citation</a></h4> -->
+        <h4><a href="https://github.com/vis-au/prointerest/blob/doi-tree/server/benchmarks/benchmarks.ipynb"><i class="icon fas fa-book"></i> Notebook with Benchmarks</a></h4>
+        <h4 class="highlight"><a href="https://github.com/vis-au/prointerest"><i class="icon fab fa-github"></i> Code on Github</a></h4>
+      </div>
+    </section>
+
+    <section class="row">
+      <div class="col s12 m7 abstract">
+        <h3>Citation in BibTeX</h3>
+
+      <p>To cite this article, we encourage you to use the following bibtex entry in your citation manager:</p>
+
+        <pre>
+@inproceedings{prointerest2023,
+  title     = {Combining Degree of Interest Functions and Progressive Visualization},
+  author    = {Hogr\"afer, Marius and Moritz, Dominik and Perer, Adam and Schulz, Hans-J\"org},
+  year      = {2023},
+  journal   = {Proc. of VIS Short Papers},
+  volume    = {},
+  number    = {},
+  pages     = {},
+  doi       = {},
+  url       = {https://vis-au.github.io/prointerest}
+}
+        </pre>
+      </div>
+    </section>
+
+    <section class="empty"></section>
+  </article>
+
+  <footer class="page-footer au-color darken-1">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">Aarhus University Visualization Repository</h5>
+          <p class="grey-text text-lighten-4">
+          </p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="https://cs.au.dk/">Department of Computer Science, Aarhus University</a></li>
+            <li><a class="grey-text text-lighten-3" href="https://cs.au.dk/research/ubiquitous-computing-and-interaction/">Research Group for Ubiquitous Computing and Interaction</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <!-- <div class="container">
+        © 2020 Copyright Department of Computer Science, Aarhus University
+      <a class="grey-text text-lighten-4 right" href="#">back to top</a>
+      </div> -->
+    </div>
+  </footer>
+
+  <script type="text/javascript" src="../static/js/materialize.min.js"></script>
+</body>
+</html>
