@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Protein Sequence Coverage Map</title>
+    <title>Highways and Tunnels: Force Feedback Guidance for Visualisations</title>
 
     <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css" media="screen,projection" />
     <link type="text/css" rel="stylesheet" href="../static/css/fonts.css" media="screen,projection">
@@ -35,7 +35,7 @@
     <article class="container">
         <section class="row" id="map-like">
             <h2>Highways and Tunnels: Force Feedback Guidance for Visualisations</h2>
-            <p class="leader">Leader goes here</p>
+            <p class="leader">EuroVis 2024</p>
         </section>
 
         <section class="row">
@@ -48,9 +48,52 @@
                         target="_blank" class="author"><span>Eve Hoggan</span></a>,
                     <a href="https://hjschulz.net/" class="author"><span>Hans-Jörg Schulz</span></a>
                 </div>
+                <h3>Submission Video</h3>
+                <iframe width="100%" height="408" min-width="400" src="https://www.youtube.com/embed/lUMYggqBi2s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>The Castor force feedback mouse</h3>
+                <figure style="margin:0">
+                    <img src="./static/Castor-Feature.jpg" alt="A picture of the Castor mouse in use">
+                    <figcaption style="margin:0;color:#888">The Castor force feedback mouse in use.</figcaption>
+                </figure>
+                The Castor mouse is a two button, two axis mouse that can provide force feedback on both axes.
+                Inside the mouse, two wheel assemblies are mounted at a 90° angle, protruding slightly from the bottom of the mouse. 
+                Each wheel assembly consists of an omni-wheel mounted to a BLDC motor, which itself is mounted to the shell of the mouse. 
+                A magnetic rotary encoder provides absolute rotational positioning of the wheel. 
+                The 90° angle lets each wheel encode movement and provide force feedback in their respective axis, without affecting each other. 
+                A ball caster is similarly mounted beneath the mouse, sitting freely beneath a push button. 
+                This helps both balance the mouse and detect whether the mouse is on the table or being lifted (to disable the motors). 
+                
+                The mouse was designed to 
+                <ul class="browser-default">
+                    <li>be relatively easy and cheap to source parts for.</li>
+                    <li>be relatively easy to make using tools available in most maker-spaces.</li>
+                    <li>provide detailed and forceful actuation (which requires motors of significant size and heft),</li>
+                    <li>while remaining as close in looks and experience to a regular mouse as possible.</li>
+                </ul>
+                To this end, its shell has been FFF manufactured in PLA plastic, and its electronics can be assembled on a single sided circuit board (or even point-to-point soldered with a bit of patience).
+                The mouse has a footprint of 15x9cm and a height of 7cm and weighs about half a kilo. 
+                <figure style="margin:0">
+                    <img style="width: 49%;" src="./static/Castor-Underside.jpg" alt="The underside of the mouse showing two omni-wheels at a 90 degree angle, and a ball caster for balance and lift sensing.">
+                    <img style="width: 49%;" src="./static/Castor-Open.jpg" alt="A Castor mouse with its shell off, showing its electronics. This is a point-to-point wired model.">
+                    <figcaption style="margin:0;color:#888">"The underside of the mouse showing two omni-wheels at a 90 degree angle, and a ball caster for balance and lift sensing (left). A Castor mouse with its shell off, showing its electronics, in this case point-to-point wired (right).</figcaption>
+                </figure>
 
-                <h3>Section 1</h3>
-                Text will be going here
+                <h3>User study and demo application</h3>
+                To explore how the use of force feedback guidance affects user behavior and experience, a simple Electron app was developed, which lets the user navigate across a subset of the <a href="https://cartograph.info">Cartograph map of Wikipedia</a>.
+                Using a flag in the code, the application may be converted between a user-study mode, where the user is put through a sequence of targets and feedback types, or a demo mode, where the user may freely explore the map and feedback configurations.
+                In user-study mode, 
+                <ul class="browser-default">
+                    <li>users are presented with a sequence of 9 tasks of locating a topic on the map. Each task applies a different combination of no, weak and strong force feedback pulling and constraining. Latin square counterbalancing is applied using the participant id.</li>
+                    <li>targets and starting points are picked randomly from a directionally-balanced pool of equal distances.</li>
+                    <li>questionaire answers are collected after each completed task.</li>
+                    <li>the cursor position on the screen and on the canvas is logged every 100 ms.</li>
+                </ul>
+                In the demo mode, the user may at any time bring up a modal allowing them to change topic and force feedback intensity.
+                <figure style="margin:0">
+                    <video loop autoplay width="100%" muted> <source src="./static/Highways-Demo.mp4" type="video/mp4" />Recording of a user being guided to their chosen topic Dinosaur using mild pulling.</video>
+                    <figcaption style="margin:0;color:#888">Navigating to the topic "Dinosaur" in the demo application with mild pulling feedback. 
+                        The two red arrows are not normally visible but here visualise the direct path to the topic, and the force applied by the mouse.</figcaption>
+                </figure>
             </div>
 
             <div class="col s12 m3 right resources">
@@ -65,9 +108,11 @@
                             class="icon fas fa-quote-right"></i> BibTeX
                         Citation</a></h4>
                 <br />
-                <h4 class="highlight"><a href="" target="_blank"><i
-                            class="icon fab fa-github"></i> Code + CAD on Github</a></h4>
-                <h4><a href="" target="_blank"><i class="icon fas fa-video"></i> Demo
+                <h4 class="highlight"><a href="https://gitlab.au.dk/highways-and-tunnels/castor-mouse" target="_blank"><i
+                            class="icon fab fa-gitlab"></i> Castor code + CAD</a></h4>
+                <h4 class="highlight"><a href="https://gitlab.au.dk/highways-and-tunnels/highways-demo-application" target="_blank"><i
+                    class="icon fab fa-gitlab"></i> Demo application</a></h4>
+                <h4><a href="https://youtu.be/lUMYggqBi2s" target="_blank"><i class="icon fas fa-video"></i> Demo
                         video</a></h4>
             </div>
         </section>
