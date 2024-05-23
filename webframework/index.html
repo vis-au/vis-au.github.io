@@ -51,26 +51,21 @@
                 <h3>Charts: View, visual model and data model combined</h3>
                 <figure style="margin:0">
                     <img src="./static/Chart.PNG" alt="A picture of a Chart with a view, and both the visual and data model open">
-                    <figcaption style="margin:0;color:#888">A Chart with a Scatterplot view alongside the visual model to the left and data model to the right.</figcaption>
+                    <figcaption style="margin:0;color:#888">A Chart with a Scatterplot view alongside the visual model to the left and data model to the right. The user can create as many Charts as they want. </figcaption>
                 </figure>
                 <br>
-                The main component of the framework is <strong>Charts</strong>. Charts are highly malleable and contain a single, customisable view. The user can create as many Charts as they want. 
-                The data model of each Chart is fully editable Python code, which loads in a data set, or accesses that of another Chart, and does the algorithmic pre-processing of the data before handing it over to the visual model.
-                The visual model, which is also modifiable, in turn transforms the data into visual marks, which creates the view.
+                The main component of the framework is <strong>Charts</strong>. Charts are highly malleable and contain a single, customisable view. 
+                The data model of each Chart is fully editable and executable Python code, which does the algorithmic pre-processing of the data before handing it over to the visual model.
+                The modifiable visual model in turn transforms the data into visual marks, which creates the view.
                 Combined with movable Charts this lets the user create their desired visual setup. 
                 The high malleability of Charts makes modifying them a seamless part of interacting with them.
                 This shortens the gap between the visualisation and pre-processing steps of the data visualisation pipeline.
                 <br>
                 <br>
-                <figure style="margin:0">
-                    <img src="./static/Architecture.png" alt="A system diagram showing of the software solution">
-                    <figcaption style="margin:0;color:#888">Charts are based on the <a href="https://ieeexplore.ieee.org/document/4015439">Reference Model</a> design pattern and built with
-                         <a href="https://svelte.dev/">Svelte</a> , 
-                         <a href="https://docs.pyscript.net/">PyScript</a> and the 
-                         <a href="https://microsoft.github.io/monaco-editor/">Monaco Editor</a>.</figcaption>
-                </figure>
-                <br>
-                Other features include:
+                Charts are based on the <a href="https://ieeexplore.ieee.org/document/4015439">Reference Model</a> design pattern and built with
+                <a href="https://svelte.dev/">Svelte</a> , 
+                <a href="https://docs.pyscript.net/">PyScript</a> and the 
+                <a href="https://microsoft.github.io/monaco-editor/">Monaco Editor</a>. Other features include:
                 <ul class="browser-default">
                     <li>Access to Python's extensive data science and machine learning libraries.</li>
                     <li>Write code sharable between all Charts to avoid code duplication.</li>
@@ -103,11 +98,9 @@
 
             <div class="col s12 m3 right resources">
                 <h3>Resources</h3>
-
-                <!-- <h4> <a href=""><i class="icon fas fa-file-pdf"></i> Paper</a></h4> -->
                 
-                <h4><a href="../webframework/static/Hansen2024_webframework(preprint).pdf" target="_blank"><i
-                            class="icon fas fa-file-pdf"></i> Paper (preprint)</a>
+                <!-- <h4><a href="../webframework/static/Hansen2024_webframework(preprint).pdf" target="_blank"><i
+                            class="icon fas fa-file-pdf"></i> Paper (preprint)</a> -->
                 </h4>
                 <h4> <a href="https://doi.org/10.2312/evp.20241080"><i class="icon fas fa-globe"></i>DOI</a></h4>
                 <h4><a href="../publications/bib/Hansen2024_webframework.bib" target="_blank"><i
