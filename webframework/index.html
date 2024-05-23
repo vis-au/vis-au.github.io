@@ -43,9 +43,40 @@
                 <h3>Authors</h3>
                 <div id="author-list">
                     <span>Simon Malthe Hansen</span></a>,
+                    <a href="https://pure.au.dk/portal/da/persons/ira%40cs.au.dk" class="author"><span>Ira Assent</span></a>,
                     <a href="https://hjschulz.net/" class="author"><span>Hans-Jörg Schulz</span></a>
                 </div>
-                Stay tuned for more.
+                <h3>Submission Video</h3>
+                <iframe width="100%" height="408" min-width="400" src="https://www.youtube.com/embed/GHJPr7Mg3MI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h3>Charts: View, visual model and data model combined</h3>
+                <figure style="margin:0">
+                    <img src="./static/webframework-figure.jpg" alt="A picture of a Chart with a view, and both the visual and data model open">
+                    <figcaption style="margin:0;color:#888">A Chart with a Scatterplot view alongside the visual model to the left and data model to the right.</figcaption>
+                </figure>
+                The main component of the framework is <strong>Charts</strong>. Charts are highly malleable and contain a single, customisable view. The user can create as many Charts as they want. 
+                The data model of each Chart is fully editable Python code, which loads in a data set, or accesses that of another Chart, and does the algorithmic pre-processing of the data before handing it over to the visual model.
+                The visual model, which is also modifiable, in turn transforms the data into visual marks, which creates the view.
+                Combined with movable Charts this lets the user create their desired visual setup. 
+                The high malleability of Charts makes modifying them a seamless part of interacting with them.
+                This shortens the gap between the visualisation and pre-processing steps of the data visualisation pipeline.
+
+                <figure style="margin:0">
+                    <img src="./static/architecture-figure.jpg" alt="A system diagram showing of the software solution">
+                    <figcaption style="margin:0;color:#888">A Chart with a Scatterplot view alongside the visual model to the left and data model to the right.</figcaption>
+                </figure>
+                <br>
+                <br>
+                Other features include:
+                <ul class="browser-default">
+                    <li>Access to Python's extensive data science and machine learning libraries.</li>
+                    <li>Write code sharable between all Charts to avoid code duplication.</li>
+                    <li>Create child Charts which can easily access their parent's data set.</li>
+                    <li>Create up to two sets of edges between the nodes in the dataset, which can be bundled with FDEB.</li>
+                    <li>Lock in specific nodes to highlight them and compare the same data set between Charts.</li>
+                </ul>
+
+                <h3>Case: The Political Compass</h3>
+
             </div>
 
             <div class="col s12 m3 right resources">
@@ -53,7 +84,7 @@
 
                 <!-- <h4> <a href=""><i class="icon fas fa-file-pdf"></i> Paper</a></h4> -->
                 
-                <h4><a href="" target="_blank"><i
+                <h4><a href="https://diglib.eg.org/items/d6ff9b25-4b08-40fb-8744-f2d42aac279d" target="_blank"><i
                             class="icon fas fa-file-pdf"></i> Paper</a>
                 </h4>
                 <h4><a href="" target="_blank"><i
@@ -62,7 +93,7 @@
                 <br />
                 <h4 class="highlight"><a href="https://github.com/vis-au" target="_blank"><i
                             class="icon fab fa-gitlab"></i>Web Framework code</a></h4>
-                <h4><a href="" target="_blank"><i class="icon fas fa-video"></i> Demo
+                <h4><a href="https://www.youtube.com/watch?v=GHJPr7Mg3MI" target="_blank"><i class="icon fas fa-video"></i> Demo
                         video</a></h4>
             </div>
         </section>
@@ -75,7 +106,16 @@
                 </p>
 
                 <pre>
-TODO
+@inproceedings{malleable_web_framework2024,
+  booktitle = {EuroVis 2024 - Posters},
+  editor = {Kucher, Kostiantyn and Diehl, Alexandra and Gillmann, Christina},
+  title = {{A Web Framework for Explainable and Malleable Visualisation}},
+  author = {Hansen, Simon Malthe and Assent, Ira and Schulz, Hans-Jörg},
+  year = {2024},
+  publisher = {The Eurographics Association},
+  ISBN = {978-3-03868-258-5},
+  DOI = {10.2312/evp.20241080}
+}                        
         </pre>
             </div>
         </section>
