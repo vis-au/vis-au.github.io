@@ -50,21 +50,25 @@
                 <iframe width="100%" height="408" min-width="400" src="https://www.youtube.com/embed/GHJPr7Mg3MI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 <h3>Charts: View, visual model and data model combined</h3>
                 <figure style="margin:0">
-                    <img src="./static/webframework-figure.jpg" alt="A picture of a Chart with a view, and both the visual and data model open">
+                    <img src="./static/Chart.PNG" alt="A picture of a Chart with a view, and both the visual and data model open">
                     <figcaption style="margin:0;color:#888">A Chart with a Scatterplot view alongside the visual model to the left and data model to the right.</figcaption>
                 </figure>
+                <br>
                 The main component of the framework is <strong>Charts</strong>. Charts are highly malleable and contain a single, customisable view. The user can create as many Charts as they want. 
                 The data model of each Chart is fully editable Python code, which loads in a data set, or accesses that of another Chart, and does the algorithmic pre-processing of the data before handing it over to the visual model.
                 The visual model, which is also modifiable, in turn transforms the data into visual marks, which creates the view.
                 Combined with movable Charts this lets the user create their desired visual setup. 
                 The high malleability of Charts makes modifying them a seamless part of interacting with them.
                 This shortens the gap between the visualisation and pre-processing steps of the data visualisation pipeline.
-
-                <figure style="margin:0">
-                    <img src="./static/architecture-figure.jpg" alt="A system diagram showing of the software solution">
-                    <figcaption style="margin:0;color:#888">A Chart with a Scatterplot view alongside the visual model to the left and data model to the right.</figcaption>
-                </figure>
                 <br>
+                <br>
+                <figure style="margin:0">
+                    <img src="./static/Architecture.png" alt="A system diagram showing of the software solution">
+                    <figcaption style="margin:0;color:#888">Charts are based on the <a href="https://ieeexplore.ieee.org/document/4015439">Reference Model</a> design pattern and built with
+                         <a href="https://svelte.dev/">Svelte</a> , 
+                         <a href="https://docs.pyscript.net/">PyScript</a> and the 
+                         <a href="https://microsoft.github.io/monaco-editor/">Monaco Editor</a>.</figcaption>
+                </figure>
                 <br>
                 Other features include:
                 <ul class="browser-default">
@@ -76,6 +80,24 @@
                 </ul>
 
                 <h3>Case: The Political Compass</h3>
+                <figure style="margin:0">
+                    <img src="./static/PCA_vs_t-SNE.PNG" alt="A picture of a two Charts side by side, with the left using t-SNE and the right using PCA">
+                    <figcaption style="margin:0;color:#888">The Political Compass when made with (left) t-SNE and (right) PCA differ a lot.</figcaption>
+                </figure>
+                <br>
+                To showcase the web framework we have created a Political Compass visualisation of the Danish political spectrum from the 2022 general election. 
+                The data set is based on 35 questions answered by 855 political candidates, which is reduced to 2 dimensions with Dimensionality Reduction Techniques.
+                By creating two Charts from the same data set and putting them side by side, the framework makes it obvious to the visualisation author, how the choice of pre-processing algorithm affects their visualisation.
+
+
+                <br><br>
+                <figure style="margin:0">
+                    <img src="./static/kNN-comparison.PNG" alt="A picture of a Chart with nodes hidden and both high- and low-dimensional edges bundled and shown">
+                    <figcaption style="margin:0;color:#888">The Political Compass made with t-SNE with the kNN of the dataset before Dimensionality Reduction in blue and after in red.</figcaption>
+                </figure>
+                <br>
+                We can show the k-Nearest Neighbours from before and after Dimensionality reduction by creating two sets of edges, setting the visual model to show and bundle the edges, and hide the nodes away.
+                This lets us as visualisation authors understand and explain just how much the pre-processing algorithm in question (here t-SNE) has changed global structure, as can be seen in how much the red edges differ from the blue ones.
 
             </div>
 
@@ -84,10 +106,11 @@
 
                 <!-- <h4> <a href=""><i class="icon fas fa-file-pdf"></i> Paper</a></h4> -->
                 
-                <h4><a href="https://diglib.eg.org/items/d6ff9b25-4b08-40fb-8744-f2d42aac279d" target="_blank"><i
-                            class="icon fas fa-file-pdf"></i> Paper</a>
+                <h4><a href="../webframework/static/Hansen2024_webframework(preprint).pdf" target="_blank"><i
+                            class="icon fas fa-file-pdf"></i> Paper (preprint)</a>
                 </h4>
-                <h4><a href="" target="_blank"><i
+                <h4> <a href="https://doi.org/10.2312/evp.20241080"><i class="icon fas fa-globe"></i>DOI</a></h4>
+                <h4><a href="../publications/bib/Hansen2024_webframework.bib" target="_blank"><i
                             class="icon fas fa-quote-right"></i> BibTeX
                         Citation</a></h4>
                 <br />
@@ -106,7 +129,7 @@
                 </p>
 
                 <pre>
-@inproceedings{malleable_web_framework2024,
+@inproceedings{Hansen2024_webframework,
   booktitle = {EuroVis 2024 - Posters},
   editor = {Kucher, Kostiantyn and Diehl, Alexandra and Gillmann, Christina},
   title = {{A Web Framework for Explainable and Malleable Visualisation}},
