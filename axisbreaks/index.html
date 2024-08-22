@@ -1,1 +1,131 @@
-Placeholder. To be updated for GCPR VMV 2024 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>A Framework for Axis Breaks in Charts</title>
+
+    <link type="text/css" rel="stylesheet" href="../static/css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="../static/css/fonts.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="../static/css/style.css" media="screen,projection">
+    <link type="text/css" rel="stylesheet" href="./style.css" media="screen,projection">
+    <script src="https://kit.fontawesome.com/cb26641bd1.js"></script>
+    <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <nav class="au-color">
+        <div class="nav-wrapper container">
+            <a href="../" class="brand-logo">
+                <img src="../static/img/auvis_logo_large_white.png" height="45px" alt="">
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="../publications/">Publications</a></li>
+                <li><a class="current" href="../software/">Software</a></li>
+                <li><a href="../teaching_materials/">Teaching Material</a></li>
+                <li><a href="../student_projects/">Student Projects</a></li>
+                <li><a href="../workshops/">Workshops</a></li>
+                <li><a href="../team/">Team</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <article class="container">
+        <section class="row" id="map-like">
+            <h2>A Framework for Axis Breaks in Charts</h2>
+            <p class="leader">VMV 2024, Munich, Germany</p>
+        </section>
+
+        <section class="row">
+            <div class="col s12 m7 abstract">
+                <h3>Authors</h3>
+                <div id="author-list">
+                    <a href="mailto:rt071195@gmail.com"
+                        target="_blank" class="author"><span>Rasmus Thorsøe</span></a>,
+                        <a href="mailto:locpeter@gmail.com"
+                        target="_blank" class="author"><span>Peter Locher</span></a>,
+                    <a href="https://pure.au.dk/portal/en/persons/harith%40cs.au.dk"
+                        target="_blank" class="author"><span>Harith Rathish</span></a>,
+                    <a href="https://hjschulz.net/" class="author"><span>Hans-Jörg Schulz</span></a>
+                </div>
+                <h3>Exploratory tool for axis breaks in charts</h3>
+                <figure style="margin:0">
+                    <img src="./static/software_main_ss.png" alt="A screenshot of the axis break software">
+                    <figcaption style="margin:0;color:#888">Exploration tool for axis breaks, supporting different clustering methods and tuning parameters. Comes with 9 datasets out of the box</figcaption>
+                </figure>
+                <p>
+                    Axis breaks are used regularly to fit data with large gaps between data subsets into a single chart. Proposed in the 1980s, axis
+breaks have not gotten much attention since then in terms of what characterizes “good” breaks, how many of them to introduce,
+and where to best place them? To answer these questions, we propose a five-step framework that specifies (1) the number of
+breaks, (2) their location, (3) the scaling of the resulting subaxes, (4) the “niceness” of the breaks, and (5) the formatting of the
+breaks. To apply this framework, we introduce a new metric, called skew, to quantify how unevenly points are distributed along
+an axis. Skew is then used as a cost function to formulate the search for optimal axis breaks as a clustering problem, which we
+solve by applying a dynamic k-means algorithm. We apply our framework specifically to Parallel Coordinate Plots and compare
+our algorithmic solution to established methods like percentile breaks and Jenks natural breaks. An interactive testbed to try
+our framework as well as its source code are made freely available. (see Resources section)
+                </p>
+            </div>
+
+            <div class="col s12 m3 right resources">
+                <h3>Resources</h3>
+
+                <!-- <h4> <a href=""><i class="icon fas fa-file-pdf"></i> Paper</a></h4> -->
+                <h4> <a href="https://doi.org/10.2312/evs.20241060"><i class="icon fas fa-globe"></i>DOI</a></h4>
+                <h4><a href="../publications/bib/Alroee2024_highways.bib" target="_blank"><i
+                            class="icon fas fa-quote-right"></i> BibTeX
+                        Citation</a></h4>
+                <br />
+                <h4 class="highlight"><a href="https://gitlab.au.dk/highways-and-tunnels/castor-mouse" target="_blank"><i
+                            class="icon fab fa-gitlab"></i>Source Code</a></h4>
+                <h4 class="highlight"><a href="https://gitlab.au.dk/highways-and-tunnels/highways-demo-application" target="_blank"><i
+                    class="icon fab fa-gitlab"></i> Demo application</a></h4>
+            </div>
+        </section>
+
+        <section class="row">
+            <div class="col s12 m7 abstract">
+                <h3>Citation in BibTeX</h3>
+
+                <p>To cite this article, we encourage you to use the following bibtex entry in your citation manager:
+                </p>
+                <pre>
+        </pre>
+            </div>
+        </section>
+
+        <section class="empty"></section>
+    </article>
+
+    <footer class="page-footer au-color darken-1">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Aarhus University Visualization Repository</h5>
+                    <p class="grey-text text-lighten-4">
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="https://cs.au.dk/">Department of Computer Science,
+                                Aarhus University</a></li>
+                        <li><a class="grey-text text-lighten-3"
+                                href="https://cs.au.dk/research/ubiquitous-computing-and-interaction/">Research Group
+                                for Ubiquitous Computing and Interaction</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <!-- <div class="container">
+        © 2020 Copyright Department of Computer Science, Aarhus University
+      <a class="grey-text text-lighten-4 right" href="#">back to top</a>
+      </div> -->
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="../static/js/materialize.min.js"></script>
+</body>
+
+</html>
