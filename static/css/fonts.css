@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: AUPassataBold;
   src: url("https://www.aucdn.dk/fonts/aupassata_bold-webfont.eot");
   src: url("https://www.aucdn.dk/fonts/aupassata_bold-webfont.eot?#iefix") format("embedded-opentype"),
@@ -30,4 +30,9 @@
     url("https://www.aucdn.dk/fonts/aupassata_rg-webfont.woff") format("woff"),
     url("https://www.aucdn.dk/fonts/aupassata_rg-webfont.ttf") format("truetype"),
     url("https://www.aucdn.dk/fonts/aupassata_rg-webfont.svg#AUPassataRegular") format("svg");
+} */
+
+Comment out or temporarily change
+body {
+  font-family: Arial, sans-serif; /* instead of AUPassataRegular */
 }
