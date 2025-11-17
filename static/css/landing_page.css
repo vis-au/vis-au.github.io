@@ -13,7 +13,7 @@ body.landing-page hr {
   border: none;
 }
 body.landing-page h1 {
-  font-family: "AUPassataBold";
+  font-family: "AUPassataBold", "Aptos";
 }
 
 body.landing-page h1 {
@@ -26,7 +26,7 @@ body.landing-page section.bullets {
 }
 
 body.landing-page h2 {
-  font-family: "AUPassataLight";
+  font-family: "AUPassataLight", "Aptos";
   font-weight: lighter;
 }
 
